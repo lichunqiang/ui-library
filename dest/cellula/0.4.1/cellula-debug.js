@@ -1,0 +1,4 @@
+define("dest/cellula/0.4.1/cellula-debug", [ "dest/cellula/0.4.1/cellula-namespace-debug", "dest/cellula/0.4.1/cellula-class-debug", "dest/cellula/0.4.1/cellula-util-debug", "dest/cellula/0.4.1/cellula-events-debug", "dest/cellula/0.4.1/cellula-cell-debug", "dest/cellula/0.4.1/cellula-element-debug", "dest/cellula/0.4.1/cellula-collection-debug" ], function(require, exports, module) {
+    var _cellula = require("dest/cellula/0.4.1/cellula-namespace-debug"), _class = require("dest/cellula/0.4.1/cellula-class-debug"), _util = require("dest/cellula/0.4.1/cellula-util-debug"), _events = require("dest/cellula/0.4.1/cellula-events-debug"), _cell = require("dest/cellula/0.4.1/cellula-cell-debug"), _element = require("dest/cellula/0.4.1/cellula-element-debug"), _collection = require("dest/cellula/0.4.1/cellula-collection-debug");
+    module.exports = _cellula;
+});

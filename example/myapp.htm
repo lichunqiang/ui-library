@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>我的应用展台</title>
+		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/enterpriseportal/enterpriseportal.base-1.7.css" media="all" />
+		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/uemprod/uemprod.global-1.6.css" media="all" />
+		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/uemprod/uemprod.user-1.2.css" media="all" />
+		<style type="text/css">
+			.container {
+				overflow: visible;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- 不允许删除应用的提示 -->
+		<div class="unallowDelAppTip" id="J_unallowDelAppTip">
+			<div class="mi-tip mi-tip-cue">
+				<div class="mi-tip-arrow mi-tip-arrow-bottom">
+					<em>◆</em>
+					<span>◆</span>
+				</div>
+				<div class="mi-tip-ctn">
+					<div class="mi-tip-text">
+						签约产品不可删除
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 删除应用成功的提示 -->
+		<div class="delAppSuccessTip" id="J_delAppSuccess">
+			<div class="mi-tip mi-tip-success mi-tip-noicon">
+				<div class="mi-tip-ctn">
+					<i title="成功" class="iconfont">&#xF049;</i>
+					<span>删除成功</span>
+				</div>
+			</div>
+		</div>
+		<!-- 删除应用错误的提示 -->
+		<div class="delAppFailedTip" id="J_delAppFailed">
+			<div class="mi-tip mi-tip-error">
+				<div class="mi-tip-ctn">
+					<i title="出错" class="iconfont">&#xF045;</i>
+					<span>删除错误</span>
+				</div>
+			</div>
+		</div>
+		<!--删除操作前的提示确认-->
+		<div class="delAppConfirmTip" id="J_delAppConfirmTip">
+			<div class="mi-tip mi-tip-cue">
+				<div class="mi-tip-arrow mi-tip-arrow-left">
+					<em>◆</em><span>◆</span>
+				</div>
+				<div class="mi-tip-ctn">
+					<div class="mi-tip-text">
+						<i class="iconfont" title="提示">&#xF046;</i>删除后，你可到产品商店找回此产品。
+					</div>
+					<div class="mi-tip-buttons">
+						<span class="mi-button mi-button-sblue">
+							<button class="mi-button-text">
+								确定删除
+							</button></span>
+						<span class="mi-button mi-button-swhite">
+							<button class="mi-button-text">
+								取消
+							</button></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="J_header" class="mi-header"></div>
+		<div id="J_nav" class="mi-nav"></div>
+		<div class="content">
+			<div class="container" id="J_container">
+
+				<div id="J_shadowLeft" class="shadow-left">
+					<div class="shadow-top"></div>
+					<div class="shadow-bottom"></div>
+				</div>
+
+				<div id="J_shadowRight" class="shadow-right">
+					<div class="shadow-top"></div>
+					<div class="shadow-bottom"></div>
+				</div>
+				<div class="fn-clear vessel">
+					<!-- 左侧区域 -->
+					<div class="content-left">
+						<!-- 我的应用展台 -->
+						<div class="myapp-content" id="J-myapp-content"></div>
+					</div>
+					<!-- 右侧区域 -->
+					<div class="content-right">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="../lib/sea.js"></script>
+		<script type="text/javascript">
+			seajs && seajs.config({
+				base : '/gitlab/cellula/',
+				alias : {
+					'$' : 'lib/$',
+					'cellula' : 'build/cellula/0.4.1/cellula'
+				},
+				charset : 'utf-8'
+			});
+		</script>
+		<script type="text/javascript">
+			seajs.use(['$', 'cellula'], function(jQuery, Cellula) {
+					
+				console.log(Cellula);
+
+			});
+
+		</script>
+
+	</body>
+
+</html>

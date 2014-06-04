@@ -1,0 +1,462 @@
+.mi-tip-buttons {
+	margin-top: 10px
+}
+.mi-tip-ctn.mi-tip-noicon {
+	padding-left: 10px
+}
+.myapp-title .myapp-config, a.myapp-arrow-del, a.myapp-arrow-del:hover, .myapp-item .myapp-link, .myapp-item-hover .myapp-link, .myapp-layer-hover .myapp-text, .ui-switchable, .ui-switchable-nav li.current {
+	background-image: url("https://i.alipayobjects.com/e/201307/mgA7yrWlp.png");
+	background-repeat: none
+}
+.vessel {
+	position: relative;
+	overflow: hidden
+}
+.content-left {
+	float: left;
+	width: 749px;
+	padding: 0;
+	margin-bottom: 0;
+	position: relative
+}
+.content-left .mi-grid-row {
+	margin: 0
+}
+.account-title {
+	line-height: 24px;
+	z-index: 10;
+	padding: 20px 20px 0;
+	position: relative
+}
+.accountName-link {
+	color: #4d4d4d
+}
+.accountName-link:hover {
+	color: #4d4d4d
+}
+.secureMsg {
+	padding: 7px 10px 0
+}
+.secureMsg span {
+	cursor: pointer
+}
+.accoutrela {
+	display: inline-block;
+	padding: 0 11px
+}
+.accoutrela .account, .accoutrela .ft-bar {
+	height: 28px;
+	line-height: 28px
+}
+.migrateTaskQuery {
+	display: inline-block
+}
+.myapp-content {
+	padding: 0 0 20px 20px
+}
+.times {
+	height: 38px;
+	line-height: 38px;
+	margin-right: 5px
+}
+.accountTips, .secureOptTips {
+	left: 0;
+	top: 0;
+	z-index: 99;
+	position: absolute;
+	display: none;
+	height: 43px
+}
+.accountTips .mi-tip, .secureOptTips .mi-tip {
+	margin: 0
+}
+.accountTips .mi-tip-arrow-bottom, .secureOptTips .mi-tip-arrow-bottom {
+	left: auto;
+	right: 37px
+}
+.amount {
+	color: #4d4d4d
+}
+.account-tip {
+	left: 0;
+	top: 0;
+	display: none;
+	position: absolute;
+	z-index: 999
+}
+.account-tip .mi-tip {
+	margin-top: 0
+}
+#J_account .mi-tip-ctn {
+	padding-bottom: 10px
+}
+.myapp-slider-trigger-prev, .myapp-slider-trigger-next {
+	background: url("https://img.alipay.com/sys/personal/style/appaside.png") no-repeat 0 0
+}
+.myapp-slider-trigger {
+	height: 24px;
+	overflow: visible;
+	padding: 0 0 10px;
+	position: relative;
+	text-align: center;
+	display: block
+}
+.myapp-slider-trigger li {
+	background: none repeat scroll 0 0 #fff;
+	color: #e6e6e6;
+	cursor: pointer;
+	display: inline-block;
+	*zoom: 1;
+	* display: inline;
+	width: 16px;
+	float: left;
+	font-family: verdana;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 1.5;
+	margin-right: 4px
+}
+.myapp-slider-trigger li.current {
+	color: #b3b3b3
+}
+.myapp-slider-trigger-dot {
+	display: inline-block;
+	*zoom: 1;
+	* display: inline
+}
+.myapp-slider-trigger-prev, .myapp-slider-trigger-next {
+	cursor: pointer;
+	height: 13px;
+	overflow: hidden;
+	position: absolute;
+	text-indent: -9999px;
+	top: 6px;
+	width: 7px
+}
+.myapp-slider-trigger-prev {
+	background-position: 0 -28px;
+	left: 15px
+}
+.myapp-slider-trigger-first {
+	background-position: 0 -28px
+}
+.myapp-slider-trigger-next {
+	background-position: -14px -28px;
+	right: 15px
+}
+.myapp-slider-trigger-last {
+	background-position: -14px -28px
+}
+.lines {
+	position: absolute;
+	left: 0;
+	bottom: 0
+}
+.lines .mi-line {
+	float: left;
+	width: 223px;
+	margin: 0 20px 0 0;
+	background-color: #ddd
+}
+.lines .mi-line-right {
+	margin: 0;
+	float: right
+}
+a.myapp-arrow-del, a.myapp-arrow-del:hover {
+	width: 18px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	text-indent: -999em;
+	margin-right: 10px;
+	text-decoration: none
+}
+a {
+	outline: 0
+}
+a.myapp-arrow-del {
+	background-position: -76px -2px
+}
+a.myapp-arrow-del:hover {
+	background-position: -100px -2px
+}
+.content-row {
+	padding-top: 0;
+	position: relative;
+	overflow: visible
+}
+.title-icon {
+	background-image: url("https://i.alipayobjects.com/e/201307/jz3FLxFQ5_src.png");
+	background-repeat: no-repeat
+}
+.myapp-edit, .myapp-link, .myapp-text {
+	background-image: url("https://i.alipayobjects.com/e/201307/mgA7yrWlp.png");
+	background-repeat: no-repeat;
+	background-position: 0 0
+}
+.myapp-package {
+	float: left;
+	margin-top: 18px;
+	width: 221px;
+	border: 1px solid #ddd;
+	margin-right: 20px;
+	position: relative
+}
+.myapp-list {
+	width: 221px;
+	float: left;
+	margin: 18px 20px 0 0;
+	border: 1px solid #ddd;
+	position: relative
+}
+.myapp-title-hover {
+	background-color: #fafafa;
+	cursor: pointer
+}
+.myapp-layer-hover {
+	position: relative;
+	margin: -2px -1px -1px;
+	background-color: #fafafa;
+	border: 1px solid #fab700;
+	width: 221px;
+	z-index: 9;
+	overflow: hidden
+}
+.myapp-title {
+	padding: 0 4px;
+	position: relative
+}
+.myapp-inner-title {
+	height: 80px;
+	border-bottom: 1px dashed #ddd
+}
+.title-icon {
+	width: 43px;
+	height: 42px;
+	float: left;
+	overflow: hidden;
+	margin: 20px 0 0 20px
+}
+.more-product-icon {
+	background-position: -159px -156px
+}
+.contractmanagement-icon {
+	background-position: -212px -208px
+}
+.transferaccounts-icon {
+	background-position: 0 0
+}
+.accountchecking-icon {
+	background-position: -53px -52px
+}
+.trade-icon {
+	background-position: -106px -104px
+}
+.service-icon {
+	background-position: -265px -260px
+}
+.title-text {
+	float: left;
+	margin: 18px 0 0 13px
+}
+.title-text strong, .title-text em {
+	display: block
+}
+.title-text strong {
+	color: #000;
+	font-size: 16px
+}
+.title-text em {
+	color: #a6a6a6
+}
+a.myapp-edit {
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-indent: -99px
+}
+a.myapp-edit:hover {
+	outline: 1px solid #ccc
+}
+.myapp-edit-icon {
+	background-position: 0 -1px
+}
+.myapp-container {
+	position: relative;
+	width: 221px;
+	overflow: hidden
+}
+.myapp-container-scroller {
+	top: 0;
+	left: 0;
+	width: 9999px;
+	overflow: hidden;
+	position: relative
+}
+.myapp-container-slider {
+	float: left;
+	width: 221px;
+	padding: 10px 0;
+	overflow: hidden
+}
+.myapp-edit-confirm {
+	position: absolute;
+	right: 8px;
+	top: 8px
+}
+.myapp-item {
+	margin-bottom: 4px;
+	overflow: hidden
+}
+.myapp-link {
+	font-size: 14px;
+	color: #08c;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	margin-left: 70px;
+	display: inline-block;
+	background-position: -206px -73px
+}
+.myapp-text {
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	margin-left: 70px;
+	display: block;
+	float: left;
+	color: #a6a6a6;
+	background-position: -4px -71px
+}
+.unallowDelAppTip, .delAppSuccessTip, .delAppFailedTip, .delAppConfirmTip {
+	top: 0;
+	left: 0;
+	z-index: 99;
+	position: absolute;
+	display: none
+}
+.delAppSuccessTip .mi-tip, .delAppFailedTip .mi-tip {
+	margin: 0
+}
+.unallowDelAppTip .mi-tip-ctn {
+	padding: 5px
+}
+.unallowDelAppTip .mi-tip-cue {
+	background: #333;
+	border-color: #333
+}
+.unallowDelAppTip .mi-tip-text {
+	color: #fff
+}
+.unallowDelAppTip .mi-tip-cue .mi-tip-arrow em {
+	color: #333
+}
+.unallowDelAppTip .mi-tip-cue .mi-tip-arrow span {
+	color: #333
+}
+.unallowDelAppTip .mi-tip-arrow-bottom {
+	left: 45px
+}
+.myapp-item .myapp-text {
+	margin-right: 0
+}
+.noMyAppItems {
+	text-align: center;
+	padding-top: 30px
+}
+.noMyAppItems a {
+	color: #a6a6a6
+}
+.moreMyApp {
+	position: absolute;
+	display: block;
+	bottom: 5px;
+	right: 5px
+}
+.moreMyApp a:hover {
+	text-decoration: none
+}
+.content-right {
+	float: left;
+	width: 240px;
+	background-color: #f4f4ee;
+	border-left: 1px #DDD solid;
+	zoom: 1;
+	min-height: 576px
+}
+.account-balance {
+	padding-left: 20px;
+	padding-top: 18px
+}
+.usable-balance h1 {
+	margin-bottom: 10px
+}
+.buttons {
+	margin-top: 12px
+}
+.buttons a {
+	margin-right: 7px
+}
+.unavailable-balance {
+	margin-top: 16px;
+	margin-bottom: 30px
+}
+.unavailable-balance span {
+	color: #808080
+}
+.ui-switchable {
+	height: 38px;
+	width: 202px;
+	background-position: 0 -27px;
+	position: relative
+}
+.ui-switchable-nav {
+	height: 38px;
+	padding-left: 5px
+}
+.ui-switchable-nav li {
+	color: #39F;
+	height: 38px;
+	float: left;
+	width: auto;
+	line-height: 38px
+}
+.ui-switchable-nav li a {
+	text-decoration: none
+}
+.ui-switchable-nav li.current {
+	background-position: 0 -106px
+}
+.ui-switchable-nav li.current a {
+	color: #4d4d4d;
+	font-weight: bold
+}
+.income {
+	padding: 10px 0;
+	width: 200px;
+	overflow: hidden;
+	border-bottom: 1px dashed #CCC
+}
+.income p {
+	padding: 10px 0
+}
+.border-bottom-none {
+	border-bottom: 0 none
+}
+.panel-1 {
+	opacity: 1;
+	position: absolute;
+	z-index: 2
+}
+.panel-2 {
+	opacity: 0;
+	position: absolute;
+	z-index: 1
+}
+.mi-dialog {
+	outline: 0
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ui-library",
+  "description": "ui-library frameworks...",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ar-insect",
+  "author": {
+    "name": "'ar-insect'",
+    "email": "'ar-insect@gmail.com'"
+  },
+  "main": "lib/cellula",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "alias": {
+    "cellula-namespace": "dest/cellula/0.4.1/cellula-namespace",
+    "cellula-class": "dest/cellula/0.4.1/cellula-class",
+    "cellula-util": "dest/cellula/0.4.1/cellula-util",
+    "cellula-events": "dest/cellula/0.4.1/cellula-events",
+    "cellula-cell": "dest/cellula/0.4.1/cellula-cell",
+    "cellula-element": "dest/cellula/0.4.1/cellula-element",
+    "cellula-collection": "dest/cellula/0.4.1/cellula-collection"
+  },
+  "devDependencies": {
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-cmd-concat": "~0.2.7",
+    "grunt-cmd-transport": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "~0.4.5"
+  },
+  "keywords": []
+}
