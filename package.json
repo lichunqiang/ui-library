@@ -1,26 +1,25 @@
 {
   "name": "enterprise",
-  "description": "enterprise ui library...",
+  "description": "ui library...",
   "version": "1.0.0",
-  "homepage": "http://gitlab.alibaba-inc.com/u/wb-jianglm",
+  "homepage": "https://github.com/ar-insect/ui-library",
   "author": {
-    "name": "'wb-jianglm'",
-    "email": "'wb-jianglm@alipay.com'"
+    "name": "ar-insect",
+    "email": "ar.insect@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:alipay-ct-wd/enterprise.git"
+    "url": "git@github.com:ar-insect/ui-library.git"
   },
   "bugs": {
-    "url": "http://gitlab.alibaba-inc.com/alipay-ct-wd/enterprise/issues"
+    "url": "https://github.com/ar-insect/ui-library/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://gitlab.alibaba-inc.com/alipay-ct-wd/enterprise/blob/master/LICENSE-MIT"
+      "url": "https://github.com/ar-insect/ui-library/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/cellula",
   "engines": {
     "node": ">= 0.10.0"
   },
