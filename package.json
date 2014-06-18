@@ -1,12 +1,25 @@
 {
-  "name": "ui-library",
-  "description": "ui-library frameworks...",
-  "version": "0.1.0",
-  "homepage": "https://github.com/ar-insect",
+  "name": "enterprise",
+  "description": "enterprise ui library...",
+  "version": "1.0.0",
+  "homepage": "http://gitlab.alibaba-inc.com/u/wb-jianglm",
   "author": {
-    "name": "'ar-insect'",
-    "email": "'ar-insect@gmail.com'"
+    "name": "'wb-jianglm'",
+    "email": "'wb-jianglm@alipay.com'"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:alipay-ct-wd/enterprise.git"
+  },
+  "bugs": {
+    "url": "http://gitlab.alibaba-inc.com/alipay-ct-wd/enterprise/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://gitlab.alibaba-inc.com/alipay-ct-wd/enterprise/blob/master/LICENSE-MIT"
+    }
+  ],
   "main": "lib/cellula",
   "engines": {
     "node": ">= 0.10.0"
@@ -15,22 +28,33 @@
     "test": "grunt nodeunit"
   },
   "alias": {
-    "cellula-namespace": "dest/cellula/0.4.1/cellula-namespace",
-    "cellula-class": "dest/cellula/0.4.1/cellula-class",
-    "cellula-util": "dest/cellula/0.4.1/cellula-util",
-    "cellula-events": "dest/cellula/0.4.1/cellula-events",
-    "cellula-cell": "dest/cellula/0.4.1/cellula-cell",
-    "cellula-element": "dest/cellula/0.4.1/cellula-element",
-    "cellula-collection": "dest/cellula/0.4.1/cellula-collection"
+	    "$": "$",
+	    "select": "assets/js/common/select/1.0.0/select",
+	    "cellula": "assets/js/common/cellula/0.4.1/cellula",
+	    "cellula-namespace": "assets/js/common/cellula/0.4.1/cellula-namespace",
+	    "cellula-class": "assets/js/common/cellula/0.4.1/cellula-class",
+	    "cellula-util": "assets/js/common/cellula/0.4.1/cellula-util",
+	    "cellula-events": "assets/js/common/cellula/0.4.1/cellula-events",
+	    "cellula-cell": "assets/js/common/cellula/0.4.1/cellula-cell",
+	    "cellula-element": "assets/js/common/cellula/0.4.1/cellula-element",
+	    "cellula-collection": "assets/js/common/cellula/0.4.1/cellula-collection", 
+	    "fdp": "assets/js/common/fdp/1.0.0/fdp",
+	    "fdp-namespace": "assets/js/common/fdp/1.0.0/fdp-namespace",
+	    "fdp-formItem": "assets/js/common/fdp/1.0.0/fdp-formItem",
+	    "fdp-form": "assets/js/common/fdp/1.0.0/fdp-form",
+	    "fdp-table": "assets/js/common/fdp/1.0.0/fdp-table",
+	    "fdp-paginator": "assets/js/common/fdp/1.0.0/fdp-paginator"
   },
   "devDependencies": {
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-cmd-concat": "~0.2.7",
-    "grunt-cmd-transport": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-cmd-concat": "^0.2.7",
+    "grunt-cmd-transport": "^0.4.1",
+    "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
     "grunt": "~0.4.5"
   },
   "keywords": []

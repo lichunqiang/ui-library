@@ -4,9 +4,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>我的应用展台</title>
-		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/enterpriseportal/enterpriseportal.base-1.7.css" media="all" />
-		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/uemprod/uemprod.global-1.6.css" media="all" />
-		<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/uemprod/uemprod.user-1.2.css" media="all" />
+		<link charset="utf-8" rel="stylesheet" href="../assets/css/common/base/1.0.0/base.css" media="all" />
+		<link charset="utf-8" rel="stylesheet" href="../assets/css/common/enterpriseportal/1.0.0/enterpriseportal.css" media="all" />
 		<style type="text/css">
 			.container {
 				overflow: visible;
@@ -14,62 +13,6 @@
 		</style>
 	</head>
 	<body>
-
-		<!-- 不允许删除应用的提示 -->
-		<div class="unallowDelAppTip" id="J_unallowDelAppTip">
-			<div class="mi-tip mi-tip-cue">
-				<div class="mi-tip-arrow mi-tip-arrow-bottom">
-					<em>◆</em>
-					<span>◆</span>
-				</div>
-				<div class="mi-tip-ctn">
-					<div class="mi-tip-text">
-						签约产品不可删除
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- 删除应用成功的提示 -->
-		<div class="delAppSuccessTip" id="J_delAppSuccess">
-			<div class="mi-tip mi-tip-success mi-tip-noicon">
-				<div class="mi-tip-ctn">
-					<i title="成功" class="iconfont">&#xF049;</i>
-					<span>删除成功</span>
-				</div>
-			</div>
-		</div>
-		<!-- 删除应用错误的提示 -->
-		<div class="delAppFailedTip" id="J_delAppFailed">
-			<div class="mi-tip mi-tip-error">
-				<div class="mi-tip-ctn">
-					<i title="出错" class="iconfont">&#xF045;</i>
-					<span>删除错误</span>
-				</div>
-			</div>
-		</div>
-		<!--删除操作前的提示确认-->
-		<div class="delAppConfirmTip" id="J_delAppConfirmTip">
-			<div class="mi-tip mi-tip-cue">
-				<div class="mi-tip-arrow mi-tip-arrow-left">
-					<em>◆</em><span>◆</span>
-				</div>
-				<div class="mi-tip-ctn">
-					<div class="mi-tip-text">
-						<i class="iconfont" title="提示">&#xF046;</i>删除后，你可到产品商店找回此产品。
-					</div>
-					<div class="mi-tip-buttons">
-						<span class="mi-button mi-button-sblue">
-							<button class="mi-button-text">
-								确定删除
-							</button></span>
-						<span class="mi-button mi-button-swhite">
-							<button class="mi-button-text">
-								取消
-							</button></span>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div id="J_header" class="mi-header"></div>
 		<div id="J_nav" class="mi-nav"></div>
 		<div class="content">
@@ -87,6 +30,227 @@
 				<div class="fn-clear vessel">
 					<!-- 左侧区域 -->
 					<div class="content-left">
+						
+						<style>
+							.ui-resultstepnew-container {margin-bottom: 20px;}
+							.ui-resultstepnew-two li {
+								width: 200px;
+							}
+							.ui-resultstepnew-item .ui-resultstepnew-steptext {
+								left: -12px;
+							}
+						
+						</style>
+						<div style="padding: 20px 0 0 200px">
+							<div class="ui-resultstep-container fn-clear ui-resultstep-four" style="margin-bottom:20px;">
+							    <ul>
+							        <li class="ui-resultstep-item ui-resultstep-first ui-resultstep-finish">
+							            <div class="ui-resultstep-steptext">提交成功</div>
+							            <div class="ui-resultstep-bg">
+							                <div class="ui-resultstep-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstep-item ui-resultstep-current">
+							            <div class="ui-resultstep-steptext">查看邮件</div>
+							            <div class="ui-resultstep-bg">
+							                <div class="ui-resultstep-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstep-item">
+							            <div class="ui-resultstep-steptext">修改密码</div>
+							            <div class="ui-resultstep-bg">
+							                <div class="ui-resultstep-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstep-item ui-resultstep-last">
+							            <div class="ui-resultstep-steptext">修改成功</div>
+							            <div class="ui-resultstep-bg">
+							                <div class="ui-resultstep-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-first ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>交易创建</p>
+							            	<p class="ft-explain">2013-05-29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>等待对方付款</p>
+							            	<p class="ft-explain">&nbsp;</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-first ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>交易创建</p>
+							            	<p class="ft-explain">2013-05-29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-current ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>付款时间</p>
+							            	<p class="ft-explain">2013-06-01 18:15</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-first ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>交易创建</p>
+							            	<p class="ft-explain">2013-05-29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-current ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>结束时间</p>
+							            	<p class="ft-explain">2013-06-01 18:15</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-first ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>交易创建</p>
+							            	<p class="ft-explain">2013-05-29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-current">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>结束时间</p>
+							            	<p class="ft-explain">2013-05-29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p>结束时间</p>
+							            	<p class="ft-explain">&nbsp;</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							<!--
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two" id="two">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">交易创建：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-success ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">付款时间：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-two" id="three">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">交易创建：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-fail ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">付款时间：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							
+							<div class="ui-resultstepnew-container fn-clear ui-resultstepnew-three" id="four">
+							    <ul>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">交易创建：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-finish">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">付款时间：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							        <li class="ui-resultstepnew-item ui-resultstepnew-fail ui-resultstepnew-last">
+							            <div class="ui-resultstepnew-steptext">
+							            	<p class="h">付款时间：</p>
+							            	<p class="w">2013.05.29 12:39</p>
+							            </div>
+							            <div class="ui-resultstepnew-bg">
+							                <div class="ui-resultstepnew-icon"></div>
+							            </div>
+							        </li>
+							    </ul>
+							</div>
+							-->
+						</div>
 						<!-- 我的应用展台 -->
 						<div class="myapp-content" id="J-myapp-content"></div>
 					</div>
@@ -99,25 +263,7 @@
 
 		</div>
 
-		<script type="text/javascript" src="../lib/sea.js"></script>
-		<script type="text/javascript">
-			seajs && seajs.config({
-				base : '/gitlab/cellula/',
-				alias : {
-					'$' : 'lib/$',
-					'cellula' : 'build/cellula/0.4.1/cellula'
-				},
-				charset : 'utf-8'
-			});
-		</script>
-		<script type="text/javascript">
-			seajs.use(['$', 'cellula'], function(jQuery, Cellula) {
-					
-				console.log(Cellula);
-
-			});
-
-		</script>
+		
 
 	</body>
 
