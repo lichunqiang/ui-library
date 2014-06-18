@@ -1,0 +1,82 @@
+/** 商户页面统一阴影
+ * @name: mi-shadow
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: 商户页面统一阴影
+ * @require: null
+ *  @example
+
+ <div class="content">
+
+    <div id="J_container" class="container">
+        <div id="J_shadowLeft" class="shadow-left">
+            <div class="shadow-top"></div>
+            <div class="shadow-bottom"></div>
+        </div>
+        <div id="J_shadowRight" class="shadow-right">
+            <div class="shadow-top"></div>
+            <div class="shadow-bottom"></div>
+        </div>
+
+        <div>用户页面内容</div>
+
+    </div>
+
+</div>
+
+*/
+html {
+    background: url("https://i.alipayobjects.com/e/201307/jbTa4AS57.png") repeat 0 0 !important;
+}
+.content {
+    background: url('https://i.alipayobjects.com/e/201307/j7551qCHl.png') repeat-x 0 -350px;
+}
+.content .container {
+    position: relative;
+    margin: 0 auto 100px;
+    width: 990px;
+    min-height: 360px;
+    _height: 360px;
+    background-color: #fff;
+}
+.content .shadow-right,
+.content .shadow-left {
+    width: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+.content .shadow-right {
+    right: -6px;
+    background: url("https://i.alipayobjects.com/e/201307/jbRxKVbO1.png") repeat-y right 0;
+}
+.content .shadow-left {
+    left: -6px;
+    background: url("https://i.alipayobjects.com/e/201307/jbRxKVbO1.png") repeat-y 0 0;
+}
+.shadow-right .shadow-top,
+.shadow-left .shadow-top {
+    width: 6px;
+    height: 50px;
+    background-color: green;
+}
+.shadow-right .shadow-top {
+    background: url("https://i.alipayobjects.com/e/201307/jbShqoK9N.png") no-repeat right 0;
+}
+.shadow-left .shadow-top {
+    background: url("https://i.alipayobjects.com/e/201307/jbShqoK9N.png") no-repeat 0 0;
+}
+.shadow-right .shadow-bottom,
+.shadow-left .shadow-bottom {
+    width: 6px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+.shadow-right .shadow-bottom {
+    background: url("https://i.alipayobjects.com/e/201307/jbShqoK9N.png") no-repeat right -50px;
+}
+.shadow-left .shadow-bottom {
+    background: url("https://i.alipayobjects.com/e/201307/jbShqoK9N.png") no-repeat 0 -50px;
+}

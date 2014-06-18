@@ -1,0 +1,622 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>支付宝 - 网上支付 安全快速！</title>
+	<link charset="utf-8" rel="stylesheet" href="../assets/css/common/base/1.0.0/base.css" media="all" />
+	<link charset="utf-8" rel="stylesheet" href="../assets/css/common/enterpriseportal/1.0.0/enterpriseportal.css" media="all" />
+	<link charset="utf-8" rel="stylesheet" href="https://a.alipayobjects.com/bizfundprod/bizfundprod.default-1.7.css" media="all" />
+	<style type="text/css">
+		.accountZone {
+			margin: 0 0 30px 0;
+			border: 0 none;
+			overflow: hidden;
+		}
+		
+		.conditionZone {
+			padding: 0 20px;
+			border-bottom: 0 none;
+		}
+		
+		.signAccount {
+			position: relative;
+			top: 5px;
+		}
+		
+		.sum-info {
+		    border-top: solid 1px #e6e6e6;
+		    border-bottom: solid 1px #e6e6e6;
+		}
+		
+		.search {
+		    position: relative;
+		}
+		
+		.mask-box {
+		    width: 990px;
+		    height: 220px;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    cursor: pointer;
+		}
+		
+		.mask-combine {
+		    z-index: 1;
+		}
+		
+		.mask-target {
+		    z-index: 3;
+		}
+		
+		.target-search {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    border-left: solid 1px #e6e6e6;
+		    margin-left: 780px;
+		    width: 800px;
+		    z-index: 2;
+		}
+		
+		.search .mi-form-item {
+		    padding-left: 0;
+		    font-size: 14px;
+		}
+		
+		.search .mi-form-text, .search .mi-form-link, .search .sl-checkcode-link {
+		    padding-top: 7px;
+		}
+		
+		.search .mi-form-text {
+		    font-size: 12px;
+		}
+		
+		.search .mi-form-link, .sl-checkcode-link {
+		    margin-top: 0px\9;
+		}
+		
+		.search .mi-input {
+		    height: 18px;
+		    line-height: 18px;
+		    padding: 7px 4px 5px\9;
+		}
+		
+		.search .mi-label {
+		    margin-left: -76px;
+		    width: 76px;
+		    font-size: 14px;
+		    text-align: left;
+		    padding: 5px 0;
+		    font-weight: 900;
+		}
+		
+		.search .mi-input-datepicker {
+		    font-weight: normal;
+		    width: 90px;
+		}
+		
+		.search .mi-input-amount {
+		    width: 150px;
+		    font-weight: normal;
+		}
+		
+		.search .mi-input-account {
+		    width: 380px;
+		}
+		
+		.search .block-link {
+		    display: inline-block;
+		    padding: 6px 10px 7px;
+		    text-decoration: none;
+		    margin-left: 0;
+		    color: #4d4d4d;
+		}
+		
+		.search .block-link:hover {
+		    background-color: #f2f2f2;
+		}
+		
+		.search .block-link-active, .search .block-link-active:hover {
+		    background-color: #3a9bfc;
+		    color: white;
+		}
+		
+		.search .ime {
+		    ime-mode: disabled;
+		}
+		
+		.search .segment-input .mi-form-text {
+		    display: inline-block;
+		    padding: 5px 10px 5px 10px;
+		    height: 20px;
+		    line-height: 20px;
+		    color: #4d4d4d;
+		}
+		
+		.search .segment-input .mi-form-text {
+			min-width: 60px;
+			text-align: right;
+		}
+		
+		.search .mi-form-explain {
+		    height: 19px;
+		    min-height: 19px;
+		    _height: 19px;
+		}
+		
+		.search-btn input.mi-button-text {
+		    padding-left: 34px !important;
+		}
+		
+		.search-btn .mi-button-icon-search {
+		    top: 7px;
+		    width: 16px;
+		    height: 16px;
+		    left: 16px;
+		    background: url('https://i.alipayobjects.com/e/201305/QGufc2PFV.png') no-repeat 0 0;
+		}
+		
+		.search-btn.mi-button-mblue-disabled .mi-button-icon {
+		   background-image: url('https://i.alipayobjects.com/e/201306/XOYQ9ACdR.png');
+		}
+		
+		.container .hr {
+		    margin: 0 20px;
+		    border-top: solid 2px #e6e6e6;
+		    height: 0;
+		    line-height: 0;
+		    font-size: 0;
+		}
+		
+		.child-container {
+		    padding: 0 20px 30px;
+		}
+		
+		.tool-bar {
+		    padding: 20px 0 10px;
+		
+		}
+		
+		.sum-info {
+		    padding: 8px 0;
+		    margin-bottom: 10px;
+		    background: #e6f5ff;
+		    font-size: 14px;
+		}
+		
+		.sum-info .percent-50 {
+		    width: 50%;
+		}
+		
+		.sum-info .percent-33 {
+		    width: 33.33%;
+		}
+		
+		.sum-info .percent-25 {
+		    width: 25%;
+		}
+		
+		.sum-info p {
+		    padding: 0 20px;
+		    line-height: 28px;
+		}
+		
+		.sum-info .info-title {
+		    font-weight: 900;
+		    padding-bottom: 4px;
+		}
+		
+		.sum-info .info-p {
+		    color: #999;
+		}
+		
+		.detail-table {
+		    /*overflow: auto;
+		    overflow-y: hidden;*/
+		    zoom: 1;
+		}
+		
+		.detail-table:hover { 
+		    height:100%;
+		}
+		
+		.detail-table th, .detail-table td {
+		    padding-top: 12px;
+		    padding-bottom: 12px;
+		    white-space: nowrap;
+		    word-break: keep-all;
+		}
+		
+		.detail-table td {
+			height: 54px;
+		}
+		
+		.detail-table tr:hover {
+		    background: #f6f6f6;
+		}
+		
+		.detail-table .time {
+		    color: #999;
+		}
+		
+		.detail-table .detail-no, .detail-table .trade-no, .detail-table .account-logid {
+		    color: #4d4d4d;
+		    text-decoration: none;
+		}
+		
+		.detail-table .copy-hint {
+		    position: absolute;
+		    zoom: 1;
+		    z-index: 98;
+		    font-size: 12px;
+		    background: white;
+		    padding: 0 10px;
+		    color: #999;
+		}
+		
+		.detail-table .copy-done {
+		    position: absolute;
+		    zoom: 1;
+		    z-index: 98;
+		    font-size: 12px;
+		    background: white;
+		    padding: 0 10px;
+		    color: red;
+		}
+		
+		.detail-table .hint-hover {
+		    text-decoration: underline;
+		}
+		
+		.detail-table .action {
+		    margin-left: 6px;
+		}
+		
+		.detail-table .current-target {
+		    color: #f60;
+		}
+		
+		.detail-pagination {
+		    margin-top: 30px;
+		}
+		
+		.ui-select {
+			font-size: 12px;
+		}
+		
+		.mi-form-item .ui-select, .mi-paging .ui-select {
+		    display:-moz-inline-stack;
+		    display:inline-block;
+		    *display:inline;
+		    zoom:1;
+		    width:220px;
+		    height:30px;
+		    line-height:30px;
+		    border:1px solid #ccc;
+		    border-top: solid 1px #a6a6a6;
+		    position:relative;
+		    vertical-align:middle;
+		}
+		
+		.ui-select-value, .ui-select-value-current {
+		    text-indent:10px;
+		    cursor:default;
+		    position:absolute;
+		    font-weight:normal;
+		    display:block;
+		    white-space:nowrap;
+		    overflow:hidden;
+		}
+		
+		.ui-select-value {
+		    background:#fff url("https://i.alipayobjects.com/e/201305/N1ZqmqLeH.png") no-repeat right 1px;
+		}
+		
+		.ui-select-iframe {
+		    border:none;
+		    position:absolute;
+		    left:-1px;
+		    top:29px;
+		    display:none;
+		}
+		
+		.ui-select-cnt {
+		    z-index:1;
+		    top:29px;
+		    left:-1px;
+		    margin:0;
+		    display:none;
+		    position:absolute;
+		    background-color:#fff;
+		    border:1px solid #ccc;
+		    padding:1px 0 0;
+		    *padding-bottom:1px;
+		    _padding-bottom:0;
+		    border-top:0;
+		    overflow:hidden;
+		}
+		
+		.ui-select-cnt li, .ui-select-item {
+		    float:left;
+		    background-color:#fff;
+		    cursor:default;
+		    margin:0 1px 1px;
+		    display:inline;
+		    line-height:29px;
+		    overflow:hidden;
+		    padding-left:10px;
+		    white-space:nowrap;
+		}
+		
+		.ui-select-cnt .ui-select-item-spliter {
+		    color: #4D4D4D;
+		    background-color: #f2f2f2;
+		}
+		.ui-select-cnt .ui-select-item-current {
+		    color: #fff;
+		    background-color:#3399fe;
+		}
+		
+		.operation-menu-trigger {
+		    display: inline-block;
+		    zoom: 1;
+		}
+		
+		.operation-menu-trigger .current-item {
+		    color: #0188cc;
+		    padding: 2px 7px;
+		    font-size: 12px;
+		    cursor: pointer;
+		    display: inline-block;
+		    zoom: 1;
+		    line-height: 17px;
+		    height: 17px;
+		}
+		
+		.operation-menu-trigger .icon-pull-down {
+		    display: inline-block;
+		    zoom: 1;
+		    width: 12px;
+		    background: url("https://i.alipayobjects.com/e/201212/1ucjDOnsb7.png") no-repeat scroll 5px -210px transparent;
+		}
+		
+		.mi-paging .ui-select {
+		    float: left;
+		}
+		
+		.error-box {
+		    width: 100%;
+		    padding: 30px 0;
+		}
+		
+		.error-box h3 {
+		    font-size: 14px;
+		    font-weight: bold;
+		    color: #999;
+		    text-align: center;
+		}
+		
+		.error-box h3 i {
+		    line-height: 40px;
+		    padding: 20px 0 15px;
+		    font-style: normal;
+		    display: inline-block;
+		    vertical-align: top;
+		}
+		
+		.error-box .icon-error {
+		    width: 114px;
+		    height: 75px;
+		    background: url('https://i.alipayobjects.com/e/201305/QGug24c9d.png') no-repeat;
+		    display: inline-block;
+		}
+		/* 批次状态 */
+		.batchStatus {
+			position: relative;
+			padding: 0 0 0 10px;
+		}
+		
+		.batchStatus.fold .batchStatusDetail {
+			display: none;
+		}
+		
+		.batchStatus .bdf1, .batchStatus .bdf2 {
+			display: block;
+		}
+		
+		.batchStatus.unfold .batchStatusDetail {
+			position: absolute;
+			top: -11px;
+			left: -29px;
+			z-index: 2;
+			border: 1px solid #ccc;
+			-moz-box-shadow: -2px -2px 2px #eee;
+			-webkit-box-shadow: -2px -2px 2px #eee;
+			box-shadow: -2px -2px 2px #eee;
+			filter:progid:DXImageTransform.Microsoft.Shadow(color='#EEEEEE', Direction=-35,Strength=2);
+			background-color: #fff;
+			width: 160px;
+			padding: 10px 10px 20px 38px;
+		}
+		
+		.batchStatus.unfold .batchStatusDetail .statusDetail {
+			padding: 14px 0 0 0;
+		}
+		
+		.batchStatus.unfold .batchStatusDetail .statusDetail p {
+			white-space: normal;
+			word-break: break-all;
+		}
+		
+		.batchStatus.unfold .batchStatusDetail .statusDetail span {
+			display: inline-block;
+			width: 70px;
+		}
+		
+		.fold .indicator, .unfold .indicator {
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			overflow: hidden;
+			top: 3px;
+			left: -17px;
+			cursor: pointer;
+			background-image: url("https://i.alipayobjects.com/i/ecmng/png/201403/2I8Ovdj88T.png");
+			background-repeat: no-repeat;
+		}
+		
+		.fold .indicator {
+			background-position: 0 -14px;
+		}
+		
+		.unfold .indicator {
+			z-index: 3;
+			background-position: 0 0;
+		}
+		
+		html .sl-deleter {
+			top: 1px;
+			right: 5px;
+		}
+	</style>
+	<script charset="utf-8" type="text/javascript" src="../lib/sea.js"></script>
+	<script charset="utf-8" type="text/javascript" src="../static/js/global/1.0.0/common.js"></script>
+</head>
+
+<body>
+
+<div id="J_header" class="mi-header"></div>
+<div id="J_nav" class="mi-nav"></div>
+<div id="container" class="ui-container">
+	<div class="content">
+		<div id="J_container" class="container fn-clear">
+			<div id="J_shadowLeft" class="shadow-left">
+				<div class="shadow-top"></div>
+				<div class="shadow-bottom"></div>
+			</div>
+			<div id="J_shadowRight" class="shadow-right">
+				<div class="shadow-top"></div>
+				<div class="shadow-bottom"></div>
+			</div>
+			<div class="accountZone">
+				
+				
+			</div>
+			<!-- search -->
+			<div class="search search-mini fn-clear">
+				<form class="mi-form" id="searchForm">
+					<div class="search-box combine-search">
+						<div class="conditionZone">
+							<div class="fn-clear">
+	        					<div class="mi-form-item" id="applyDate">
+	        						<div class="fn-clear">
+		        						<div class="segment-input fn-left">
+		        							<span class="mi-form-text">申请时间</span><input type="text" class="mi-input mi-input-datepicker" value="" name="createTimeStart" readonly="readonly" />
+		                                    <span>-</span><input type="text" class="mi-input mi-input-datepicker fn-mr10" value="" name="createTimeEnd" readonly="readonly" />
+		        						</div>
+		                                <div class="fn-left">
+		                					<a class="mi-form-link block-link block-link-active" href="javascript:;" data-picker="today">今 日</a><a class="mi-form-link block-link" href="javascript:;" data-picker="yesterday">昨 日</a><a class="mi-form-link block-link" href="javascript:;" data-picker="week">最近7天</a><a class="mi-form-link block-link" href="javascript:;" data-picker="month">最近30天</a>
+		                                </div>
+	                                </div>
+	                				<div class="mi-form-explain"></div>
+	                            </div>
+	    					</div>
+							<div class="fn-clear">
+								<div class="mi-form-item fn-mr20 fn-left" id="batchNo">
+									<label class="mi-label">&nbsp;</label>
+									<div class="segment-input">
+										<span class="mi-form-text">批次号</span><span>
+											<input type="text" class="mi-input mi-input-batchId" autocomplete="off" name="batchNo" maxlength="50" />
+										</span>
+									</div>
+									<div class="mi-form-explain" style="margin-left:83px;"></div>
+								</div>
+								<div class="mi-form-item fn-mr20 fn-left" id="batchStatus">
+									<label class="mi-label">&nbsp;</label>
+									<div class="segment-input">
+										<span class="mi-form-text">状态</span>
+										<select name="batchStatus">
+											<option value="ALL">全部</option>
+											<option value="INIT">校验中</option>
+											<option value="WAIT_APPROVAL">审批中</option>
+											<option value="WAIT_EXECUTE">审批通过</option>
+											<option value="DEALING">处理中</option>
+											<option value="FINISH">处理完成</option>
+											<option value="FAIL">处理失败</option>
+										</select>
+									</div>
+									<div class="mi-form-explain"></div>
+								</div>
+								<span class="mi-button mi-button-mblue search-btn fn-left">
+									<input type="submit" class="mi-button-text" value="搜索" />
+									<span class="mi-button-icon mi-button-icon-search"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- sys error -->
+			<div class="sys-error-box fn-hide">
+				<div class="mi-notice mi-notice-wait">
+			   		<div class="mi-notice-cnt">
+				        <div class="mi-notice-title">
+				            <i class="iconfont" title="出错">&#xF04B;</i>
+				            <h3>由于网络系统的原因，您暂时无法使用当前服务，请稍后再试。</h3>
+				        </div>
+			    	</div>
+				</div>
+			</div>
+			<!-- no result -->
+			<div class="error-box fn-hide">
+		        <h3><span class="icon-error"></span><i>暂无此类记录，请更换条件，重新搜索。</i></h3>
+		    </div>
+			<!-- search -->
+			<div class="child-container">
+				<div class="detail-data">
+					<div class="mi-table detail-table mi-table-concise fn-hide" id="detailTable">
+						<table>
+							<thead>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div class="mi-paging detail-pagination fn-hide" id="paginator">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div class="fn-hide">
+	<div id="J_loadingContent" class="loading-xbox">
+	    <div class="progress-container">
+	        <div class="mi-progress mi-progress-loading">
+	            <div class="mi-progress-track"></div>
+	            <div class="mi-progress-bar" style="width: 104px; left: 0px;"></div>
+	        </div>
+	    </div>
+	    <h4>数据正在加载</h4>
+	    <p>请耐心等待...</p>
+		<a href="javascript:;" class="mi-button btn-cancel mi-button-mwhite fn-mt10 fn-hide">
+			<span class="mi-button-text">取 消</span>
+		</a>
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+	seajs.use(['assets/js/searchingScene/1.0.0/searchingScene'], function(searchingScene) {
+		//console.log(searchingScene);
+		
+	});
+</script>
+
+</html>

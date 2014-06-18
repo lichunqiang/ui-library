@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ItemList</title>
+    <link type="text/css" media="screen" charset="utf-8" rel="stylesheet" href="../assets/css/common/base/1.0.0/base.css" />
+    <style type="text/css">
+        #itemListUl li{
+            width:400px;
+            height:100px;
+            margin: 10px;
+            padding: 15px;
+            border: 2px dashed #f4a460;
+        }
+        #itemListUl{}
+        .item-edit, .item-del{
+            float: right;
+            margin: 5px;
+        }
+        #itemListUl li.on-editing{
+            border: 3px solid #fea460;
+            box-shadow: 2px 2px 2px #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div id="itemList" data-itemlist="item:item edit:item-edit del:item-del add:J_addItem">
+    <ul id="itemListUl">
+        <li class="item on-editing">
+            <a href="javascript:;" class="ui-button ui-button-sorange item-del">
+                <span class="ui-button-text">Del</span>
+            </a>
+            <a href="javascript:;" class="ui-button ui-button-sblue item-edit">
+                <span class="ui-button-text">edit</span>
+            </a>
+        </li>
+
+        <li class="item">
+            <a href="javascript:;" class="ui-button ui-button-sorange item-del">
+                <span class="ui-button-text">Del</span>
+            </a>
+            <a href="javascript:;" class="ui-button ui-button-sblue item-edit">
+                <span class="ui-button-text">edit</span>
+            </a>
+        </li>
+    </ul>
+    <div style="margin-left: 15px;">
+        <a id="J_addItem" href="javascript:;" class="ui-button ui-button-lorange item-add">
+            <span class="ui-button-text">Add</span>
+        </a>
+    </div>
+</div>
+<script type="text/javascript" src="../lib/sea.js"></script>
+<script charset="utf-8" type="text/javascript" src="../static/js/global/1.0.0/common.js"></script>
+<script type="text/javascript">
+    seajs.use(['assets/js/itemList/0.1.0/itemList'], function(ItemList) {
+
+        console.log(ItemList);
+    
+    });
+</script>
+</body>
+</html>

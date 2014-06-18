@@ -1,0 +1,57 @@
+/**
+ * @name    : ui-resultstepnew
+ * @filename: ui-resultstepnew.css
+ * @overview: 信息提示框进度条
+ * @date    : 2014.06.13
+ * @author  : 蒋立明(wb-jianglm@alipay.com)
+ */
+.ui-resultstepnew-container {
+    margin-left: 15px;
+}
+.ui-resultstepnew-bg,
+.ui-resultstepnew-icon {
+    background-image: url('https://i.alipayobjects.com/i/ecmng/png/201406/2q8gx2lqnd.png');
+}
+.ui-resultstepnew-item {
+    float: left;
+    text-align: left;
+    margin-left: 12px;
+}
+.ui-resultstepnew-item .ui-resultstepnew-bg {
+    background-position: 0 -52px;
+    background-repeat: repeat-x;
+    height: 20px;
+}
+.ui-resultstepnew-bg .ui-resultstepnew-icon {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: -15px;
+    background-position: 0 -174px;
+}
+.ui-resultstepnew-item .ui-resultstepnew-steptext p {
+    text-align: left;
+}
+
+.ui-resultstepnew-current .ui-resultstepnew-icon {
+    background-position: -2px -310px;
+}
+.ui-resultstepnew-finish .ui-resultstepnew-bg {
+    background-position: 0 0;
+}
+.ui-resultstepnew-finish .ui-resultstepnew-icon {
+    background-position: -2px -310px;
+}
+.ui-resultstepnew-item .ui-resultstepnew-steptext {
+    position: relative;
+    color: #666;
+    text-align: center;
+}
+.ui-resultstepnew-current .ui-resultstepnew-steptext {
+    color: #666;
+    font-weight: bold;
+}
+.ui-resultstepnew-last .ui-resultstepnew-bg {
+    background: none;
+}
+

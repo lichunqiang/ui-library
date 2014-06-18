@@ -1,0 +1,426 @@
+/**
+ * @name: mi-paging
+ * @author: 蒋立明(wb-jianglm@alipay.com)
+ * @description: 分页组件
+ * @require: null
+ * @example 
+ */
+/** mi-paging base */
+.mi-paging {
+    height: 32px;
+}
+.mi-paging,
+.mi-paging input {
+    color: #808080;
+}
+.mi-paging .mi-paging-item,
+.mi-paging a.mi-paging-item,
+.mi-paging a.mi-paging-item:hover {
+    color: #808080;
+    margin: 0 2px 0 0;
+}
+.mi-paging a,
+.mi-paging a:hover {
+    text-decoration: none;
+}
+.mi-paging-item,
+.mi-paging-item .paging-text,
+.mi-paging-hover a.mi-paging-hover,
+.mi-paging-hover .paging-text,
+a.mi-paging-hover .paging-text,
+.mi-paging-item-down,
+a.mi-paging-item-down,
+.mi-paging-item-down .paging-text,
+a.mi-paging-item-down .paging-text a.mi-paging-item-down:hover .paging-text,
+a.mi-paging-item,
+a.mi-paging-item .paging-text,
+.mi-paging-ellipsis {
+    float: left;
+    background: transparent url("https://i.alipayobjects.com/e/201305/PqTHSrAFJ.png") no-repeat 0 0;
+}
+
+/* * default */
+.mi-page-item,
+.mi-paging-item,
+.mi-page-item,
+a.mi-paging-item {
+    font-weight: 700;
+    text-decoration: none;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 0 0 10px;
+    background-position: 0 0;
+    position: relative;
+}
+.mi-page-item .mi-paging-icon,
+a.mi-paging-item .mi-paging-icon {
+    cursor: pointer;
+}
+.mi-page-item .paging-text,
+a.mi-paging-item .paging-text {
+    padding: 0 10px 0 0;
+    background-position: right 0;
+    cursor: pointer;
+}
+
+/* * hover */
+.mi-paging-item-hover,
+a.mi-paging-item:hover,
+.mi-paging-first-hover,
+.mi-paging-prev-hover,
+.mi-paging-next-hover,
+.mi-paging-last-hover {
+    background-position: 0 -32px;
+}
+.mi-paging-first-hover .paging-text,
+.mi-paging-prev-hover .paging-text,
+.mi-paging-next-hover .paging-text,
+.mi-paging-last-hover .paging-text,
+.mi-paging-item-hover .paging-text,
+a.mi-paging-item:hover .paging-text {
+    background-position: right -32px;
+}
+
+/* * down */
+.mi-paging-item-down,
+a.mi-paging-item-down,
+a.mi-paging-item-down:hover,
+.mi-paging-prev-down,
+a.mi-paging-prev-down,
+a.mi-paging-prev-down:hover,
+.mi-paging-next-down,
+a.mi-paging-next-down,
+a.mi-paging-next-down:hover,
+.mi-paging-first-down,
+a.mi-paging-first-down,
+a.mi-paging-first-down:hover,
+.mi-paging-last-down,
+a.mi-paging-last-down,
+a.mi-paging-last-down:hover,
+.mi-paging-goto-down,
+a.mi-paging-goto-down,
+a.mi-paging-goto-down:hover {
+    background-position: 0 -64px;
+}
+.mi-paging-item-down .paging-text,
+a.mi-paging-item-down .paging-text,
+a.mi-paging-item-down:hover .paging-text,
+.mi-paging-prev-down .paging-text,
+a.mi-paging-prev-down .paging-text,
+a.mi-paging-prev-down:hover .paging-text,
+.mi-paging-next-down .paging-text,
+a.mi-paging-next-down .paging-text,
+a.mi-paging-next-down:hover .paging-text,
+.mi-paging-first-down .paging-text,
+a.mi-paging-first-down .paging-text,
+a.mi-paging-first-down:hover .paging-text,
+.mi-paging-last-down .paging-text,
+a.mi-paging-last-down .paging-text,
+a.mi-paging-last-down:hover .paging-text,
+.mi-paging-goto-down .paging-text,
+a.mi-paging-goto-down .paging-text,
+a.mi-paging-goto-down:hover .paging-text {
+    background-position: right -64px;
+}
+
+/* * current */
+.mi-paging-current,
+a.mi-paging-current,
+a.mi-paging-current:hover {
+    background-position: 0 -96px;
+}
+.mi-paging-current span,
+a.mi-paging-current .paging-text,
+a.mi-paging-current:hover .paging-text {
+    background-position: right -96px;
+}
+
+/* * first page,
+previous page next page last page */
+.mi-paging-first .paging-text,
+a.mi-paging-first .paging-text,
+.mi-paging-prev .paging-text,
+a.mi-paging-prev .paging-text,
+.mi-paging-next .paging-text,
+a.mi-paging-next .paging-text,
+.mi-paging-last .paging-text,
+a.mi-paging-last .paging-text {
+    width: 28px;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -999px;
+}
+
+/* * paging-item icon */
+.mi-paging .mi-paging-icon {
+    background: url("https://i.alipayobjects.com/e/201305/QA8ASXpTZ.png") no-repeat;
+}
+.mi-paging-first .mi-paging-icon,
+.mi-paging-prev .mi-paging-icon,
+.mi-paging-next .mi-paging-icon,
+.mi-paging-last .mi-paging-icon {
+    background-position: 0 0;
+    width: 6px;
+    height: 11px;
+    position: absolute;
+}
+.mi-paging-first .mi-paging-icon {
+    width: 13px;
+    background-position: -217px -1px;
+    top: 11px;
+    left: 12px;
+}
+.mi-paging-last .mi-paging-icon {
+    width: 13px;
+    background-position: -245px -1px;
+    top: 11px;
+    right: 12px;
+}
+.mi-paging-prev .mi-paging-icon {
+    background-position: -7px 0;
+    top: 11px;
+    left: 14px;
+}
+.mi-paging-next .mi-paging-icon {
+    background-position: -28px 0;
+    top: 11px;
+    right: 15px;
+}
+
+/* * paging-disabled */
+.mi-paging-item-disabled,
+a.mi-paging-item-disabled,
+a.mi-paging-item-disabled:hover,
+.mi-paging-first-disabled,
+a.mi-paging-first-disabled,
+a.mi-paging-first-disabled:hover,
+.mi-paging-last-disabled,
+a.mi-paging-last-disabled,
+a.mi-paging-last-disabled:hover,
+.mi-paging-prev-disabled,
+a.mi-paging-prev-disabled,
+a.mi-paging-prev-disabled:hover,
+.mi-paging-next-disabled,
+a.mi-paging-next-disabled,
+a.mi-paging-next-disabled:hover {
+    cursor: default;
+    background-position: 0 -96px;
+}
+.mi-paging-first-disabled .paging-text,
+a.mi-paging-first-disabled .paging-text,
+a.mi-paging-first-disabled:hover .paging-text,
+.mi-paging-first-disabled-hover .paging-text,
+.mi-paging-prev-disabled .paging-text,
+a.mi-paging-prev-disabled .paging-text,
+a.mi-paging-prev-disabled:hover .paging-text,
+.mi-paging-prev-disabled-hover .paging-text,
+.mi-paging-next-disabled .paging-text,
+a.mi-paging-next-disabled .paging-text,
+a.mi-paging-next-disabled:hover .paging-text,
+.mi-paging-next-disabled-hover .paging-text {
+    cursor: default;
+    background-position: right -96px;
+}
+
+/* * paging-disabled icon */
+.mi-paging-first-disabled .mi-paging-icon,
+a.mi-paging-first-disabled .mi-paging-icon,
+a.mi-paging-first-disabled:hover .mi-paging-icon,
+.mi-paging-first-disabled-hover .mi-paging-icon {
+    background-position: -231px -1px;
+}
+.mi-paging-prev-disabled .mi-paging-icon,
+a.mi-paging-prev-disabled .mi-paging-icon,
+a.mi-paging-prev-disabled:hover .mi-paging-icon,
+.mi-paging-prev-disabled-hover .mi-paging-icon {
+    background-position: -14px 0;
+}
+.mi-paging-next-disabled .mi-paging-icon,
+a.mi-paging-next-disabled .mi-paging-icon,
+a.mi-paging-next-disabled:hover .mi-paging-icon,
+.mi-paging-next-disabled-hover .mi-paging-icon {
+    background-position: -35px 0;
+}
+
+/* * paging-info */
+.mi-paging-info {
+    height: 32px;
+    line-height: 32px;
+    line-height: 34px\9;
+    *line-height: 34px;
+    _line-height: 32px;
+    float: left;
+    display: inline;
+    margin: 0 6px 0 5px;
+    overflow: hidden;
+    color: #A6A6A6;
+}
+.mi-paging-ellipsis {
+    width: 35px;
+    height: 32px;
+    text-indent: -10em;
+    overflow: hidden;
+    margin: 0 2px 0 0;
+    background-position: 0 -160px;
+}
+.mi-paging-goto .paging-text {
+    font-weight: normal;
+}
+.mi-paging-which {
+    padding: 0 0 0 5px;
+}
+.mi-paging-which input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    *margin-top: -1px;
+    padding: 0 6px;
+    width: 20px;
+    font-weight: 700;
+    border: 1px solid #CCC;
+    overflow: hidden;
+}
+.mi-paging-bold {
+    font-weight: 700;
+}
+
+/* * paging-text */
+.mi-paging-text .mi-paging-info {
+    line-height: 25px;
+    height: 25px;
+}
+.mi-paging-text .mi-paging-info-current {
+    color: #4D4D4D;
+}
+
+/* * reset */
+.mi-paging-text a.mi-paging-item,
+.mi-paging-text .mi-paging-item {
+    font-weight: normal;
+}
+.mi-paging-text a.mi-paging-first,
+.mi-paging-text a.mi-paging-first:hover,
+.mi-paging-text .mi-paging-first,
+.mi-paging-text a.mi-paging-prev,
+.mi-paging-text a.mi-paging-prev:hover,
+.mi-paging-text .mi-paging-prev,
+.mi-paging-text a.mi-paging-next,
+.mi-paging-text a.mi-paging-next:hover,
+.mi-paging-text .mi-paging-next,
+.mi-paging-text a.mi-paging-last,
+.mi-paging-text a.mi-paging-last:hover,
+.mi-paging-text .mi-paging-last {
+    background: none;
+    color: #39F;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.mi-paging-text a.mi-paging-first,
+.mi-paging-text a.mi-paging-first:hover,
+.mi-paging-text .mi-paging-first,
+.mi-paging-text a.mi-paging-prev,
+.mi-paging-text a.mi-paging-prev:hover,
+.mi-paging-text .mi-paging-prev,
+.mi-paging-text {
+    padding: 0 5px 0 20px;
+}
+.mi-paging-text a.mi-paging-next,
+.mi-paging-text a.mi-paging-next:hover,
+.mi-paging-text .mi-paging-next,
+.mi-paging-text,
+.mi-paging-text a.mi-paging-last,
+.mi-paging-text a.mi-paging-last:hover,
+.mi-paging-text .mi-paging-last,
+.mi-paging-text {
+    padding: 0 20px 0 5px;
+}
+
+/* * text */
+.mi-paging-text a.mi-paging-first .paging-text,
+.mi-paging-text a.mi-paging-first:hover .paging-text,
+.mi-paging-text .mi-paging-first .paging-text,
+.mi-paging-text a.mi-paging-prev .paging-text,
+.mi-paging-text a.mi-paging-prev:hover .paging-text,
+.mi-paging-text .mi-paging-prev .paging-text,
+.mi-paging-text a.mi-paging-next .paging-text,
+.mi-paging-text a.mi-paging-next:hover .paging-text,
+.mi-paging-text .mi-paging-next .paging-text,
+.mi-paging-text a.mi-paging-last .paging-text,
+.mi-paging-text a.mi-paging-last:hover .paging-text,
+.mi-paging-text a.mi-paging-last .paging-text {
+    text-indent: 0;
+    width: auto;
+    background: none;
+}
+
+/* * icon */
+.mi-paging-text .mi-paging-icon {
+    width: 15px;
+    height: 15px;
+    background: url("https://i.alipayobjects.com/e/201305/PqTHSm5D3.png") no-repeat;
+}
+.mi-paging-text a.mi-paging-first .mi-paging-icon,
+.mi-paging-text a.mi-paging-first:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-first .mi-paging-icon,
+.mi-paging-text a.mi-paging-prev .mi-paging-icon,
+.mi-paging-text a.mi-paging-prev:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-prev .mi-paging-icon {
+    top: 6px;
+    left: 2px;
+}
+.mi-paging-text a.mi-paging-next .mi-paging-icon,
+.mi-paging-text a.mi-paging-next:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-next .mi-paging-icon,
+.mi-paging-text a.mi-paging-last .mi-paging-icon,
+.mi-paging-text a.mi-paging-last:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-last .mi-paging-icon {
+    top: 6px;
+    right: 2px;
+}
+.mi-paging-text a.mi-paging-first .mi-paging-icon,
+.mi-paging-text a.mi-paging-first:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-first .mi-paging-icon {
+    background-position: 0 3px;
+}
+.mi-paging-text a.mi-paging-prev .mi-paging-icon,
+.mi-paging-text a.mi-paging-prev:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-prev .mi-paging-icon {
+    background-position: 9px -54px;
+}
+.mi-paging-text a.mi-paging-next .mi-paging-icon,
+.mi-paging-text a.mi-paging-next:hover .mi-paging-icon,
+.mi-paging-text .mi-paging-next .mi-paging-icon {
+    background-position: -8px -35px;
+}
+.mi-paging-text a.mi-paging-last .mi-paging-icon,
+.mi-paging-text a.mi-paging-last:hover .mi-paging-icon,
+.mi-paging-text a.mi-paging-last .mi-paging-icon {
+    background-position: 0 -16px;
+}
+
+/* * @state disabled */
+.mi-paging-text .mi-paging-prev-disabled .paging-text,
+.mi-paging-text a.mi-paging-prev-disabled .paging-text,
+.mi-paging-text a.mi-paging-prev-disabled:hover .paging-text,
+.mi-paging-text .mi-paging-next-disabled .paging-text,
+.mi-paging-text a.mi-paging-next-disabled .paging-text,
+.mi-paging-text a.mi-paging-next-disabled:hover .paging-text {
+    text-decoration: none;
+    cursor: default;
+    color: #A6A6A6;
+}
+
+/* * disabled icon */
+.mi-paging-text .mi-paging-prev-disabled .mi-paging-icon,
+.mi-paging-text a.mi-paging-prev-disabled .mi-paging-icon,
+.mi-paging-text a.mi-paging-prev-disabled:hover .mi-paging-icon {
+    background-position: 9px -610px;
+}
+.mi-paging-text .mi-paging-next-disabled .mi-paging-icon,
+.mi-paging-text a.mi-paging-next-disabled .mi-paging-icon,
+.mi-paging-text a.mi-paging-next-disabled:hover .mi-paging-icon {
+    background-position: -8px -591px;
+}
