@@ -81,14 +81,15 @@ Gruntfile.js 部署脚本
 
 package.js 项目配置
 
-关于 Cellula
+## 关于 Cellula ##
 
 --
 
-关于 FDP
+
+## 关于 FDP ##
 
 --
-## 简介 ##
+
 FDP(1.0.0)是一套非常轻量的富客户查询模型，同时它也支持Single Form应用场景，内部是基于cellula v0.4.1构建，依赖了jQuery 1.7.2。
 
 具体源码可以参考 `lib/fdp`
@@ -98,8 +99,6 @@ FDP(1.0.0)是一套非常轻量的富客户查询模型，同时它也支持Sing
 tips:
 
 - single Form只使用 form+formItem组合，searchingScene使用form+formItem+table+paginator组合
-
---
 
 **FormItem**
 
@@ -209,8 +208,6 @@ tips:
             }).inherits(SearchingScene.FormItem);
 
 
-
---
 
 tips:
 
