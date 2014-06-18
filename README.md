@@ -85,6 +85,8 @@ package.js 项目配置
 
 --
 
+is building...
+
 
 ## 关于 FDP ##
 
