@@ -37,73 +37,51 @@ Q&A
 答：很简单，比如需要安装`dialog`组件，进入项目根目录中执行`spm install arale.dialog`就会自动下载组件以及其依赖到`sea-modules'下面，具体可以访问`arale.org`
 注意：以上操作仅限于在内网中使用，然后你在项目中这么引用 `require('arale/dialog/1.2.6/dialog.js')`
 
-目录结构
+**目录结构**
 
-
-/-- `example` 示例
-
-
-/-- `assets` 静态文件资源库（存放编译打包后的js&css）
-
-
-	/-- js
-	
+		|-- `example` 示例
 		
-		/-- common 公共模块
+		|-- `assets` 静态文件资源库（存放编译打包后的js&css）
 		
+						|-- js
 
-			/-- cellula
-			
+								|-- common 公共模块
+
+											|-- cellula
+							
+											|-- fdp `Form` `dataView` `paginator`
+						
+											|-- select
+
+								|-- itemList 一个使用`cellula`做的小玩意儿
 				
-			/-- fdp `Form` `dataView` `paginator`
-			
+								|-- singleForm 单表单模型
+							
+								|-- searchingScene 异步查询场景模型
 
-			/-- select
+			|-- css
+		
+					|-- common	
+		
+								|-- base		
+		
+								|-- enterpriseportal
+						
+								|-- ...
+		
+			|-- `lib` 公共js库		
+		
+			|-- `sea-modules` sea模块
+				 			
+			 				|-- .. arale组件等			 
+		
+			|-- `static` 静态资源
 			
-		
-		/-- itemList 一个使用`cellula`做的小玩意儿
-		
-		
-		/-- singleForm 单表单模型
-		
-		
-		/-- searchingScene 异步查询场景模型
-		
-
-	/-- css
+			|-- `test` 单元测试
 	
-
-		/-- common
-		
-
-			/-- base
-			
-
-			/-- enterpriseportal
-			
-			
-			/-- ...
-
-
-/-- `lib` 公共js库
-
-
-/-- `sea-modules` sea模块
-
- 			
-	 /-- .. arale组件等
-	 
-
-/-- `static` 静态资源
-
-
-/-- `test` 单元测试
-
-
-Gruntfile.js 部署脚本
-
-
-package.js 项目配置
+			|-- Gruntfile.js 部署脚本
+	
+			|-- package.js 项目配置
 
 
 ## 关于 Cellula ##
