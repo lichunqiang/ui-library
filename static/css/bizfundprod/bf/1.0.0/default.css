@@ -1,0 +1,166 @@
+html {
+    overflow-y: scroll;
+    overflow:-moz-scrollbars-vertical;
+}
+
+html body .mi-input-placeholder{color: #A6A6A6;font-weight:normal;}
+html body ::-webkit-input-placeholder{color: #A6A6A6;font-weight:normal;}
+html body :-moz-placeholder{color: #A6A6A6;font-weight:normal;}
+
+html body .fn-mt30 {
+    margin-top: 30px;
+}
+
+.mi-form .mi-line {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mi-label {
+    width: 150px;
+    padding-right: 20px;
+}
+
+.mi-form-item-submit {
+    padding-top: 5px;
+}
+
+.summary .mi-label,
+.withdraw-form .mi-label,
+.confirm-form .mi-label,
+.payment-form .mi-label,
+.apply-detail .mi-label {
+    color: #808080;
+}
+
+.summary {
+    padding: 23px 10px 10px 0;
+    background: #f2f2ee;
+    border-bottom: 1px solid #e2e2e1;
+}
+
+.summary-multiple {
+    padding-bottom: 0;
+}
+
+.summary .tools {
+    float: right;
+    padding: 2px 10px 0 0;
+    font-size: 14px;
+}
+
+.summary .account-desc {
+    padding-top: 3px;
+}
+
+.acquiring-account {
+    display: block;
+}
+
+/** 转账与提现确认表单 */
+.confirm-form {
+    padding: 5px 20px 60px;
+}
+
+.confirm-title {
+    overflow: visible;
+    height: 20px;
+    border-bottom: 2px solid #ddd;
+}
+.confirm-title h3 {
+    position: relative;
+    bottom: -10px;
+    margin-left: -2px;
+    background-color: #fff;
+    padding: 0 21px 0 0;
+}
+
+/** 提现或转账金额较大 */
+.large-amount {
+    padding: 0;
+}
+
+/** 元在input输入框内 */
+.amount-container {
+    position: relative;
+    vertical-align: top;
+    width: 226px;
+}
+
+.amount-container-unit {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    text-align:center;
+    color: #4D4D4D;
+    display: block;
+    width: 30px;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.amount-container .mi-input {
+    padding-right: 30px;
+    width: 190px;
+}
+
+.amount-container .mi-form-explain {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.pay-password-item {
+    margin: 15px 0 0;
+    border-top: 3px solid #a7cbff;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    background-color: #d8e4ff;
+    padding-left: 0;
+}
+
+.pay-password-item .ui-securitycore .ui-label {
+    width: 150px;
+    padding-right: 20px;
+    font-family: tahoma,arial,Hiragino Sans GB,\5b8b\4f53;
+    padding-top: 0;
+    color: #808080;
+}
+
+/** 转账联系 */
+.contacts-box {
+    position: absolute;
+    left: 405px;
+    top: 190px;
+    zoom: 1;
+    z-index: 2;
+}
+
+.com-mycontacts-group {
+    padding-left: 15px;
+}
+.com-contacts-explain {
+    margin: 5px 0 0;
+}
+
+.ui-footer .ui-footer-copyright .server {
+    color: #F5F5F5;
+}
+
+.ui-footer .ui-footer-link a, .ui-footer .ui-footer .ui-separator {
+    color: #808080;
+}
+
+/** 余额宝转入cms入口 */
+.fund-purechase-container {
+    position: absolute;
+    top: 126px;
+    right: 30px;
+    width: 228px;
+    height: 144px;
+}
+
+.fund-purechase-container img {
+    vertical-align: top;
+}

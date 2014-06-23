@@ -1,0 +1,440 @@
+.mi-header {
+    position: relative;
+    z-index: 99;
+    height: 30px;
+    background-color: #3a3a3a;
+    border-bottom: none;
+}
+.mi-header a,
+.mi-header a:visited,
+.mi-header a:hover {
+    text-decoration: none;
+}
+.mi-header-placeholder {
+    margin-bottom: 180px;
+}
+.mi-header-cnt {
+    width: 990px;
+    margin: 0 auto;
+    position: relative;
+}
+.mi-header .welcome {
+    float: left;
+    color: #afafaf;
+    padding: 5px 0 0;
+}
+.mi-header .back-to-old,
+.mi-header .back-to-old:visited {
+    color: #afafaf;
+    padding: 1px 3px 2px 18px;
+    background: url("https://i.alipayobjects.com/e/201307/jzAYosQbd.png") no-repeat 0 -339px;
+}
+.mi-header .back-to-old:hover {
+    color: #fff;
+    background-position: 0 -387px;
+}
+
+/* * 标题 */
+.mi-header .title {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+    margin: 3px 0 0 10px;
+    font-weight: 700;
+    font-size: 16px;
+    border-left: 1px solid #a3bae8;
+    padding: 2px 10px 0px 9px;
+}
+
+/* * 头部导航 */
+.mi-header .navigation {
+    float: right;
+    font-size: 14px;
+    padding: 0 13px 0 0;
+    background: url("https://i.alipayobjects.com/e/201307/jzAYosQbd.png") no-repeat right -285px;
+}
+
+/* * 导航项 */
+.navigation .item {
+    float: left;
+    margin: 0;
+}
+
+/* * 导航链接 */
+.navigation .link,
+.navigation .link:visited,
+.navigation .link:hover {
+    float: left;
+    color: #D6D6D6;
+    padding: 5px 10px 4px 11px;
+}
+.navigation .current a,
+.navigation .current a:visited,
+.navigation .current a:hover,
+.navigation .link:hover {
+    color: #fff;
+}
+
+/* * 账户 */
+.mi-header .accounts {
+    float: right;
+    font-size: 12px;
+    padding: 0 3px 0 11px;
+}
+.accounts .item {
+    float: left;
+    height: 30px;
+}
+.accounts .info,
+.accounts .logout,
+.accounts .config,
+.accounts .message,
+.accounts .login,
+.accounts .register,
+.accounts .more,
+.help {
+    float: left;
+    position: relative;
+    margin-right: -4px;
+    display: inline;
+    margin-top: 1px;
+}
+.accounts .hover {
+    z-index: 2;
+}
+.accounts .link,
+.accounts .link:visited,
+.accounts .link:hover,
+.accounts .label {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    color: #b0b0b0;
+    line-height: 16px;
+    height: 18px;
+    overflow: hidden;
+    padding: 6px 10px 5px 10px;
+}
+.accounts .drop-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 29px;
+    z-index: 1;
+    border: 1px solid #DDD;
+    border-top: none;
+    margin: 0;
+    padding: 11px 9px 14px 10px;
+    background-color: #fff;
+}
+.accounts .drop-list a:hover {
+    text-decoration: underline;
+}
+.accounts .hover .link {
+    color: #676767;
+    background-color: #FFF;
+    border-color: #676767;
+}
+.accounts .drop-list {
+    -webkit-box-shadow: 0 0 4px rgba(32, 32, 32, .22);
+    -moz-box-shadow: 0 0 4px rgba(32, 32, 32, .22);
+    box-shadow: 0 0 4px rgba(32, 32, 32, .22);
+}
+.accounts .hover .drop-list {
+    display: block;
+}
+
+/* * background */
+.info,
+.info .link,
+.logout,
+.logout .link,
+.config,
+.config .link,
+.message,
+.message .link,
+.login,
+.login .link,
+.register,
+.register .link,
+.more .link,
+.msg-list li,
+.msg-list .close {
+    background: url("https://i.alipayobjects.com/e/201307/jzAYosQbd.png") no-repeat -20px 0;
+}
+.help {
+    background: url("https://i.alipayobjects.com/e/201311/1ZQFK6PKY1.png") no-repeat 0 0;
+}
+.help .link {
+    width: 14px;
+    background-position: 0 0;
+}
+.info .link,
+.info .link:visited {
+    padding-right: 14px;
+    background-position: right -204px;
+}
+.accounts .hover .account-link {
+    padding-right: 14px;
+    background-color: #fff;
+    background-position: right -245px;
+}
+
+/* * info下拉 */
+.info .drop-list {
+    /* width: 321px;
+    */
+    white-space: nowrap;
+}
+.info .detail {
+    width: auto;
+    padding: 0 69px 7px 0;
+    border-bottom: 1px solid #DDD;
+}
+.info .related-account {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    padding: 21px 0 0;
+}
+.info .receive-account a,
+.info .receive-account a:visited {
+    color: #4D4D4D;
+}
+.info .receive-account a:hover {
+    text-decoration: underline;
+}
+.info .receive-account .current {
+    display: block;
+    padding: 3px 0 0;
+    color: #4C4C4C;
+}
+.info .other {
+    padding: 15px 137px 0 0;
+}
+.info .other .ft-bar {
+    color: #a6a6a6;
+    padding: 0 4px 0 7px;
+}
+.info .balance {
+    padding: 3px 0 6px;
+}
+.info a.balance,
+.info a.balance:visited {
+    display: block;
+    width: 52px;
+    color: #4d4d4d;
+    font-weight: 700;
+    padding: 2px 14px 5px 15px;
+    padding: 4px 14px 3px 15px\9;
+    *padding-top: 4px;
+    border: 1px solid #d9d9d9;
+    background-color: #f4f4f4;
+}
+.info a.balance:hover {
+    text-decoration: none;
+    border-color: #CCC;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+.info a.fn-hide {
+    display: none;
+}
+.info .balance .amount {
+    color: #f60;
+    font-weight: 700;
+    padding: 0 5px 0 5px;
+}
+
+/* * 金额较小 */
+.info .balance-min {
+    padding: 2px 0 4px;
+}
+.info .balance-min .amount {
+    font-size: 14px;
+}
+
+/* * 金额较大 */
+.info .balance-max {
+    padding: 3px 0 6px;
+}
+.info .balance-max .amount {
+    font-size: 10px;
+}
+.info .tools {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    padding-top: 3px;
+}
+.info-amount-shown .related-account,
+.info-amount-shown .tools {
+    /* * 外层padding奇数是 11px, 偶数是 9px */
+    _right: 11px;
+}
+.accounts .hover .logout-link,
+.accounts .hover .login-link,
+.accounts .hover .register-link {
+    background-color: transparent;
+    color: #fff;
+}
+.config .link {
+    width: 15px;
+    background-position: 10px 7px;
+}
+.accounts .hover .config-link {
+    background-color: transparent;
+    background-position: 10px -33px;
+}
+
+/* * info下拉 */
+.message .drop-list {
+    width: 340px;
+    padding: 0;
+}
+.message .link {
+    width: 15px;
+    background-position: 9px -70px;
+}
+.hover .message-link {
+    background-position: 9px -107px;
+}
+.message .count {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    font-size: 100%;
+    left: 20px;
+    top: 1px;
+    color: #fff;
+    background-color: #f60;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 2px 1px 2px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.message .many {
+    line-height: 6px;
+}
+.message .msg-title {
+    padding: 11px 0 3px 15px;
+}
+.msg-title .msg-tip {
+    color: #808080;
+}
+.msg-tip .unread-msg,
+.msg-tip .unread-msg:visited {
+    color: #808080;
+}
+.msg-list {
+    padding-top: 5px;
+}
+.msg-list li {
+    position: relative;
+    display: block;
+    border-top: 1px solid #eee;
+    padding: 11px 47px 13px 16px;
+    width: 278px;
+}
+.msg-list-warn .warn {
+    background-position: 14px -465px;
+}
+.msg-list .hover,
+.msg-list .warn-hover {
+    cursor: default;
+    color: #4d4d4d;
+    background-color: #f4f4f4;
+}
+.msg-list a {
+    color: #4d4d4d;
+}
+.msg-list a:hover {
+    text-decoration: underline;
+}
+.msg-list .hover,
+.msg-list .warn-hover,
+.msg-list .hover a,
+.msg-list .warn-hover a {
+    color: #4d4d4d;
+}
+.msg-list .close,
+.msg-list .close:visited {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    visibility: hidden;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    font-size: 0;
+    margin: -8px 0 0;
+    background-position: 0 -434px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* ie8 */
+    filter: alpha(opacity=50); /* ie5-7 */
+    opacity: 0.5;
+}
+.msg-list .close:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; /* ie8 */
+    filter: alpha(opacity=100); /* ie5-7 */
+    opacity: 1;
+}
+.msg-list .warn-hover .close,
+.msg-list .hover .close {
+    visibility: visible;
+}
+.msg-list-warn li {
+    padding-left: 35px;
+    width: 258px;
+}
+.message .view-all {
+    border-top: 1px solid #eee;
+}
+.message .view-all a,
+.message .view-all a:visited {
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    padding: 10px 0 12px;
+    background-color: #f8f8f8;
+}
+.message .view-all a:hover {
+    background-color: #f4f4f4;
+}
+.more .link {
+    width: 13px;
+    background-position: 9px -138px;
+}
+.hover .more-link {
+    background-position: 9px -170px;
+}
+.more .drop-list {
+    width: 80px;
+    padding: 7px 0;
+}
+.more .links a,
+.more .links a:visited,
+.more .links a:hover {
+    color: #4d4d4d;
+    float: left;
+    width: 49px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: keep-all;
+    padding: 6px 21px 7px 10px;
+}
+.more .links a:hover {
+    color: #4D4D4D;
+    background-color: #f4f4f4;
+    text-decoration: none;
+}
+.more .links li {
+    float: left;
+    width: 80px;
+}

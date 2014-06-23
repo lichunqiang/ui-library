@@ -1,0 +1,1044 @@
+/**
+ * @name: mi-button
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: 各种按钮样式
+ * @require: null
+ * @example:
+ * 外层可以是 a, span 标签
+ * 里层可以是 span, input, button
+ * a > span
+ * <a class="mi-button mi-button-sorange">
+ *    <span class="mi-button-text">确定</span>
+ * </a>
+ *
+ * span > input
+ * <sapn class="mi-button mi-button-sorange">
+ *    <input type="button" class="mi-button-text" value="确定" />
+ * </span>
+ *
+ * span > button
+ * <span class="mi-button mi-button-sorange">
+ *    <button class="mi-button-text">确定</button>
+ * </span>
+ */
+/* * 按钮基类样式 */
+.mi-button {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none !important;
+    text-align: center;
+    *zoom: 1;
+    *display: inline;
+    overflow: visible;
+    vertical-align: middle;
+    position: relative;
+}
+.mi-button-text {
+    cursor: pointer;
+    border: none;
+    float: left;
+}
+.mi-button-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    width: 6px;
+    height: 11px;
+}
+.mi-button input.mi-button-text,
+.mi-button button.mi-button-text {
+    *line-height: normal;
+    overflow: visible;
+    border: none;
+    float: left;
+}
+
+/* * 小按钮 高 26px */
+.mi-button-sblue,
+.mi-button-swhite,
+.mi-button-sorange,
+.mi-button-sgreen,
+.mi-button-sred,
+.mi-button-sblue-hover,
+.mi-button-swhite-hover,
+.mi-button-sorange-hover,
+.mi-button-sgreen-hover,
+.mi-button-sred-hover,
+.mi-button-sblue-down,
+.mi-button-swhite-down,
+.mi-button-sorange-down,
+.mi-button-sgreen-down,
+.mi-button-sred-down,
+/* * 小按钮不可点 */
+.mi-button-sblue-disabled,
+.mi-button-swhite-disabled,
+.mi-button-sorange-disabled,
+.mi-button-sgreen-disabled,
+.mi-button-sred-disabled,
+/* * 普通按钮 高 30px */
+.mi-button-mblue,
+.mi-button-mwhite,
+.mi-button-morange,
+.mi-button-mgreen,
+.mi-button-mred,
+.mi-button-mblue-hover,
+.mi-button-mwhite-hover,
+.mi-button-morange-hover,
+.mi-button-mgreen-hover,
+.mi-button-mred-hover,
+.mi-button-mblue-down,
+.mi-button-mwhite-down,
+.mi-button-morange-down,
+.mi-button-mgreen-down,
+.mi-button-mred-down,
+/* * 普通按钮不可点 */
+.mi-button-mblue-disabled,
+.mi-button-mwhite-disabled,
+.mi-button-morange-disabled,
+.mi-button-mgreen-disabled,
+.mi-button-mred-disabled,
+.mi-button-text {
+    outline: none;
+    padding: 0 0 0 4px;
+    background: url("https://i.alipayobjects.com/e/201308/106l8706g1.png") no-repeat 0 0;
+}
+.mi-button-text {
+    padding: 0 4px 0 0;
+    background-position: right 0;
+}
+.mi-button-icon {
+    background: url("https://i.alipayobjects.com/e/201304/9D8AO1pv5.png") no-repeat 0 0;
+}
+
+/* * 按钮组 */
+.mi-button-group {
+    padding-left: 1px;
+}
+.mi-button-group .mi-button {
+    margin-left: -1px;
+}
+
+/* * 小按钮 height:26px */
+.mi-button-sblue .mi-button-text,
+.mi-button-swhite .mi-button-text,
+.mi-button-sorange .mi-button-text,
+.mi-button-sgreen .mi-button-text,
+.mi-button-sred .mi-button-text {
+    height: 26px;
+    color: #FFF;
+    font: 700 12px/1 \5b8b\4f53, \9ED1\4F53, verdana;
+}
+a.mi-button-sblue .mi-button-text,
+a.mi-button-swhite .mi-button-text,
+a.mi-button-sorange .mi-button-text,
+a.mi-button-sgreen .mi-button-text,
+a.mi-button-sred .mi-button-text {
+    padding: 7px 11px 0 8px;
+    height: 19px;
+}
+
+/* * 对button进行处理 */
+.mi-button-sblue button.mi-button-text,
+.mi-button-swhite button.mi-button-text,
+.mi-button-sorange button.mi-button-text,
+.mi-button-sgreen button.mi-button-text,
+.mi-button-sred button.mi-button-text {
+    padding: 3px 8px 4px 5px;
+    padding: 3px 8px 2px 5px\9;
+    _padding: 4px 8px 1px 5px;
+    height: 26px;
+}
+
+/* * 对input进行处理 */
+.mi-button-sblue input.mi-button-text,
+.mi-button-swhite input.mi-button-text,
+.mi-button-sorange input.mi-button-text,
+.mi-button-sgreen input.mi-button-text,
+.mi-button-sred input.mi-button-text {
+    padding: 0 8px 1px 5px;
+    padding: 2px 8px 1px 5px\9;
+    _padding: 2px 8px 0px 5px;
+}
+
+/* * 白色小按钮 */
+.mi-button-swhite {
+    background-position: 0 -81px;
+}
+.mi-button-swhite .mi-button-text {
+    background-position: right -81px;
+    color: #4D4D4D;
+}
+
+/* * 添加按钮 基于白色小按钮 */
+.mi-button-swhite-add .mi-button-icon {
+    left: 15px;
+    top: 8px;
+    height: 10px;
+    width: 10px;
+    background-position: -108px 0;
+}
+
+/* * 添加按钮与文字间距离 */
+a.mi-button-swhite-add .mi-button-text,
+.mi-button-swhite-add .mi-button-text {
+    padding-right: 16px;
+    padding-left: 29px;
+}
+
+/* * 对button进行处理 */
+.mi-button-swhite-add button.mi-button-text {
+    padding-right: 13px;
+    padding-left: 26px;
+}
+
+/* * 对input进行处理 */
+.mi-button-swhite-add input.mi-button-text {
+    padding-right: 13px;
+    padding-left: 26px;
+}
+
+/* * 显示更多按钮 基于白色小按钮 */
+.mi-button-swhite-more .mi-button-icon,
+.mi-button-swhite-more-disabled .mi-button-icon {
+    right: 30px;
+    top: 10px;
+    height: 4px;
+    width: 7px;
+    background-position: -84px 0;
+}
+
+/* * 显示更多按钮与文字间距离 */
+a.mi-button-swhite-more .mi-button-text,
+a.mi-button-swhite-more-disabled .mi-button-text {
+    padding-right: 41px;
+    padding-left: 27px;
+}
+
+/* * 显示更多按钮自定义字体 */
+.mi-button-swhite-more .mi-button-text,
+.mi-button-swhite-more-disabled .mi-button-text {
+    font-weight: normal;
+    color: #808080;
+}
+
+/* * 显示更多按钮对button进行处理 */
+.mi-button-swhite-more button.mi-button-text,
+.mi-button-swhite-more-disabled button.mi-button-text {
+    padding-right: 41px;
+    padding-left: 27px;
+}
+
+/* * 显示更多按钮对input进行处理 */
+.mi-button-swhite-more input.mi-button-text,
+.mi-button-swhite-more-disabled input.mi-button-text {
+    padding-right: 41px;
+    padding-left: 27px;
+}
+
+/* * 下载按钮 基于白色小按钮 */
+.mi-button-swhite-download .mi-button-icon,
+.mi-button-swhite-download-disabled .mi-button-icon {
+    left: 14px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    background-position: -141px 0;
+}
+
+/* * 下载按钮与文字间距离 */
+a.mi-button-swhite-download .mi-button-text,
+a.mi-button-swhite-download-disabled .mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 下载按钮对button进行处理 */
+.mi-button-swhite-download button.mi-button-text,
+.mi-button-swhite-download-disabled button.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 下载按钮对input进行处理 */
+.mi-button-swhite-download input.mi-button-text,
+.mi-button-swhite-download-disabled input.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 打印按钮 基于白色小按钮 */
+.mi-button-swhite-print .mi-button-icon,
+.mi-button-swhite-print-disabled .mi-button-icon {
+    left: 14px;
+    top: 7px;
+    height: 12px;
+    width: 12px;
+    background-position: -153px 0;
+}
+
+/* * 打印按钮与文字间距离 */
+a.mi-button-swhite-print .mi-button-text,
+a.mi-button-swhite-print-disabled .mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 打印按钮对button进行处理 */
+.mi-button-swhite-print button.mi-button-text,
+.mi-button-swhite-print-disabled button.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 打印按钮对input进行处理 */
+.mi-button-swhite-print input.mi-button-text,
+.mi-button-swhite-print-disabled input.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 配置按钮 基于白色小按钮 */
+.mi-button-swhite-config .mi-button-icon,
+.mi-button-swhite-config-disabled .mi-button-icon {
+    left: 14px;
+    top: 7px;
+    height: 12px;
+    width: 12px;
+    background-position: -166px 0;
+}
+
+/* * 配置按钮与文字间距离 */
+a.mi-button-swhite-config .mi-button-text,
+a.mi-button-swhite-config-disabled .mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 配置按钮对button进行处理 */
+.mi-button-swhite-config button.mi-button-text,
+.mi-button-swhite-config-disabled button.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 配置按钮对input进行处理 */
+.mi-button-swhite-config input.mi-button-text,
+.mi-button-swhite-config-disabled input.mi-button-text {
+    height: 26px;
+    width: 34px;
+    padding: 0;
+}
+
+/* * 橘色小按钮 */
+.mi-button-sorange {
+    background-position: 0 -162px;
+}
+.mi-button-sorange .mi-button-text {
+    background-position: right -162px;
+}
+
+/* * 绿色小按钮 */
+.mi-button-sgreen {
+    background-position: 0 -243px;
+}
+.mi-button-sgreen .mi-button-text {
+    background-position: right -243px;
+}
+
+/* * 红色小按钮 */
+.mi-button-sred {
+    background-position: 0 -324px;
+}
+.mi-button-sred .mi-button-text {
+    background-position: right -324px;
+}
+
+/* * 阴影 */
+.mi-button-sblue-hover,
+.mi-button-swhite-hover,
+.mi-button-sorange-hover,
+.mi-button-sgreen-hover,
+.mi-button-sred-hover {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+/* * 蓝色小按钮 hover */
+a.mi-button-sblue:hover,
+.mi-button-sblue-hover {
+    background-position: 0 -27px;
+}
+a.mi-button-sblue:hover .mi-button-text,
+.mi-button-sblue-hover .mi-button-text {
+    background-position: right -27px;
+}
+
+/* * 蓝色小按钮 down */
+a.mi-button-sblue-down:hover,
+.mi-button-sblue-down {
+    background-position: 0 -54px;
+}
+a.mi-button-sblue-down:hover .mi-button-text,
+.mi-button-sblue-down .mi-button-text {
+    background-position: right -54px;
+}
+
+/* * 白色小按钮 hover */
+a.mi-button-swhite:hover,
+.mi-button-swhite-hover {
+    background-position: 0 -108px;
+}
+a.mi-button-swhite:hover .mi-button-text,
+.mi-button-swhite-hover .mi-button-text {
+    background-position: right -108px;
+}
+
+/* * 添加按钮 hover 改变icon */
+a.mi-button-swhite-add:hover .mi-button-icon-add,
+.mi-button-swhite-hover .mi-button-icon-add {
+    background-position: -119px 0;
+}
+
+/* * 显示更多按钮 hover 改变icon */
+a.mi-button-swhite-more:hover .mi-button-icon-more,
+.mi-button-swhite-hover .mi-button-icon-more {
+    background-position: -92px 0;
+}
+
+/* * 显示更多小按钮 hover 改变字体颜色 */
+a.mi-button-swhite-more:hover .mi-button-text,
+.mi-button-swhite-hover .mi-button-text {
+    color: #4E4E4E;
+}
+
+/* * 白色小按钮 down */
+a.mi-button-swhite-down:hover,
+.mi-button-swhite-down {
+    background-position: 0 -135px;
+}
+a.mi-button-swhite-down:hover .mi-button-text,
+.mi-button-swhite-down .mi-button-text {
+    background-position: right -135px;
+}
+
+/* * 添加按钮 down 改变icon */
+a.mi-button-swhite-down:hover .mi-button-icon-add,
+.mi-button-swhite-down .mi-button-icon-add {
+    background-position: -119px 0;
+}
+
+/* * 显示更多按钮 down 改变icon */
+a.mi-button-swhite-down:hover .mi-button-icon-more,
+.mi-button-swhite-down .mi-button-icon-more {
+    background-position: -92px 0;
+}
+
+/* * 显示更多按钮 down 改变字体颜色 */
+a.mi-button-swhite-down:hover .mi-button-text,
+.mi-button-swhite-down .mi-button-text {
+    color: #4E4E4E;
+}
+
+/* * 橘色小按钮 hover */
+a.mi-button-sorange:hover,
+.mi-button-sorange-hover {
+    background-position: 0 -189px;
+}
+a.mi-button-sorange:hover .mi-button-text,
+.mi-button-sorange-hover .mi-button-text {
+    background-position: right -189px;
+}
+
+/* * 橘色小按钮 down */
+a.mi-button-sorange-down:hover,
+.mi-button-sorange-down {
+    background-position: 0 -216px;
+}
+a.mi-button-sorange-down:hover .mi-button-text,
+.mi-button-sorange-down .mi-button-text {
+    background-position: right -216px;
+}
+
+/* * 绿色小按钮 hover */
+a.mi-button-sgreen:hover,
+.mi-button-sgreen-hover {
+    background-position: 0 -270px;
+}
+a.mi-button-sgreen:hover .mi-button-text,
+.mi-button-sgreen-hover .mi-button-text {
+    background-position: right -270px;
+}
+
+/* * 绿色小按钮 down */
+a.mi-button-sgreen-down:hover,
+.mi-button-sgreen-down {
+    background-position: 0 -297px;
+}
+a.mi-button-sgreen-down:hover .mi-button-text,
+.mi-button-sgreen-down .mi-button-text {
+    background-position: right -297px;
+}
+
+/* * 红色小按钮 hover */
+a.mi-button-sred:hover,
+.mi-button-sred-hover {
+    background-position: 0 -351px;
+}
+a.mi-button-sred:hover .mi-button-text,
+.mi-button-sred-hover .mi-button-text {
+    background-position: right -351px;
+}
+
+/* * 红色小按钮 down */
+a.mi-button-sred-down:hover,
+.mi-button-sred-down {
+    background-position: 0 -378px;
+}
+a.mi-button-sred-down:hover .mi-button-text,
+.mi-button-sred-down .mi-button-text {
+    background-position: right -378px;
+}
+
+/* * 小按钮 disabled */
+a.mi-button-sblue-disabled:hover,
+a.mi-button-swhite-disabled:hover,
+a.mi-button-sorange-disabled:hover,
+a.mi-button-sgreen-disabled:hover,
+a.mi-button-sred-disabled:hover,
+.mi-button-sblue-disabled,
+.mi-button-swhite-disabled,
+.mi-button-sorange-disabled,
+.mi-button-sgreen-disabled,
+.mi-button-sred-disabled {
+    background-position: 0 -405px;
+}
+a.mi-button-sblue-disabled:hover .mi-button-text,
+a.mi-button-swhite-disabled:hover .mi-button-text,
+a.mi-button-sorange-disabled:hover .mi-button-text,
+a.mi-button-sgreen-disabled:hover .mi-button-text,
+a.mi-button-sred-disabled:hover .mi-button-text,
+.mi-button-sblue-disabled .mi-button-text,
+.mi-button-swhite-disabled .mi-button-text,
+.mi-button-sorange-disabled .mi-button-text,
+.mi-button-sgreen-disabled .mi-button-text,
+.mi-button-sred-disabled .mi-button-text {
+    background-position: right -405px;
+    color: #BBB;
+    cursor: default;
+}
+
+/* * 添加按钮 disabled 基于白色小按钮 disabled */
+a.mi-button-swhite-disabled:hover .mi-button-icon-add,
+.mi-button-swhite-disabled .mi-button-icon-add {
+    left: 15px;
+    background-position: -130px 0;
+}
+
+/* * 显示更多按钮 disabled 基于白色小按钮 disabled */
+a.mi-button-swhite-disabled:hover .mi-button-icon-more,
+.mi-button-swhite-disabled .mi-button-icon-more {
+    right: 30px;
+    background-position: -100px 0;
+}
+
+/* * 下载按钮 disabled 基于白色小按钮 disabled */
+a.mi-button-swhite-disabled:hover .mi-button-icon-download,
+.mi-button-swhite-disabled .mi-button-icon-download {
+    background-position: -179px 0;
+}
+
+/* * 打印按钮 disabled 基于白色小按钮 disabled */
+a.mi-button-swhite-disabled:hover .mi-button-icon-print,
+.mi-button-swhite-disabled .mi-button-icon-print {
+    background-position: -191px 0;
+}
+
+/* * 配置按钮 disabled 基于白色小按钮 disabled */
+a.mi-button-swhite-disabled:hover .mi-button-icon-config,
+.mi-button-swhite-disabled .mi-button-icon-config {
+    background-position: -204px 0;
+}
+
+/* ************************************************************** */
+/* * 普通按钮[height:32px] */
+.mi-button-mblue .mi-button-text,
+.mi-button-morange .mi-button-text,
+.mi-button-mwhite .mi-button-text,
+.mi-button-mgreen .mi-button-text,
+.mi-button-mred .mi-button-text {
+    height: 32px;
+    color: #fff;
+    font: 700 14px/1.2 \5b8b\4f53, \9ED1\4F53, verdana;
+}
+
+/* * 普通按钮文字间距 */
+a.mi-button-mblue .mi-button-text,
+a.mi-button-mwhite .mi-button-text,
+a.mi-button-morange .mi-button-text,
+a.mi-button-mgreen .mi-button-text,
+a.mi-button-mred .mi-button-text {
+    padding: 8px 21px 0 18px;
+    height: 24px;
+}
+
+/* * 调整普通按钮[button] */
+.mi-button-mblue button.mi-button-text,
+.mi-button-mwhite button.mi-button-text,
+.mi-button-morange button.mi-button-text,
+.mi-button-mgreen button.mi-button-text,
+.mi-button-mred button.mi-button-text {
+    padding: 2px 18px 3px 15px;
+    padding: 2px 18px 1px 15px\9;
+    _padding: 3px 18px 0 15px;
+    height: 32px;
+}
+
+/* * 调整普通按钮[input] */
+.mi-button-mblue input.mi-button-text,
+.mi-button-mwhite input.mi-button-text,
+.mi-button-morange input.mi-button-text,
+.mi-button-mgreen input.mi-button-text,
+.mi-button-mred input.mi-button-text {
+    padding: 2px 18px 4px 15px;
+    padding: 2px 18px 1px 15px\9;
+    _padding: 3px 18px 0 15px;
+}
+
+/* * 普通按钮皮肤背景[mblue,
+mwhite,
+morange,
+mgreen,
+mred] */
+.mi-button-mblue {
+    background-position: 0 -432px;
+}
+.mi-button-mblue .mi-button-text {
+    background-position: right -432px;
+}
+.mi-button-mwhite {
+    background-position: 0 -531px;
+}
+.mi-button-mwhite .mi-button-text {
+    background-position: right -531px;
+    color: #4E4E4E;
+}
+.mi-button-morange {
+    background-position: 0 -630px;
+}
+.mi-button-morange .mi-button-text {
+    background-position: right -630px;
+}
+.mi-button-mgreen {
+    background-position: 0 -729px;
+}
+.mi-button-mgreen .mi-button-text {
+    background-position: right -729px;
+}
+.mi-button-mred {
+    background-position: 0 -828px;
+}
+.mi-button-mred .mi-button-text {
+    background-position: right -828px;
+}
+
+/* * mouseover */
+/* * 蓝色 */
+a.mi-button-mblue:hover,
+.mi-button-mblue-hover {
+    background-position: 0 -465px;
+}
+a.mi-button-mblue:hover .mi-button-text,
+.mi-button-mblue-hover .mi-button-text {
+    background-position: right -465px;
+}
+
+/* * 白色 */
+a.mi-button-mwhite:hover,
+.mi-button-mwhite-hover {
+    background-position: 0 -564px;
+}
+a.mi-button-mwhite:hover .mi-button-text,
+.mi-button-mwhite-hover .mi-button-text {
+    background-position: right -564px;
+}
+
+/* * 橘色 */
+a.mi-button-morange:hover,
+.mi-button-morange-hover {
+    background-position: 0 -663px;
+}
+a.mi-button-morange:hover .mi-button-text,
+.mi-button-morange-hover .mi-button-text {
+    background-position: right -663px;
+}
+
+/* * 绿色 */
+a.mi-button-mgreen:hover,
+.mi-button-mgreen-hover {
+    background-position: 0 -762px;
+}
+a.mi-button-mgreen:hover .mi-button-text,
+.mi-button-mgreen-hover .mi-button-text {
+    background-position: right -762px;
+}
+
+/* * 红色 */
+a.mi-button-mred:hover,
+.mi-button-mred-hover {
+    background-position: 0 -861px;
+}
+a.mi-button-mred:hover .mi-button-text,
+.mi-button-mred-hover .mi-button-text {
+    background-position: right -861px;
+}
+
+/* * mouseover出现阴影 */
+.mi-button-mblue-hover,
+.mi-button-mwhite-hover,
+.mi-button-morange-hover,
+.mi-button-mgreen-hover,
+.mi-button-mred-hover {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+/* * mousedown */
+/* * 蓝色 */
+a.mi-button-mblue-down:hover,
+.mi-button-mblue-down {
+    background-position: 0 -498px;
+}
+a.mi-button-mblue-down:hover .mi-button-text,
+.mi-button-mblue-down .mi-button-text {
+    background-position: right -498px;
+}
+
+/* * 白色 */
+a.mi-button-mwhite-down:hover,
+.mi-button-mwhite-down {
+    background-position: 0 -597px;
+}
+a.mi-button-mwhite-down:hover .mi-button-text,
+.mi-button-mwhite-down .mi-button-text {
+    background-position: right -597px;
+}
+
+/* * 橘色 */
+a.mi-button-morange-down:hover,
+.mi-button-morange-down {
+    background-position: 0 -696px;
+}
+a.mi-button-morange-down:hover .mi-button-text,
+.mi-button-morange-down .mi-button-text {
+    background-position: right -696px;
+}
+
+/* * 绿色 */
+a.mi-button-mgreen-down:hover,
+.mi-button-mgreen-down {
+    background-position: 0 -795px;
+}
+a.mi-button-mgreen-down:hover .mi-button-text,
+.mi-button-mgreen-down .mi-button-text {
+    background-position: right -795px;
+}
+
+/* * 红色 */
+a.mi-button-mred-down:hover,
+.mi-button-mred-down {
+    background-position: 0 -894px;
+}
+a.mi-button-mred-down:hover .mi-button-text,
+.mi-button-mred-down .mi-button-text {
+    background-position: right -894px;
+}
+
+/* * 普通按钮disabled */
+a.mi-button-mblue-disabled:hover,
+a.mi-button-mwhite-disabled:hover,
+a.mi-button-morange-disabled:hover,
+a.mi-button-mgreen-disabled:hover,
+a.mi-button-mred-disabled:hover,
+.mi-button-mblue-disabled,
+.mi-button-mwhite-disabled,
+.mi-button-morange-disabled,
+.mi-button-mgreen-disabled,
+.mi-button-mred-disabled {
+    background-position: 0 -927px;
+}
+a.mi-button-mblue-disabled:hover .mi-button-text,
+a.mi-button-mwhite-disabled:hover .mi-button-text,
+a.mi-button-morange-disabled:hover .mi-button-text,
+a.mi-button-mgreen-disabled:hover .mi-button-text,
+a.mi-button-mred-disabled:hover .mi-button-text,
+.mi-button-mblue-disabled .mi-button-text,
+.mi-button-mwhite-disabled .mi-button-text,
+.mi-button-morange-disabled .mi-button-text,
+.mi-button-mgreen-disabled .mi-button-text,
+.mi-button-mred-disabled .mi-button-text {
+    color: #BBB;
+    cursor: default;
+    background-position: right -927px;
+}
+
+/* * 调整编辑按钮[A] */
+a.mi-button-mblue-edit .mi-button-text,
+a.mi-button-mwhite-edit .mi-button-text,
+a.mi-button-morange-edit .mi-button-text,
+a.mi-button-mgreen-edit .mi-button-text,
+a.mi-button-mred-edit .mi-button-text {
+    padding-right: 15px;
+    padding-left: 35px;
+}
+
+/* * 调整编辑按钮[button] */
+.mi-button-mblue-edit button.mi-button-text,
+.mi-button-mwhite-edit button.mi-button-text,
+.mi-button-morange-edit button.mi-button-text,
+.mi-button-mgreen-edit button.mi-button-text,
+.mi-button-mred-edit button.mi-button-text {
+    padding-right: 12px;
+    padding-left: 32px;
+}
+
+/* * 调整编辑按钮[input] */
+.mi-button-mblue-edit input.mi-button-text,
+.mi-button-mwhite-edit input.mi-button-text,
+.mi-button-morange-edit input.mi-button-text,
+.mi-button-mgreen-edit input.mi-button-text,
+.mi-button-mred-edit input.mi-button-text {
+    padding-right: 12px;
+    padding-left: 32px;
+}
+
+/* * 编辑按钮图标 */
+.mi-button-mblue-edit .mi-button-icon,
+.mi-button-mwhite-edit .mi-button-icon,
+.mi-button-morange-edit .mi-button-icon,
+.mi-button-mgreen-edit .mi-button-icon,
+.mi-button-mred-edit .mi-button-icon {
+    left: 16px;
+    top: 10px;
+    height: 13px;
+    width: 13px;
+    background-position: -42px 0;
+}
+
+/* * 编辑禁用按钮小图标 */
+a.mi-button-mblue-disabled:hover .mi-button-icon-edit,
+a.mi-button-mwhite-disabled:hover .mi-button-icon-edit,
+a.mi-button-morange-disabled:hover .mi-button-icon-edit,
+a.mi-button-mgreen-disabled:hover .mi-button-icon-edit,
+a.mi-button-mred-disabled:hover .mi-button-icon-edit,
+.mi-button-mblue-disabled .mi-button-icon-edit,
+.mi-button-mwhite-disabled .mi-button-icon-edit,
+.mi-button-morange-disabled .mi-button-icon-edit,
+.mi-button-mgreen-disabled .mi-button-icon-edit,
+.mi-button-mred-disabled .mi-button-icon-edit {
+    background-position: -70px 0;
+}
+
+/* * 白色编辑按钮使用深灰色图标 */
+a.mi-button-mwhite-edit:hover .mi-button-icon,
+.mi-button-mwhite-edit .mi-button-icon {
+    background-position: -56px 0;
+}
+a.mi-button-mblue-disabled:hover .mi-button-icon-edit,
+a.mi-button-mwhite-disabled:hover .mi-button-icon-edit,
+a.mi-button-morange-disabled:hover .mi-button-icon-edit,
+a.mi-button-mgreen-disabled:hover .mi-button-icon-edit,
+a.mi-button-mred-disabled:hover .mi-button-icon-edit,
+.mi-button-mblue-disabled .mi-button-icon-edit,
+.mi-button-mwhite-disabled .mi-button-icon-edit,
+.mi-button-morange-disabled .mi-button-icon-edit,
+.mi-button-mgreen-disabled .mi-button-icon-edit,
+.mi-button-mred-disabled .mi-button-icon-edit {
+    left: 16px;
+    background-position: -70px 0;
+}
+
+/* * 白色添加按钮 */
+.mi-button-mwhite-add .mi-button-icon,
+.mi-button-mwhite-add-disabled .mi-button-icon {
+    left: 15px;
+    top: 11px;
+    height: 10px;
+    width: 10px;
+    background-position: -108px 0;
+}
+
+/* * 调整白色添加按钮与文字间距离 */
+a.mi-button-mwhite-add .mi-button-text,
+.mi-button-mwhite-add .mi-button-text {
+    padding-right: 16px;
+    padding-left: 29px;
+}
+
+/* * 调整白色添加按钮[button] */
+.mi-button-mwhite-add button.mi-button-text {
+    padding-right: 13px;
+    padding-left: 26px;
+}
+
+/* * 调整白色添加按钮[input] */
+.mi-button-mwhite-add input.mi-button-text {
+    padding-right: 13px;
+    padding-left: 26px;
+}
+
+/* * 白色添加按钮mouseover,
+mousedown 改变icon */
+a.mi-button-mwhite-add:hover .mi-button-icon-add,
+.mi-button-mwhite-hover .mi-button-icon-add,
+a.mi-button-mwhite-down:hover .mi-button-icon-add,
+.mi-button-mwhite-down .mi-button-icon-add {
+    background-position: -119px 0;
+}
+
+/* * 白色添加按钮disabled图标 */
+a.mi-button-mwhite-disabled:hover .mi-button-icon-add,
+.mi-button-mwhite-disabled .mi-button-icon-add {
+    background-position: -130px 0;
+}
+
+/* * 上一步按钮图标 */
+.mi-button-mblue-prev .mi-button-icon,
+.mi-button-mwhite-prev .mi-button-icon,
+.mi-button-morange-prev .mi-button-icon,
+.mi-button-mgreen-prev .mi-button-icon,
+.mi-button-mred-prev .mi-button-icon {
+    left: 16px;
+    background-position: 0 0;
+}
+
+/* * 上一步白色按钮黑色图标 */
+.mi-button-mwhite-prev .mi-button-icon {
+    background-position: -7px 0;
+}
+
+/* * 调整上一步按钮与文字间距离 */
+a.mi-button-mblue-prev .mi-button-text,
+a.mi-button-mwhite-prev .mi-button-text,
+a.mi-button-morange-prev .mi-button-text,
+a.mi-button-mgreen-prev .mi-button-text,
+a.mi-button-mred-prev .mi-button-text {
+    padding-right: 14px;
+    padding-left: 27px;
+}
+
+/* * 调整上一步按钮[button] */
+.mi-button-mblue-prev button.mi-button-text,
+.mi-button-mwhite-prev button.mi-button-text,
+.mi-button-morange-prev button.mi-button-text,
+.mi-button-mgreen-prev button.mi-button-text,
+.mi-button-mred-prev button.mi-button-text {
+    padding-right: 11px;
+    padding-left: 24px;
+}
+
+/* * 调整上一步按钮[input] */
+.mi-button-mblue-prev input.mi-button-text,
+.mi-button-mwhite-prev input.mi-button-text,
+.mi-button-morange-prev input.mi-button-text,
+.mi-button-mgreen-prev input.mi-button-text,
+.mi-button-mred-prev input.mi-button-text {
+    padding-right: 11px;
+    padding-left: 24px;
+}
+
+/* * 上一步禁用按钮图标 */
+a.mi-button-mblue-disabled:hover .mi-button-icon-prev,
+a.mi-button-mwhite-disabled:hover .mi-button-icon-prev,
+a.mi-button-morange-disabled:hover .mi-button-icon-prev,
+a.mi-button-mgreen-disabled:hover .mi-button-icon-prev,
+a.mi-button-mred-disabled:hover .mi-button-icon-prev,
+.mi-button-mblue-disabled .mi-button-icon-prev,
+.mi-button-mwhite-disabled .mi-button-icon-prev,
+.mi-button-morange-disabled .mi-button-icon-prev,
+.mi-button-mgreen-disabled .mi-button-icon-prev,
+.mi-button-mred-disabled .mi-button-icon-prev {
+    left: 16px;
+    background-position: -14px 0;
+}
+
+/* * 下一步按钮图标 */
+.mi-button-mblue-next .mi-button-icon,
+.mi-button-mwhite-next .mi-button-icon,
+.mi-button-morange-next .mi-button-icon,
+.mi-button-mgreen-next .mi-button-icon,
+.mi-button-mred-next .mi-button-icon {
+    right: 16px;
+    background-position: -21px 0;
+}
+
+/* * 下一步白色按钮黑色图标 */
+.mi-button-mwhite-next .mi-button-icon {
+    background-position: -28px 0;
+}
+
+/* * 调整下一步按钮与文字间距离 */
+a.mi-button-mblue-next .mi-button-text,
+a.mi-button-mwhite-next .mi-button-text,
+a.mi-button-morange-next .mi-button-text,
+a.mi-button-mgreen-next .mi-button-text,
+a.mi-button-mred-next .mi-button-text {
+    padding-right: 30px;
+    padding-left: 11px;
+}
+
+/* * 调整下一步按钮[button] */
+.mi-button-mblue-next button.mi-button-text,
+.mi-button-mwhite-next button.mi-button-text,
+.mi-button-morange-next button.mi-button-text,
+.mi-button-mgreen-next button.mi-button-text,
+.mi-button-mred-next button.mi-button-text {
+    padding-right: 27px;
+    padding-left: 8px;
+}
+
+/* * 调整下一步按钮[input] */
+.mi-button-mblue-next input.mi-button-text,
+.mi-button-mwhite-next input.mi-button-text,
+.mi-button-morange-next input.mi-button-text,
+.mi-button-mgreen-next input.mi-button-text,
+.mi-button-mred-next input.mi-button-text {
+    padding-right: 27px;
+    padding-left: 8px;
+}
+
+/* * 下一步禁用按钮图标 */
+a.mi-button-mblue-disabled:hover .mi-button-icon-next,
+a.mi-button-mwhite-disabled:hover .mi-button-icon-next,
+a.mi-button-morange-disabled:hover .mi-button-icon-next,
+a.mi-button-mgreen-disabled:hover .mi-button-icon-next,
+a.mi-button-mred-disabled:hover .mi-button-icon-next,
+.mi-button-mblue-disabled .mi-button-icon-next,
+.mi-button-mwhite-disabled .mi-button-icon-next,
+.mi-button-morange-disabled .mi-button-icon-next,
+.mi-button-mgreen-disabled .mi-button-icon-next,
+.mi-button-mred-disabled .mi-button-icon-next {
+    right: 16px;
+    background-position: -35px 0;
+}
+.mi-button-sblue-disabled .mi-button-icon,
+.mi-button-swhite-disabled .mi-button-icon,
+.mi-button-sorange-disabled .mi-button-icon,
+.mi-button-sgreen-disabled .mi-button-icon,
+.mi-button-sred-disabled .mi-button-icon,
+.mi-button-mblue-disabled .mi-button-icon,
+.mi-button-mwhite-disabled .mi-button-icon,
+.mi-button-morange-disabled .mi-button-icon,
+.mi-button-mgreen-disabled .mi-button-icon,
+.mi-button-mred-disabled .mi-button-icon {
+    cursor: default;
+}

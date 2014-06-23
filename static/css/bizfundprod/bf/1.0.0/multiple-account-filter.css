@@ -1,0 +1,82 @@
+html body .fn-shadow {
+    -webkit-box-shadow: 0 0 2px #ccc;
+    -moz-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+}
+
+.multiple-account-trigger {
+    height: 30px;
+    padding: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: default;
+    position: relative;
+    z-index: 1;
+    background: #F1F1F1 url("https://i.alipayobjects.com/e/201310/1LZIxYGsVx.png") repeat-x 0 -9px;
+}
+.multiple-account-arrow {
+    float: right;
+    width: 11px;
+    height: 6px;
+    padding: 0;
+    margin: 12px 10px 0 0;
+    display: inline;
+    font-size: 0;
+    overflow: hidden;
+    background: url("https://i.alipayobjects.com/e/201310/1LZIxYGsVx.png") no-repeat 0 0;
+}
+
+.multiple-account-value {
+    padding: 3px 10px 0 10px;
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+    margin: 0 32px 0 0;
+}
+
+.multiple-account-trigger,
+.multiple-account-filter,
+.multiple-account-filter .bankcard-cnt {
+    width: 327px;
+}
+
+.multiple-account-trigger-hover {
+    color: #333;
+    border-color: #bbb;
+    -webkit-box-shadow: 0 1px 0px #d9d9d9;
+    -moz-box-shadow: 0 1px 0px #d9d9d9;
+    box-shadow: 0 1px 0px #d9d9d9;
+}
+
+.multiple-account-trigger-hover .multiple-account-arrow {
+    background-position: -12px 0;
+}
+
+.multiple-account-trigger-focus {
+    border-color: #0077ff;
+    outline:1px solid #8cddff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.multiple-account-filter {
+    z-index: 1;
+}
+
+.multiple-account-filter .mi-filter-input {
+    width: 288px;
+}
+
+.multiple-account-filter .mi-filter-item {
+    height: 22px;
+}
+
+.multiple-account-filter .filter-item-value {
+    padding: 0 0 0 10px;
+}
+
+.mi-filter-item-current,
+.mi-filter-item-hover {
+    background-color: #499bd9;
+}

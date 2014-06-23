@@ -1,0 +1,42 @@
+.mi-filter {
+    border: 1px solid #ccc;
+    border-top:none;
+}
+/** update by alice.base-1.2, fixed font-family on mac */
+.mi-filter-input {
+    font-family: "tahoma,arial,Hiragino Sans GB,\5b8b\4f53";
+    padding-left: 22px;
+    background: url("https://i.alipayobjects.com/e/201306/SAj9unMer.png") no-repeat 4px 6px;
+}
+.mi-filter-input-focus {
+    background: url("https://i.alipayobjects.com/e/201306/SAj9unMer.png") no-repeat 4px -42px;
+}
+
+.mi-filter-input-edit {
+    /* background-position: right 100px; */
+}
+
+.mi-filter-cnt {
+    overflow: auto;
+    position:relative;
+    border-top: 1px solid #ccc;
+}
+.mi-filter-item {
+    position:relative;
+    list-style:none;
+    display:block;
+    vertical-align: middle;
+}
+
+.mi-filter-item-split {
+    background-color: #F2F2F2;
+}
+
+.mi-filter-item-current, .mi-filter-item-hover {
+    color: #fff;
+    background-color: #4775d1;
+}
+/** 搜索关键字样式 */
+.mi-filter-item .mi-filter-keyword {
+    color:#F60;
+}

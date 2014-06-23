@@ -1,0 +1,155 @@
+/** 提现页面 */
+.payment {
+    padding: 30px 20px;
+}
+
+.payment-form {
+    padding-bottom: 60px;
+}
+
+/** 转账 */
+.payment-form .mi-form-item,
+.withdraw-form .mi-form-item {
+    padding-bottom: 10px;
+}
+
+.payment-form .mi-form-item .mi-form-explain,
+.withdraw-form .mi-form-item .mi-form-explain {
+    min-height: 20px;
+    _height: 20px;
+}
+
+.payment-form .summary .mi-form-item,
+.withdraw-form .summary .mi-form-item {
+    padding-bottom: 15px;
+}
+
+.payment-tip-container {
+    padding: 0 0 20px;
+}
+
+.payment-tip {
+    z-index: 1;
+    margin: 0;
+    width: 450px;
+}
+
+.payment-tip .mi-tip-ctn {
+    padding-top: 10px;
+}
+
+.payment-tip .explain {
+    color: #a6a6a6;
+    padding: 5px 0 0;
+}
+
+/** 收费标准 */
+.fee-standard {
+    float: right;
+    z-index: 2;
+    position: relative;
+    display: inline;
+    margin: 0 -10px 0 0;
+    padding: 0 10px 0 0;
+}
+
+.fee-standard .mi-table th, .fee-standard .mi-table td {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.fee-standard-check {
+    position: absolute;
+}
+
+.fee-standard .mi-tip-cue {
+    width: 580px;
+    left: -110px;
+    top: -151px;
+    position: absolute;
+    display: none;
+    background-color: #E4F5FD;
+}
+
+.fee-standard-check .mi-tip {
+    width: 580px;
+}
+
+
+.fee-standard-check .mi-tip-arrow-bottom {
+    left: 15px;
+}
+
+.fee-standard .mi-tip-arrow-bottom {
+    left: 162px;
+}
+
+.fee-standard .mi-table th,
+.fee-standard .mi-table td,
+.fee-standard-check .mi-table th,
+.fee-standard-check .mi-table td {
+    padding: 3px 4px 3px 5px;
+}
+
+.fee-standard-hover .mi-tip-cue {
+    display: block;
+}
+
+.fee-link {
+    margin: 0 0 0 36px;
+}
+
+.fee-service {
+    padding: 0 14px 0 0;
+}
+
+.payment-form .sms-item {
+    padding-bottom: 3px;
+}
+
+.sms-item .mi-tip {
+    width: 520px;
+    margin: 0 0 0 11px;
+}
+
+
+
+/** 转账 */
+.sms {
+    vertical-align: middle;
+    position: relative;
+    top: 4px;
+}
+
+.sms .icon {
+    width: 9px;
+    height: 16px;
+    font-size: 0;
+    line-height: 0;
+    overflow:hidden;
+    vertical-align: middle;
+    margin: 0 0 0 6px;
+    background: url("https://i.alipayobjects.com/e/201305/NKnxR2HlF.png") no-repeat 0 0;
+}
+
+.sms .mi-tip {
+    position: absolute;
+    left: 31px;
+    top: -5px;
+    width: 275px;
+    margin: 0;
+    display: none;
+}
+
+.sms-hover .mi-tip {
+    display: block;
+}
+
+/** 安全控件警告提示 */
+.securitycore-tip-warn,
+.securitycore-tip-cue {
+    margin: 0 0 5px;
+}
+
+
+

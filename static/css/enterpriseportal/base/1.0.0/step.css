@@ -1,0 +1,112 @@
+/**
+ * @name: mi-step
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: progress组件
+ * @require: null
+ * @example 
+
+ */
+.mi-step {
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: -13px;
+}
+.mi-step li,
+.mi-step li span,
+.mi-step .first,
+.mi-step .last span,
+.mi-step .hover,
+.mi-step .hover span,
+.mi-step .current,
+.mi-step .current span,
+.mi-step .first-hover,
+.mi-step .first-hover span,
+.mi-step .first-current,
+.mi-step .first-current span,
+.mi-step .last-hover,
+.mi-step .last-hover span {
+    background: url("https://i.alipayobjects.com/e/201304/DYBEUSPSX.png") no-repeat 0 100px;
+}
+.mi-step li {
+    float: left;
+    margin: 0 0 0 13px;
+    background-position: 0 -105px;
+}
+.mi-step li span {
+    float: left;
+    height: 34px;
+    line-height: 32px;
+    line-height: 34px\9;
+    *line-height: 34px;
+    padding: 0 35px 0 33px;
+    margin: 0 -20px 0 0;
+    position: relative;
+    background-position: right -315px;
+}
+.mi-step-switchable li {
+    cursor: pointer;
+}
+
+/* * default */
+.mi-step .first {
+    background-position: 0 0;
+}
+.mi-step .first span {
+    padding-left: 20px;
+}
+.mi-step .last span {
+    padding-right: 18px;
+    background-position: right -210px;
+}
+
+/* * default hover */
+.mi-step .hover {
+    background-position: 0 -140px;
+}
+.mi-step .hover span {
+    color: #4d4d4d;
+    background-position: right -350px;
+}
+
+/* * default current */
+.mi-step .current {
+    background-position: 0 -175px;
+}
+.mi-step .current span {
+    color: #fff;
+    background-position: right -385px;
+}
+
+/* * first hover */
+.mi-step .first-hover {
+    background-position: 0 -35px;
+}
+.mi-step .first-hover span {
+    background-position: right -350px;
+}
+
+/* * first current */
+.mi-step .first-current {
+    background-position: 0 -70px;
+}
+.mi-step .first-current span {
+    color: #fff;
+    background-position: right -385px;
+}
+
+/* * last hover */
+.mi-step .last-hover {
+    background-position: 0 -140px;
+}
+.mi-step .last-hover span {
+    background-position: right -245px;
+}
+
+/* * last current */
+.mi-step .last-current {
+    background-position: 0 -175px;
+}
+.mi-step .last-current span {
+    color: #fff;
+    background-position: right -280px;
+}

@@ -1,0 +1,75 @@
+/** 
+ * @name: mi-select
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: 系统级select组件
+ * @require: null
+ * @example 
+
+*/
+.mi-select {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 220px;
+    height: 29px;
+    line-height: 29px;
+    border: 1px solid #ccc;
+    position: relative;
+    vertical-align: middle;
+}
+.mi-select-value,
+.mi-select-value-current {
+    text-indent: 10px;
+    cursor: default;
+    position: absolute;
+    font-weight: normal;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mi-select-value {
+    background: #fff url("https://i.alipayobjects.com/e/201206/3PEcjkVYpP.png") no-repeat right 1px;
+}
+.mi-select-iframe {
+    border: none;
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    display: none;
+}
+.mi-select-cnt {
+    z-index: 1;
+    top: 30px;
+    left: -1px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1px 0 0;
+    *padding-bottom: 1px;
+    _padding-bottom: 0;
+    border-top: 0;
+    overflow: hidden;
+}
+.mi-select-cnt li,
+.mi-select-item {
+    float: left;
+    background-color: #fff;
+    cursor: default;
+    margin: 0 1px 1px;
+    display: inline;
+    line-height: 29px;
+    overflow: hidden;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.mi-select-cnt .mi-select-item-spliter {
+    color: #4D4D4D;
+    background-color: #f2f2f2;
+}
+.mi-select-cnt .mi-select-item-current {
+    color: #fff;
+    background-color: #3399fe;
+}

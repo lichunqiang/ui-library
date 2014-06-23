@@ -1,0 +1,41 @@
+/** 提现结果页面 */
+.ui-resultstep-two, .ui-resultstep-three {
+    width: 850px;
+    padding-left: 110px;
+    margin: 10px auto 0;
+}
+.ui-resultstep-three {
+    padding-left: 138px;
+}
+.ui-resultstep-three li {
+    width: 328px;
+    font-size: 12px;
+}
+
+.ui-resultstep-item .ui-resultstep-steptext {
+    left: -170px;
+}
+
+.ui-resultstep-two .ui-resultstep-last, .ui-resultstep-three .ui-resultstep-last {
+    width: 120px;
+}
+
+.ui-resultstep-three .ui-resultstep-last {
+    width: 148px;
+}
+
+.ui-resultstep-last .ui-resultstep-steptext {
+    left: -66px;
+}
+
+.ui-resultstep-three .ui-resultstep-last .ui-resultstep-steptext {
+    left: -80px;
+}
+
+.ui-resultstep-two li {
+    width: 700px;
+    font-size: 12px;
+}
+.ui-resultstep-two .ui-resultstep-first .ui-resultstep-steptext {
+    left: -350px;
+}

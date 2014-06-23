@@ -1,0 +1,115 @@
+html body .ft-30{ font-size:30px;}
+.detail-container {
+    padding-bottom: 25px;
+}
+.mi-button.mi-button-return, .mi-button-return .mi-button-text, .mi-button-return-hover, .mi-button-return-down {
+    outline: none;
+    padding: 0 0 0 15px;
+    background-image: url("https://i.alipayobjects.com/e/201310/1IlkgyxR9T.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.mi-button-return {
+    height: 26px;
+    color: #656565;
+    font: 700 12px/1 \5b8b\4f53,\9ED1\4F53,verdana;
+}
+a.mi-button-return .mi-button-text {
+    padding: 7px 11px 0 8px;
+    height: 19px;
+}
+.mi-button-return {
+    background-position: 0 0;
+}
+.mi-button-return .mi-button-text {
+    background-position: right 0;
+}
+a.mi-button-return:hover, .mi-button-return-hover {
+    background-position: 0 -27px;
+}
+a.mi-button-return:hover .mi-button-text, .mi-button-return-hover .mi-button-text {
+    background-position: right -27px;
+}
+a.mi-button-return-down:hover, .mi-button-return-down {
+    background-position: 0 -54px;
+}
+a.mi-button-return-down:hover .mi-button-text, .mi-button-return-down .mi-button-text {
+    background-position: right -54px;
+}
+.pcont {
+    padding: 20px;
+}
+
+.order-transId {
+    width: 760px;
+    text-align: center;
+}
+.order-transId label {
+    font-size: 18px;
+    color: #808080;
+}
+
+.order-transId span {
+    font-size: 18px;
+}
+
+.account-module{
+    width:870px;
+    padding:0 60px;
+    margin:35px 0;
+}
+.td-bg{
+    background-color:#eee;
+}
+
+.payment-total-amount {
+    padding-left: 130px;
+}
+
+.trans-id-copy {
+    cursor: pointer;
+}
+
+.process-success-tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 34px;
+    width: 100%;
+    margin-top: -120px;
+}
+.process-success-tip .mi-tip {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.copy-status-tip {
+    vertical-align: middle;
+    width: 50px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    margin-right: -60px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+
+.transfer-failure-message-shown .transfer-failure-message {
+    display: block;
+}
+
+.transfer-failure-message {
+    position: absolute;
+    display: none;
+    left: 36px;
+    top: -52px;
+    text-align: left;
+    white-space: nowrap;
+    word-break: keep-all;
+    z-index: 10;
+}
+
+html body .fn-relative {
+    position: relative;
+}

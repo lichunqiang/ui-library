@@ -1,0 +1,30 @@
+/** 水平分隔线
+ * @name: mi-line
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: 实线和虚线样式
+ * @require: null
+ *  @example
+实线
+<hr class="mi-line" />
+
+虚线
+<hr class="mi-line mi-line-dot" />
+*/
+.mi-line {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border: none;
+    height: 1px;
+    background-color: #CCC;
+    display: block;
+    margin: 5px 0;
+}
+.mi-line-dashed {
+    height: 0;
+    background-color: transparent;
+    border-bottom: 1px dashed #CCC;
+}
+.mi-line-dot {
+    background: transparent url("https://i.alipayobjects.com/e/201205/2mWxr1oBG5.png") repeat-x 0 0;
+}

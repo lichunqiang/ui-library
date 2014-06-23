@@ -1,0 +1,33 @@
+/**
+ * @name    : mi-subtitle
+ * @filename: mi-subtitle.css
+ * @overview: 企业版子标题样式
+ * @date    : 2013-04-22
+ * @require : 
+ * @author  : 竹卢
+ * @demo    :
+ 
+        <div class="mi-subtitle">
+            <h2>如何收费</h2>
+            <div class="mi-subtitle-line"></div>
+        </div>
+ */
+.mi-subtitle {
+    position: relative;
+    height: 20px;
+}
+.mi-subtitle h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4d4d4d;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    padding-right: 20px;
+}
+.mi-subtitle .mi-subtitle-line {
+    border-top: 2px solid #ccc;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}

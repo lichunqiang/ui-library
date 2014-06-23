@@ -1,0 +1,103 @@
+/** 提现 */
+
+.add-bankcard {
+    vertical-align: top;
+    margin-left: 10px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.add-bankcard .mi-tip {
+    position: absolute;
+    left: 0;
+    top: -42px;
+    width: 250px;
+    display: none;
+}
+
+.add-bankcard-hover .mi-tip {
+    display: block;
+}
+
+/** 未添加银行卡账户 */
+.withdraw {
+    padding: 30px 20px;
+}
+
+
+.withdraw-form {
+    padding-bottom: 60px;
+}
+
+.withdraw-form .mi-form-item {
+    padding-bottom: 10px;
+}
+
+.notice-has-mbutton .mi-notice-title h3 {
+    padding: 0;
+}
+
+.supported-banks-tip {
+    display: none;
+    width: 290px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.supported-banks-tip .mi-tip-arrow-top {
+    left: 235px;
+}
+
+/** 已绑定银行卡 */
+.bankcard-selected {
+    padding: 9px 10px 4px 13px;
+    border: 1px solid #ccc;
+    width: 344px;
+    position: relative;
+    cursor: pointer;
+}
+.bankcard-selected .arrow {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    width: 11px;
+    height: 6px;
+    font-size: 0;
+    line-height: 0;
+    background: url("https://i.alipayobjects.com/e/201306/S93k4ZsOr.png") no-repeat 0 -7px;
+}
+.bankcard-selected .remark {
+    color: #000;
+    font-weight: 700;
+}
+.bankcard-selected .other {
+    padding: 5px 0 0;
+}
+.bankcard-selected .logo {
+    width: 126px;
+    height: 36px;
+    overflow: hidden;
+    text-indent: -10em;
+    vertical-align: middle;
+}
+
+.bankcard-selected .text {
+    text-indent: 0;
+    font-weight: 500;
+    color: #808080;
+    font-size: 16px;
+    line-height: 32px;
+    width: auto;
+    padding-right: 10px;
+}
+
+.bankcard-selected-show .arrow {
+    background-position: 0 0;
+}
+
+.withdraw-form .withdraw-sms-item {
+    padding-bottom: 3px;
+}

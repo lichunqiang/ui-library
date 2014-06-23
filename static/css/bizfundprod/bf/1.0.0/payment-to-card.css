@@ -1,0 +1,502 @@
+.top-info-notice {
+    margin: 20px;
+}
+
+.payment-to-bankcard .apply-detail .square {
+    height: 260px;
+}
+
+.payment-bankcard-form {
+    padding-bottom: 50px;
+}
+
+.payment-bankcard-form .summary .mi-form-item {
+    float: left;
+}
+
+.payment-bankcard-form .mi-form-item-first {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+.payment-bankcard-form .mi-form-item-top {
+    padding-top: 20px;
+}
+
+.payment-bankcard-form .sub-item {
+    padding-left: 170px;
+    width: 360px;
+    min-height: 85px;
+    _height: 85px;
+    vertical-align: top;
+    padding-bottom: 0;
+}
+
+.payment-bankcard-form .mi-form-item {
+    padding-bottom: 0;
+}
+
+.payment-bankcard-form .mi-form-explain {
+    min-height: 17px;
+    _height: 17px;
+}
+
+.mi-form-item-amount {
+    min-height: 60px;
+    _height: 60px;
+    padding-bottom: 0;
+    margin-top: 30px;
+}
+
+.top-fields {
+    border: 1px solid #ccc;
+    margin: 5px 20px 20px 170px;
+    background-color: #F5F5F5;
+}
+
+.top-fields .sub-item {
+    padding-left: 20px;
+}
+
+.top-fields .item-without-label {
+    width: 370px;
+    padding-left: 30px;
+}
+
+.item-without-label .mi-label {
+    display: none;
+}
+
+.sub-item .mi-input {
+    width: 350px;
+}
+
+.sub-item .mi-input-dropdown {
+    width: 324px;
+    padding-right: 30px;
+}
+
+.rarewords-trigger, .payee-card-trigger {
+    float: right;
+    font-size: 12px;
+    padding-top: 4px;
+}
+
+.history-accounts-trigger {
+    display: block;
+    padding: 3px 0 0;
+}
+
+.history-accounts-trigger .multiple-account-arrow {
+    margin: 9px 5px 0 5px;
+    background:url("https://i.alipayobjects.com/e/201312/1hLcwkQycn.png") no-repeat 0 0;
+}
+
+.history-accounts-trigger-active .multiple-account-arrow {
+    background-position: -12px 0;
+}
+
+.sub-item .label {
+    color: #666;
+    font-size: 14px;
+    display: block;
+    padding: 3px 0 5px;
+}
+
+.mi-input-accounts {
+    width: 350px;
+}
+
+.amount-chinese {
+    color: #808080;
+}
+
+/** tab input filter */
+.tab-input-filter {
+    display: none;
+    padding: 20px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/** tip当中的小箭头 */
+.tab-input-filter .arrow, .tab-input-filter .arrow em, .tab-input-filter .arrow span {
+    position:absolute;
+    font-size:20px;
+    font-family: SimSun, Hiragino Sans GB;
+    font-style:normal;
+    line-height:20px;
+    z-index:10;
+    *zoom:1;
+}
+
+/** arrow */
+.tab-input-filter .arrow em {
+    color: #ccc ;
+}
+
+.tab-input-filter .arrow span {
+    color: #fff;
+    top:0;
+    left:0;
+}
+
+/** arrow-top */
+.tab-input-filter .arrow {
+    top:-9px;
+    left:30px;
+}
+
+.tab-input-filter .arrow em {
+    top:-1px;
+    left:0;
+}
+
+.tab-input-filter .mi-filter {
+    border: none;
+}
+
+.tab-input-filter-header {
+
+}
+
+/** 不可搜索 */
+.bankcard-filter .bankcard-query {
+    display: none;
+}
+
+.bankcard-filter .mi-filter-cnt {
+    border-top-width: 0;
+    margin-top: 1px;
+}
+
+/** 可搜索 */
+
+.bankcard-filter-searchable .bankcard-query {
+    display: block;
+}
+
+.bankcard-filter-searchable .mi-filter-cnt {
+    border-top-width: 1px;
+    margin-top: 0;
+}
+
+
+/** tab filter */
+
+.mi-tab-filter {
+
+}
+
+.mi-tab-filter .mi-filter {
+    position: static;
+}
+
+.mi-tab-filter .bankcard-filter {
+    display: block;
+}
+
+.mi-tab-filter .mi-tab-trigger ul {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.mi-tab-filter .bankcard-query {
+    border-top: none;
+}
+
+.mi-tab-filter .bankcard-filter .mi-filter-input {
+    width: 329px;
+}
+
+
+.bank-account-ctn {
+    position: relative;
+    display: block;
+}
+
+.bank-account-trigger {
+    position: absolute;
+    right: 12px;
+    top: 2px;
+    display: block;
+    width: 30px;
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    text-indent: -10em;
+    background: #fff url("https://i.alipayobjects.com/e/201310/1IMVSVFhC1.png") no-repeat 10px -42px;
+}
+
+.bank-account-trigger-disabled {
+    cursor: default;
+    background-color: #f2f2f2;
+}
+
+/** 删除卡号按钮 */
+.bank-card-clear, .bank-card-clear:visited {
+    background:#efefef none;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-indent: 0;
+    color: #aaa;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    *background:url("https://i.alipayobjects.com/e/201310/1IMW9ZMGqF.png") no-repeat -56px -167px;
+    background: url("https://i.alipayobjects.com/e/201310/1IMW9ZMGqF.png") no-repeat -56px -167px\0;
+    *text-indent: -10em;
+    text-indent: -10em\0;
+    *top: 9px;
+    top: 9px\0;
+}
+
+.bank-card-clear:hover {
+    text-decoration: none;
+    background-color: #e8e8e8;
+    *background-color: #fff;
+    background-color: #fff\0;
+}
+
+/** 历史联系人清除按钮 */
+.bankcard-query .mi-filter-input-clear, .bankcard-query .mi-filter-input-clear:visited {
+    top: 10px;
+    right: 10px;
+    *top: 14px;
+    top: 14px\0;
+}
+
+/** 历史记录选择控件关闭按钮 */
+.tab-input-filter-close, .tab-input-filter-close:visited {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #999;
+    z-index: 1;
+}
+
+.tab-input-filter-close:hover {
+    text-decoration: none;
+    color: #808080;
+}
+
+/* bank account filter */
+.bank-account-filter {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 358px;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    -moz-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+}
+.bank-account-filter .bankcard-cnt {
+    width: 358px;
+}
+.bank-account-filter .mi-filter-item {
+    height: 23px;
+    padding-top: 7px;
+}
+.bank-account-filter .filter-item-value {
+    padding: 0 0 0 10px;
+    font-size: 14px;
+}
+
+.bank-account-filter-auto .mi-filter-item {
+    height: auto;
+}
+
+.payment-bankcard-form .fee-standard .mi-table .th {
+    background-color: #eee;
+}
+
+.payment-bankcard-form .fee-standard .mi-tip-cue {
+    width: 800px;
+    top: -206px;
+    left: -346px;
+}
+
+.payment-bankcard-form .fee-standard .mi-tip-arrow-bottom {
+    left: 398px;
+}
+
+/** 签约用户提示 */
+.payment-bankcard-form .fee-standard .tip-sign {
+    left: 20px;
+    top: -56px;
+    width: 380px;
+}
+
+.payment-bankcard-form .fee-standard .tip-sign .mi-tip-arrow-bottom {
+    left: 32px;
+}
+
+.tip-sign .mi-tip-ctn {
+    padding-left: 32px;
+}
+
+.tip-sign .iconfont {
+    visibility: visible;
+}
+
+.bank-none-tip {
+    float: right;
+    position: relative;
+}
+
+.bank-none-tip .mi-tip {
+    position: absolute;
+    left: -156px;
+    top: -98px;
+    width: 300px;
+    display: none;
+}
+
+.bank-none-tip .mi-tip .mi-tip-arrow-bottom {
+    left: 190px;
+}
+
+.bank-none-tip-hover .mi-tip {
+    display: block;
+}
+
+.bank-none-close, .bank-none-close:visited {
+    float: right;
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    overflow: hidden;
+    margin-right: -5px;
+    color: #4d4d4d;
+}
+.bank-none-close:hover {
+    text-decoration: none;
+}
+
+/** 账户选择器户名 */
+.bankcard-picker-inst {
+    padding: 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+}
+
+.bankcard-filter-unsearchable .bankcard-picker-inst {
+    margin-top: 1px;
+    border-bottom: 1px solid #ccc;
+}
+
+/** 城市控件 */
+.cityhint, .cityhint-overlay {
+    outline: 1px solid #EDEDED;
+}
+.citybox {
+    margin: 0;
+    padding: 7px 0;
+    padding: 7px 0\9;
+    *padding: 0;
+	display:block
+}
+#J_cityHint {
+    /** id的padding为必填，否则会导致鼠标点击热区太低 */
+    padding: 10px 0;
+}
+html a.cityhint-input {
+    color: #4D4D4D;
+    height: 18px;
+    line-height: 18px;
+    padding: 7px 30px 7px 10px;
+    border: 1px #CCC solid;
+    margin-right: 10px;
+    background:#fff url("https://i.alipayobjects.com/e/201205/2jqKxITncv.png") no-repeat right 1px;
+    background-image:url("https://i.alipayobjects.com/e/201304/7B4Iz7gc9.png");
+}
+
+html .mi-form-item-error a.cityhint-input {
+    border-color: #F33;
+    color: #F33;
+}
+
+html a.cityhint-input:hover,
+html .mi-form-item-error a.cityhint-input:hover {
+    border:1px solid #999;
+    background:#fff url("https://i.alipayobjects.com/e/201205/2jqKxITncv.png") no-repeat right 1px;
+    background-image:url("https://i.alipayobjects.com/e/201304/7B0Q2RZ3V.png");
+    text-decoration: none;
+}
+
+html .cityhint a.current, html .cityhint a:hover {
+    background: #4775D1;
+    text-decoration: none;
+    color: #FFF;
+    -moz-border-radius: 2px;    /* Gecko browsers */
+    -webkit-border-radius: 2px; /* Webkit browsers */
+    border-radius: 2px;         /* W3C syntax */
+    text-decoration: none;
+}
+html .cityhint dl{
+    padding: 3px 0;
+}
+html .cityhint dt {
+    color: #4D4D4D;
+}
+html .cityhint a {
+    color: #4D4D4D;
+    display: block;
+    float: left;
+    padding: 0 10px;
+}
+html div.cityhint-sub {
+    background: #E5F5FF;
+}
+html div.cityhint-sub a {
+    margin: 4px 0;
+}
+
+/** 首页短信提容器 */
+.sms-phone-box {
+    position: relative;
+}
+
+.sms-phone-box .mi-tip {
+    position: absolute;
+    top: 0;
+    left: 125px;
+}
+
+/** 确认页面 */
+.payment-bankcard-check .mi-tip {
+    width: 800px;
+}
+
+.payment-bankcard-check .tip-sign {
+    width: 380px;
+    margin-top: 161px;
+
+}

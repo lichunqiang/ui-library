@@ -1,0 +1,159 @@
+/*
+ * @name: mi-notice
+ * @author: 天孝(chentao.yuan@alipay.com)
+ * @description: 通用提示, 成功提示、禁止提示、信息提示、警告提示、错误提示、疑问提示、等待提示。
+ * @require: iconfont
+ * @example 
+<div class="mi-notice mi-notice-success">
+    <div class="mi-notice-cnt">
+        <div class="mi-notice-title">
+            <i class="iconfont" title="成功">&#xF049;</i>
+            <h3>成功</h3>
+        </div>
+        <p class="mi-notice-explain">
+            缴款成功成功！
+        </p>
+        <p class="mi-notice-explain-other">
+            现在您可能需要：<a href="#">返回首页</a>
+            <span class="fn-bar">|</span>
+            <a href="#">返回账单查询</a>
+            <span class="fn-bar">|</span>
+            <a href="#">返回合同查询</a>
+        </p>
+    </div>
+</div>
+*/
+.mi-notice {
+    font-size: 14px;
+    border: 1px solid #e1e1ca;
+    background-color: #fff;
+}
+.mi-notice-titleonly {
+    border: none;
+}
+.mi-notice-titleonly .mi-notice-title {
+    margin: 0;
+}
+.mi-notice-success .mi-notice-title {
+    background-color: #edffcc;
+}
+.mi-notice-success .iconfont {
+    color: #3C3;
+}
+.mi-notice-forbidden .mi-notice-title {
+    background-color: #fceee8;
+    border-color: #f6c8b5;
+}
+.mi-notice-forbidden .iconfont {
+    color: #f33;
+}
+.mi-notice-cue .mi-notice-title {
+    background-color: #e5f5ff;
+    border-color: #cbd7e3;
+}
+.mi-notice-cue .iconfont {
+    color: #09f;
+}
+.mi-notice-warn .mi-notice-title {
+    background-color: #ffff8d;
+    border-color: #f5db64;
+}
+.mi-notice-warn .iconfont {
+    color: #f90;
+}
+.mi-notice-error .mi-notice-title {
+    background-color: #fceee8;
+    border-color: #f6c8b5;
+}
+.mi-notice-error .iconfont {
+    color: #f33;
+}
+.mi-notice-doubt .mi-notice-title {
+    background-color: #e5f5ff;
+    border-color: #cbd7e3;
+}
+.mi-notice-doubt .iconfont {
+    color: #09f;
+}
+.mi-notice-wait .mi-notice-title {
+    background-color: #fff9d7;
+    border-color: #e6ccae;
+}
+.mi-notice-wait .iconfont {
+    color: #c60;
+}
+.mi-notice-title {
+    min-height: 34px;
+    _height: 34px;
+    padding: 25px 43px 21px 88px;
+    border: 1px solid #e1e1ca;
+    margin: -1px;
+    position: relative;
+}
+.mi-notice-title .iconfont {
+    font-size: 38px;
+    line-height: 38px;
+    float: left;
+    margin: -4px 0 0 -51px;
+    *display: inline;
+}
+.mi-notice-title h3 {
+    color: #3C3C3C;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 4px 0 0;
+    padding-top: 5px\9;
+    _padding-top: 4px;
+}
+.mi-notice-explain {
+    color: #808080;
+    padding: 16px 0 23px 84px;
+}
+.mi-notice-explain-other {
+    border-top: 1px dashed #eeeeee;
+    color: #4d4d4d;
+    margin: 0 15px;
+    padding: 14px 0 16px 69px;
+}
+.mi-notice-explain-other .ft-bar {
+    padding: 0 5px;
+}
+.mi-notice-title .mi-notice-explain {
+    padding: 6px 0 0;
+}
+.mi-notice-title .mi-notice-explain-other {
+    padding: 14px 0 0;
+    margin: 0;
+    border-top: none;
+}
+
+/* *
+嵌套于xbox之中
+xboxClass: {
+    MOCK_CLASS: 'mi-notice-inxbox'
+}
+*/
+html body .mi-notice-inxbox {
+    border: 1px solid #949494;
+}
+.mi-notice-inxbox .ui-xbox-action {
+    z-index: 1;
+    right: 19px;
+    top: 16px;
+}
+.mi-notice-inxbox .ui-xbox-action a,
+.mi-notice-inxbox .ui-xbox-action a:hover {
+    font-size: 14px;
+    text-decoration: none;
+}
+.mi-notice-inxbox .mi-notice {
+    margin: 0;
+    border: none;
+}
+.mi-notice-inxbox .mi-notice-title {
+    margin: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 26px 44px 21px 89px;
+}

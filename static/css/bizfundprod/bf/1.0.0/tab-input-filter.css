@@ -1,0 +1,103 @@
+/** tab input filter */
+.tab-input-filter {
+    display: none;
+    padding: 20px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    -moz-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/** tip当中的小箭头 */
+.tab-input-filter .arrow, .tab-input-filter .arrow em, .tab-input-filter .arrow span {
+    position:absolute;
+    font-size:20px;
+    font-family: SimSun, Hiragino Sans GB;
+    font-style:normal;
+    line-height:20px;
+    z-index:10;
+    *zoom:1;
+}
+
+/** arrow */
+.tab-input-filter .arrow em {
+    color: #ccc ;
+}
+
+.tab-input-filter .arrow span {
+    color: #fff;
+    top:0;
+    left:0;
+}
+
+/** arrow-top */
+.tab-input-filter .arrow {
+    top:-9px;
+    left:30px;
+}
+
+.tab-input-filter .arrow em {
+    top:-1px;
+    left:0;
+}
+
+.tab-input-filter .mi-filter {
+    border: none;
+}
+
+.tab-input-filter-header {
+
+}
+
+/** 不可搜索 */
+.bankcard-filter-unsearchable .bankcard-query {
+    display: none;
+}
+
+.bankcard-filter-unsearchable .mi-filter-cnt {
+    border-top-width: 0;
+}
+
+/** 可搜索 */
+
+.bankcard-filter-searchable .bankcard-query {
+    display: block;
+}
+
+.bankcard-filter-searchable .mi-filter-cnt {
+    border-top-width: 1px;
+    margin-top: 0;
+}
+
+
+/** tab filter */
+
+.mi-tab-filter {
+
+}
+
+.mi-tab-filter .mi-filter {
+    position: static;
+}
+
+.mi-tab-filter .bankcard-filter {
+    display: block;
+}
+
+.mi-tab-filter .mi-tab-trigger ul {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.mi-tab-filter .bankcard-query {
+    border-top: none;
+}
+
+.mi-tab-filter .bankcard-filter .mi-filter-input {
+    width: 329px;
+}

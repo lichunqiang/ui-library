@@ -1,0 +1,21 @@
+/** 联系人控件 */
+.contacts-filter .bankcard-cnt .mi-filter-item {
+    height: auto;
+    min-height: 25px;
+    _height: 25px;
+}
+
+.contacts-filter .bankcard-cnt .item-cnt {
+    padding: 0 0 0 10px;
+}
+
+.contacts-filter .nick-name {
+    margin-right: 0.5em;
+}
+
+.contacts-data-none .mi-tip-cue {
+    border: none;
+    background-color: #fff;
+    height: 150px;
+    padding: 0 0 0 5px;
+}

@@ -1,0 +1,57 @@
+
+.mi-rarewords {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 495px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.mi-rarewords-trigger {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.mi-rarewords-trigger li {
+    float: left;
+    width: 22px;
+    height: 24px;
+    line-height: 22px;
+    text-align: center;
+    overflow: hidden;
+    cursor: default;
+    font-size: 16px;
+    font-family: verdana, arial, tahoma;
+}
+
+.mi-rarewords-trigger-item-hover {
+    background-color: #4775D1;
+    color: #fff;
+}
+
+.mi-rarewords-cnt {
+    padding: 5px;
+}
+
+.mi-rarewords-cnt-item {
+    display: none;
+}
+
+.mi-rareword {
+    float: left;
+    width: 44px;
+    height: 30px;
+    line-height: 30px;
+    overflow:hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline;
+}
+
+.mi-rareword-hover {
+    background-color: #4775D1;
+    color: #fff;
+}
