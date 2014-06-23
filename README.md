@@ -34,76 +34,67 @@ Q&A
 
 - 问：如何在项目中安装arale组件呢？
 
-答：很简单，比如需要安装`dialog`组件，进入项目根目录中执行`spm install arale.dialog`就会自动下载组件以及其依赖到`sea-modules'下面，具体可以访问`arale.org`
-注意：以上操作仅限于在内网中使用，然后你在项目中这么引用 `require('arale/dialog/1.2.6/dialog.js')`
+答：假如你需要在项目中使用arale的`dialog`组件，则可以进入项目根目录中执行`spm install arale.dialog`就会自动下载组件以及其依赖到`sea-modules`下面，关于组件具体细节可以访问站点`arale.org`
+（注意：以上操作仅限于在内网中使用），然后在项目中这么引用 `require('arale/dialog/1.2.6/dialog.js')`也可以将组件配置到`package.json`的`alias`，比如`‘dialog’： ‘arale/dialog/1.2.6/dialog.js’`这样只需要`require('dialog')`就可以了，是不是更加简单了呢^v^
 
-目录结构
+- 问：关于自己开发组件模块的规范是什么呢？
 
-
-/-- `example` 示例
-
-
-/-- `assets` 静态文件资源库（存放编译打包后的js&css）
+答：现在库里面已经有`cellula` `fdp`之类的公共模块了，理论上我们在开发环境中会涉及到2大类型的模块，一类是公共的模块，也就是可以供不同系统和业务使用的模块，它们通常是js底层的类库扩展或者是基于场景模型的构建，比如cellula，fdp之类，它们存放在lib下面，另一类是纯业务型的模块组件，它们存放在`static`下面，而`assets`则是存放系统编译打包后的js&css也就是在线上环境被调用的静态文件就在这里。
 
 
-	/-- js
-	
+**目录结构**
+
+		|-- `example` 示例
 		
-		/-- common 公共模块
+		|-- `assets` 静态文件资源库（存放编译打包后的js&css）
 		
+						|-- js
 
-			/-- cellula
-			
+								|-- common 公共模块
+
+											|-- cellula
+							
+											|-- fdp `Form` `dataView` `paginator`
+						
+											|-- select
+
+								|-- itemList 一个使用`cellula`做的小玩意儿
 				
-			/-- fdp `Form` `dataView` `paginator`
-			
+								|-- singleForm 单表单模型
+							
+								|-- searchingScene 异步查询场景模型
 
-			/-- select
+			|-- css
+		
+					|-- common	
+		
+								|-- base		
+		
+								|-- enterpriseportal
+						
+								|-- ...
+		
+			|-- `lib` 公共js库
+		
+			|-- `sea-modules` sea模块
+				 			
+			 				|-- .. arale组件等			 
+		
+			|-- `static` 静态资源
 			
-		
-		/-- itemList 一个使用`cellula`做的小玩意儿
-		
-		
-		/-- singleForm 单表单模型
-		
-		
-		/-- searchingScene 异步查询场景模型
-		
-
-	/-- css
+			|-- `test` 单元测试
 	
-
-		/-- common
-		
-
-			/-- base
-			
-
-			/-- enterpriseportal
-			
-			
-			/-- ...
+			|-- Gruntfile.js 部署脚本
+	
+			|-- package.js 项目配置
 
 
-/-- `lib` 公共js库
 
+后续优化方案：
 
-/-- `sea-modules` sea模块
+- 项目中依赖sea-modules中的组件也都迁移到assets目录下面，形成统一的静态文件格局
 
- 			
-	 /-- .. arale组件等
-	 
-
-/-- `static` 静态资源
-
-
-/-- `test` 单元测试
-
-
-Gruntfile.js 部署脚本
-
-
-package.js 项目配置
+- 优化gruntfile，尽量做到配置最简化
 
 
 ## 关于 Cellula ##
