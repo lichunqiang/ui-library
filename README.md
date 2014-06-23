@@ -42,57 +42,64 @@ Q&A
 答：现在库里面已经有`cellula` `fdp`之类的公共模块了，理论上我们在开发环境中会涉及到2大类型的模块，一类是公共的模块，也就是可以供不同系统和业务使用的模块，它们通常是js底层的类库扩展或者是基于场景模型的构建，比如cellula，fdp之类，它们存放在lib下面，另一类是纯业务型的模块组件，它们存放在`static`下面，而`assets`则是存放系统编译打包后的js&css也就是在线上环境被调用的静态文件就在这里。
 
 
-**目录结构**
+**本地目录结构**
 
-		|-- `example` 示例
-		
 		|-- `assets` 静态文件资源库（存放编译打包后的js&css）
-		
-						|-- js
 
-								|-- common 公共模块
+        			|-- `accountswitcher`
 
-											|-- cellula
-							
-											|-- fdp `Form` `dataView` `paginator`
-						
-											|-- select
+        			|-- `alipay`
 
-								|-- itemList 一个使用`cellula`做的小玩意儿
-				
-								|-- singleForm 单表单模型
-							
-								|-- searchingScene 异步查询场景模型
+        			|-- `arale`
 
-			|-- css
-		
-					|-- common	
-		
-								|-- base		
-		
-								|-- enterpriseportal
-						
-								|-- ...
-		
-			|-- `lib` 公共js库
-		
-			|-- `sea-modules` sea模块
-				 			
-			 				|-- .. arale组件等			 
-		
-			|-- `static` 静态资源
-			
-			|-- `test` 单元测试
-	
-			|-- Gruntfile.js 部署脚本
-	
-			|-- package.js 项目配置
+        			|-- `bizfundprod`
 
+        			|-- `cellula`
+
+        			|-- `enterpriseportal`
+
+        			|-- `fdp` `Form` `dataView` `paginator`
+
+        			|-- `gallery`
+
+        			|- `seajs-style`
+
+        			|- `searchingScene` 一个富客户端查询场景
+
+        			|-- `itemList` 一个使用`cellula`做的小玩意儿
+
+        			|-- `select`
+
+        			|-- `singleForm` 单表单模型
+
+        			|-- `tinyscrollbar`
+
+        			|-- ...
+
+        	|-- `data`
+
+        	|-- `example` 示例
+
+        	|-- `htdocs`
+
+        		  |-- `bizfundprod`
+
+        		  |-- ...
+
+        	|-- images
+
+        	|-- `lib` 公共js库
+
+        	/-- `static` 静态文件
+
+        	/-- `test` 单元测试
+
+        	Gruntfile.js 部署脚本
+
+        	package.js 项目配置
 
 
 后续优化方案：
-
-- 项目中依赖sea-modules中的组件也都迁移到assets目录下面，形成统一的静态文件格局
 
 - 优化gruntfile，尽量做到配置最简化
 
