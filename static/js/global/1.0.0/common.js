@@ -1,6 +1,6 @@
 	
 	seajs && seajs.config({
-		base : '/alipay-ct-wd/enterprise/raw/master/assets',
+		base : '/github/ui-library/assets',
 		/*paths: {
 			assets: '/alipay-ct-wd/enterprise/raw/master/assets'
 		},*/

@@ -1,0 +1,200 @@
+.ui-selectmenu {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #aaa;
+    background: #fff url("https://i.alipayobjects.com/e/201305/N1ZqmqLeH.png") no-repeat right 1px;
+    color: #222;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.ui-selectmenu:hover, .ui-selectmenu-open {
+    box-shadow: 1px 1px 9px #ccc;
+}
+
+.ui-selectmenu-menu {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 400px;
+    color: #222;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 9px #ccc;
+}
+
+.ui-selectmenu-menu .ui-selectmenu-menu-dropdown {
+    height: 266px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.ui-selectmenu-menu .ui-selectmenu-menu-dropdown ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    float: left;
+    list-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ui-selectmenu-menu li {
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * extra definitions
+ */
+.ui-selectmenu .accountName, .ui-selectmenu .accountEmail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 9em;
+    padding-left: 10px;
+}
+
+.ui-selectmenu .accountName {
+    font-weight: bold;
+    width: auto;
+}
+
+.ui-selectmenu .accountName.noAlias {
+    display: none;
+}
+
+.ui-selectmenu .accountEmail {
+    color: #a5a5a5;
+    max-width: 18em;
+    width: auto;
+    padding-right: 36px;
+}
+
+.ui-selectmenu .accountEmail.noAlias {
+    max-width: 27em;
+    font-weight: bold;
+    color: #222;
+}
+
+.ui-selectmenu-menu ul:after {
+    display: block;
+    position: absolute;
+    content: ' ';
+    border-top: 1px solid #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+.ui-selectmenu-menu li {
+    border-top: 0;
+    border-top: 1px dashed transparent;
+    border-bottom: 1px dashed #ddd;
+}
+
+.ui-selectmenu-menu li:last-child, .ui-select-item-empty {
+    border-bottom: 1px solid transparent;
+}
+
+.ui-selectmenu-menu .ui-select-item-current {
+    background-image: url("https://i.alipayobjects.com/e/201401/1u1cY3Xor1.png");
+    background-repeat: no-repeat;
+    background-position: right 10px;
+}
+
+.ui-select-item:hover {
+    color: #fff;
+    background-color: #3399fe;
+    cursor: pointer;
+}
+
+.ui-select-item-odd {
+    background-color: #f2f2f2;
+}
+
+.ui-select-item-text-highlight {
+    color: red;
+}
+
+li.ui-select-item > div {
+    width: 100%;
+    height: 100%;
+}
+
+.ui-select-item:hover .accountEmail, .ui-select-item:hover .iconfont, .ui-select-item:hover .accountEmail.noAlias {
+    color: inherit;
+}
+
+.ui-select-item .accountStatus, .ui-select-item .accountName, .ui-select-item .accountEmail {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 12px;
+    width: 12px;
+    height: 30px;
+    float: left;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ui-select-item .accountStatus {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.ui-select-item .accountName {
+    font-weight: bold;
+    max-width: 8em;
+    width: auto;
+}
+
+.ui-select-item .accountName.noAlias {
+    display: none;
+}
+
+.ui-select-item .accountEmail {
+    color: #a5a5a5;
+    max-width: 18em;
+    width: auto;
+    float: right;
+    padding-right: 36px;
+}
+
+.ui-select-item .accountEmail.noAlias {
+    max-width: 27em;
+    font-weight: bold;
+    color: #222;
+    float: left;
+}
+
+.ui-selectmenu-menu .filter-search-box {
+    margin: 0 auto;
+    padding: 8px 12px;
+    background-color: #ccc;
+}
+
+.ui-selectmenu-menu .filter-search-box input {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    background: #fff url('https://i.alipayobjects.com/e/201309/18314JWoD9.png') no-repeat -74px 3px;
+    padding: 0 20px;
+    vertical-align: middle;
+    border-radius: 11px;
+    border-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

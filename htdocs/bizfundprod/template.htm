@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>批量付款到银行账号 </title>
+		<link charset="utf-8" rel="stylesheet" href="../../assets/enterpriseportal/enterprise/1.0.0/enterprise.css" media="all" />
+		<link charset="utf-8" rel="stylesheet" href="../../assets/bizfundprod/bf/1.0.0/bf.css" media="all" />
+		<script charset="utf-8" type="text/javascript" src="../../assets/sea.js"></script>
+		<script charset="utf-8" type="text/javascript" src="../../assets/seajs-style/1.0.2/seajs-style.js"></script>
+		<script charset="utf-8" type="text/javascript" src="../../static/js/global/1.0.0/common.js"></script>
+	</head>
+	<body>
+		<div id="J_header" class="mi-header">
+		</div>
+		<div id="J_nav" class="mi-nav">
+			<div class="mi-nav-cnt fn-clear">
+				<div class="background-left"></div>
+				<div class="background-right"></div>
+				<h1 class="logo">
+					<a id="J_logoHomeUrl" href="http://enterpriseportal.stable.alipay.net/index.htm" class="ent-uri-placeholder" seed="logo-J_logoHomeUrl" smartracker="on">
+						<span class="alt"><i class="iconfont" title="支付宝"></i></span>
+					</a>
+					<div class="logo-title" id="J_logoTitle" bubble="true">
+						<span class="title"><em id="J_globalTitle">批量付款到银行账号</em><i>&nbsp;</i></span>
+					</div>
+	            </h1>
+				<div id="J_headPlaceholder" class="head-placeholder"></div>
+				<div id="J_subMenu" class="nav-banner">
+	                <div class="mi-nav-background"></div>
+					<ul id="J_subMenuUl" class="fn-clear mi-nav-items" style="height: 0px;"></ul>
+	            </div>
+	        </div>
+		</div>
+		<div class="content">
+			<div class="container" id="J_container">
+				<div id="J_shadowLeft" class="shadow-left">
+					<div class="shadow-top"></div>
+					<div class="shadow-bottom"></div>
+				</div>
+				<div id="J_shadowRight" class="shadow-right">
+					<div class="shadow-top"></div>
+					<div class="shadow-bottom"></div>
+				</div>
+				<div class="fn-clear vessel">
+					<!-- 业务系统开始 -->
+					<form class="mi-form " action="" method="post" enctype="multipart/form-data">
+						<div class="summary fn-clear">
+					       	<div class="mi-form-item">
+					            <label class="mi-label">付款账户</label>
+				                <!--
+				                <span class="mi-form-text account-desc">
+				                    <em class="acquiring-account ft-bold">
+				                        [收单账户]- alipay@alipay.com
+				                        <span class="ft-explain ft-normal">（可用余额<em class="ft-orange ft-normal">23,890.00</em> 元）</span>
+				                    </em>
+				                </span>
+					        	<div class="mi-form-explain"></div>
+					        	-->
+					        	<input type="hidden" value="" id="J_bp_cardNo" />
+					        	<div class="accountSwitch ui-selectmenu fn-hide" role="button" aria-haspopup="true" aria-owns="accountSwitcher" aria-disabled="false">
+	        						<span class="fn-left ft-14 ft-bold accountName">[asdf]</span> <span class="fn-left accountHyphen"> - </span> <span class="fn-left accountEmail">mdata.dev.001@alitest.com</span>
+	    						</div>
+	    						<div class="accountSwitcher ui-selectmenu-menu" aria-hidden="false" role="listbox" aria-labelledby="accountSwitch"></div>
+					        </div>
+					   	</div>
+						
+						<script id="accountsMenuTemplate" type="text/x-handlebars-template">
+						    <div class="filter-search-box fn-hide">
+						    <input type="text" autocomplete="false" spellcheck="false" placeholder="搜索账户" />
+						    </div>
+						    <div class="ui-selectmenu-menu-dropdown">
+						        <ul>
+						            {{#is loading 'ing'}}
+						                <li>
+						                    <div class="mi-message mi-message-loading fn-ml10 fn-mt10 fn-mb10">加载中请稍候 。。。</div>
+						                </li>
+						            {{else}}
+						                {{#is loading 'error'}}
+						                    <li>
+						                        <div class="mi-message mi-message-wait fn-ml10 fn-mt10 fn-mb10"><i class="iconfont" title="等待">&#xF04B;</i>请稍后再试 。。。</div>
+						                    </li>
+						                {{else}}
+						                    <li class="ui-select-item-empty{{#is this.length 0}} {{else}} fn-hide{{/is}}">
+						                        <div class="mi-message mi-message-wait fn-ml10 fn-mt10 fn-mb10"><i class="iconfont" title="无数据">&#xF046;</i><span class="emptyInfo">还没有账户信息</span></div>
+						                    </li>
+						                    {{#each .}}
+						                        <li role="presentation" class="ui-select-item">
+						                            <div role="option" data-id="{{accountId}}">
+						                                <span class="accountStatus"><i class="iconSelect iconfont fn-hide" title="选中">&#xF029;</i><i class="iconAdd iconfont fn-hide" title="添加">&#xF025;</i><i class="iconEdit iconfont fn-hide" title="备注">&#xF051;</i></span>
+						                                <span class="accountName{{#isNotEmpty accountName}} {{else}} noAlias{{/isNotEmpty}}" title="{{accountName}}">{{#searchArea accountName}}{{/searchArea}}</span>
+						                                <span class="accountEmail{{#isNotEmpty accountName}} {{else}} noAlias{{/isNotEmpty}}" title="{{accountEmail}}">{{#searchArea accountEmail}}{{/searchArea}}</span>
+						                            </div>
+						                        </li>
+						                    {{/each}}
+						                {{/is}}
+						            {{/is}}
+						        </ul>
+						    </div>
+						</script>
+						<script type="text/javascript">
+							window.accountSwitchList = [{
+								accountId: "1000011110",
+								accountName: "账户A",
+								accountEmail: "alipayb01@alitest.com",
+								order: 0,
+								current: false
+							}, {
+								accountId: "1000011111",
+								accountName: "账户B",
+								accountEmail: "alipayb02@alitest.com",
+								order: 1,
+								current: false
+							}, {
+								accountId: "1000011113",
+								accountName: "",
+								accountEmail: "alipayb01@alitest.com",
+								order: 2,
+								current: false
+							}, {
+								accountId: "1000011115",
+								accountName: "asdf啊士大夫啊啊",
+								accountEmail: "alip32b5301@alitasdfasdfzxcvzxcest.com",
+								order: 3,
+								current: true
+							}, {
+								accountId: "1000011340",
+								accountName: "",
+								accountEmail: "alipayb345601@alitest.com",
+								order: 4,
+								current: false
+							}, {
+								accountId: "1000011210",
+								accountName: "啊士大夫",
+								accountEmail: "alipab01@alitest.com",
+								order: 5,
+								current: false
+							}, {
+								accountId: "1004311111",
+								accountName: "踩刹车",
+								accountEmail: "alipa01@alitest.com",
+								order: 6,
+								current: false
+							}];
+							
+						seajs.use(['$', 'accountswitcher/1.0.3/accountswitcher'], function($, AccountSwitcher) {
+						   console.log(AccountSwitcher);
+						   var acountList = window.accountSwitchList;
+						   if ( acountList.length ) {
+								$('#J_bp_cardNo').val(acountList[0].accountId);
+						   }
+						   var accountSwitcher = AccountSwitcher.init({
+						        dataList: window.accountSwitchList,
+						        bSwitchDefault: true,
+						        accountSwitchInput: $('#J_bp_cardNo')
+						    });
+						});
+						</script>
+						<div class="mi-form-item">
+					    	<label class="mi-label">批次号</label>
+					        <input type="text" class="mi-input" name="batchNo" autocomplete="off" maxlength="32" tabindex="1" />
+					        <div class="mi-form-explain"></div>
+					    </div>
+						
+						<div class="mi-form-item">
+					        <label class="mi-label">付款文件</label>
+					        <label class="mi-bp-sel-file" for="J_bp_payFile">
+					            <span class="mi-bp-upload-trigger ft-bold">选择文件</span>
+					            <input type="file" name="uploadFile" id="J_bp_payFile" class="mi-bp-sel-file-input" tabindex="2" />
+					        </label>
+					        <div class="mi-form-explain">
+					            	若初次使用，请先下载<a href="#" target="_blank">Excel模板</a>
+					        </div>
+					    </div>
+						
+						<div class="mi-form-item">
+				          	<label class="mi-label">总笔数</label>
+				          	<input type="text" class="mi-input" name="totalCount" autocomplete="off" data-max="3000" tabindex="3" maxlength="32" /><span class="mi-form-bp-unit">笔</span>
+				          	<div class="mi-form-explain">总笔数最多3000笔</div>
+				    	</div>
+				    	
+				    	<div class="mi-form-item">
+				          	<label class="mi-label">到账时间</label>
+				          	<input type="radio" name="receiveDateTime" id="rdt0" value="0" class="mi-radio" tabindex="4" />
+							<label class="mi-radio-label" for="rdt0">T+0日到账</label>
+							<input type="radio" name="receiveDateTime" id="rdt1" value="1" class="mi-radio" tabindex="5" />
+							<label class="mi-radio-label" for="rdt1">T+1日到账</label>
+							<div>
+								<span class="mi-message mi-message-cue">
+							    <i class="iconfont" title="提示">&#xF046;</i>
+								    用户名和密码不能为空
+								</span>
+							</div>
+				          	<div class="mi-form-explain"></div>
+				    	</div>
+						
+						<div class="mi-form-item" id="type">
+							<label class="mi-label">用途</label>
+							<div class="mi-form-text">
+								<select name="type" tabindex="6">
+									<option value="" selected>请选择</option>
+									<option value="A">类别A</option>
+									<option value="B">类别B</option>
+									<option value="C">类别C</option>
+									<option value="D">类别D</option>
+								</select>
+							</div>
+							<div class="mi-form-explain"></div>
+						</div>
+						
+						<div class="mi-form-item">
+					        <label class="mi-label">备注</label>
+					        <textarea class="mi-textarea" data-maxlength="50" name="remark" autocomplete="off" tabindex="7"></textarea>
+					        <div class="mi-form-explain">50个汉字，100个字符。</div>
+					    </div>
+						
+					</form>
+					
+					<!-- 业务系统结束 -->
+				</div>
+			</div><!--.container-->
+		</div><!--.content-->
+		
+		<style>
+			.ui-footer {margin-top: 30px; border-top: 1px solid #cccccc; height: 100px; color:#808080;}
+			.ui-footer .ui-separator{font-weight: normal;}
+			.ui-footer-ctn {border-top: 1px solid #ffffff;padding-top: 15px;text-align: center;}
+			.ui-footer-link a {padding: 0 3px 0 2px;}
+			.ui-footer-copyright,.ui-footer-phone {padding-top: 10px;}
+			.ui-footer-copyright a,.ui-footer-copyright a:hover {color:#808080;}
+			.server{color:#fff;}
+		</style>
+		<div class="ui-footer fn-clear" coor="footer">
+		    <div class="ui-footer-ctn">
+		        <!-- CMS:支付宝全站/全站底部/底部链接开始:/home/admin/sharedata/ecmng_zpublish/tmp/ali01116442/req20131122227334.zip --><div class="ui-footer-link">
+		      <a href="https://www.alipay.com" target="_self" seed="ss">ss</a>  
+		           <em class="ui-separator">|</em>
+		       <a seed="ss" href="https://www.alipay.com" title="ss" target="_blank">ss</a>
+		      </div><!-- CMS:支付宝全站/全站底部/底部链接结束:alipay/foot/links.vm -->
+		        <div class="ui-footer-copyright">
+		            <!-- CMS:cms/foot/copyright.vm开始:alipay/foot/copyright.vm --><style>
+		.copyright,.copyright a,.copyright a:hover{color:#808080;}
+		</style>
+		<div class="copyright">
+		      支付宝版权所有 2004-2014 ICP证：浙B2-20120045
+		  </div>
+		<div class="server" id="ServerNum">
+		  uemprod.stable.alipay.net &nbsp; 90eaec3f-aff3-4291-9b96-7cead673ac50
+		</div><!-- CMS:cms/foot/copyright.vm结束:alipay/foot/copyright.vm -->        </div>
+		    </div>
+		</div>
+
+	</body>
+
+</html>

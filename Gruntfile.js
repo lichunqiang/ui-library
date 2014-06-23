@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 	var style = transport.style.init(grunt);
 	var text = transport.style.init(grunt);
 	var script = transport.script.init(grunt);
-
+	
 	// Project configuration.
 	grunt.initConfig({
 		// Metadata.
@@ -15,32 +15,38 @@ module.exports = function(grunt) {
 		// Task configuration.
 		copy : {
 			/*
-			move : {
-				files : [{
-					expand : true,
-					cwd : './',
-					src : ['enterprise/**'],
-					dest : 'sea-modules'
-				}]
-			},
-			*/
-			/*
 			 * assets 为静态文件的目录，存放编译打包后的js&css
 			 */
+			sea: {
+				files : [{
+					expand : true,
+					cwd : 'lib/',
+					src : ['sea.js', 'seajs-style/**'],
+					dest : 'assets'
+				}]
+			},
 			$ : { // jQuery 默认请求sea-modules下的 $
 				files : [{
 					expand : true,
 					cwd : 'lib/',
 					src : ['$.js'],
-					dest : 'sea-modules'
+					dest : 'assets'
+				}]
+			},
+			cp_araleModule: {
+				files : [{
+					expand : true,
+					cwd : 'sea-modules/',
+					src : ['arale/**', 'alipay/**', 'gallery/**'],
+					dest : 'assets'
 				}]
 			},
 			arale : { // 为了避免解析依赖模块错误，需要事先将依赖的组件模块cp到项目根目录下
 				files : [{
 					expand : true,
-					cwd : 'sea-modules/arale/',
-					src : ['dialog/1.2.6/*', 'calendar/1.0.0/*'], // 追加arale组件
-					dest : 'arale'
+					cwd : 'sea-modules/',
+					src : ['arale/**', 'alipay/**', 'gallery/**'],
+					dest : '.'
 				}]
 			},
 			// 自定义插件，放在公共目录下面
@@ -49,7 +55,23 @@ module.exports = function(grunt) {
 					expand : true,
 					cwd : 'lib/',
 					src : ['select/1.0.0/*'],
-					dest : 'assets/js/common'
+					dest : 'assets'
+				}]
+			},
+			tinyscrollbar: {
+				files : [{
+					expand : true,
+					cwd : 'lib/',
+					src : ['tinyscrollbar/1.0.0/*'],
+					dest : 'assets'
+				}]
+			},
+			accountswitcher:  {
+				files : [{
+					expand : true,
+					cwd : 'lib/',
+					src : ['accountswitcher/1.0.3/*'],
+					dest : 'assets'
 				}]
 			},
 			cellula : {
@@ -57,7 +79,7 @@ module.exports = function(grunt) {
 					expand : true,
 					cwd : 'lib/',
 					src : ['cellula/0.4.1/*.js'],
-					dest : 'assets/js/common'
+					dest : 'assets'
 				}]
 			},
 			fdp : {
@@ -65,7 +87,7 @@ module.exports = function(grunt) {
 					expand : true,
 					cwd : 'lib/',
 					src : ['fdp/1.0.0/*.js'],
-					dest : 'assets/js/common'
+					dest : 'assets'
 				}]
 			}
 		},
@@ -77,80 +99,104 @@ module.exports = function(grunt) {
 					'.js' : [script.jsParser],
 					'.css' : [style.css2jsParser]
 				},
-				paths : ['.']
+				paths : ['assets']
 			},
 			select : {
 				options : {
-					idleading : 'assets/js/common/select/1.0.0/'
+					idleading : 'select/1.0.0/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'lib/select/1.0.0',
 					src : '*.js',
-					dest : 'assets/js/common/select/1.0.0'
+					dest : 'assets/select/1.0.0'
+				}]
+			},
+			tinyscrollbar: {
+				options : {
+					idleading : 'tinyscrollbar/1.0.0/'
+				},
+				files : [{
+					expand : true,
+					filter : 'isFile',
+					cwd : 'lib/tinyscrollbar/1.0.0',
+					src : '*.js',
+					dest : 'assets/tinyscrollbar/1.0.0'
+				}]
+			},
+			accountswitcher: {
+				options : {
+					idleading : 'accountswitcher/1.0.3/'
+				},
+				files : [{
+					expand : true,
+					filter : 'isFile',
+					cwd : 'lib/accountswitcher/1.0.3',
+					src : '*.js',
+					dest : 'assets/accountswitcher/1.0.3'
 				}]
 			},
 			cellula : {
 				options : {
-					idleading : 'assets/js/common/cellula/0.4.1/'
+					idleading : 'cellula/0.4.1/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'lib/cellula/0.4.1',
 					src : '*.js',
-					dest : 'assets/js/common/cellula/0.4.1'
+					dest : 'assets/cellula/0.4.1'
 				}]
 			},
 			fdp : {
 				options : {
-					idleading : 'assets/js/common/fdp/1.0.0/'
+					idleading : 'fdp/1.0.0/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'lib/fdp/1.0.0',
 					src : '*.js',
-					dest : 'assets/js/common/fdp/1.0.0'
+					dest : 'assets/fdp/1.0.0'
 				}]
 			},
 			itemList : {
 				options : {
-					idleading : 'assets/js/itemList/0.1.0/'
+					idleading : 'itemList/0.1.0/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'static/js/itemList/0.1.0',
 					src : '*.js',
-					dest : 'assets/js/itemList/0.1.0'
+					dest : 'assets/itemList/0.1.0'
 				}]
 			},
 			singleForm : {
 				options : {
-					idleading : 'assets/js/singleForm/1.0.0/'
+					idleading : 'singleForm/1.0.0/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'static/js/singleForm/1.0.0',
 					src : '*.js',
-					dest : 'assets/js/singleForm/1.0.0'
+					dest : 'assets/singleForm/1.0.0'
 				}]
 			},
 			searchingScene : {
 				options : {
-					idleading : 'assets/js/searchingScene/1.0.0/'
+					idleading : 'searchingScene/1.0.0/'
 				},
 				files : [{
 					expand : true,
 					filter : 'isFile',
 					cwd : 'static/js/searchingScene/1.0.0',
 					src : '*.js',
-					dest : 'assets/js/searchingScene/1.0.0'
+					dest : 'assets/searchingScene/1.0.0'
 				}]
-			}
+			},
 		},
 		cssmin: {
 	         options: {
@@ -158,8 +204,8 @@ module.exports = function(grunt) {
 	         },
 	         compress: {
 	             files: {
-	                 'assets/css/common/base/1.0.0/base.css': ['static/css/base/1.0.0/*.css'],
-	                 'assets/css/common/enterpriseportal/1.0.0/enterpriseportal.css': ['static/css/enterprise/1.0.0/*.css']
+	                 'assets/enterpriseportal/enterprise/1.0.0/enterprise.css': ['static/css/enterpriseportal/base/1.0.0/*.css', 'static/css/patch/1.0.0/*.css', 'static/css/enterpriseportal/enterprise/1.0.0/*.css'],
+	                 'assets/bizfundprod/bf/1.0.0/bf.css': ['static/css/bizfundprod/bf/1.0.0/*.css']
 	             }
 	         }
      	},
@@ -169,15 +215,13 @@ module.exports = function(grunt) {
 			},
 			cellula: {
 				files : {
-					'assets/js/common/cellula/0.4.1/cellula.js': ['assets/js/common/cellula/0.4.1/*.js']
+					'assets/cellula/0.4.1/cellula.js': ['assets/cellula/0.4.1/*.js']
 				}
 			},
 			fdp : {
 				files : {
-					'assets/js/common/fdp/1.0.0/fdp.js': ['assets/js/common/fdp/1.0.0/*.js']
+					'assets/fdp/1.0.0/fdp.js': ['assets/fdp/1.0.0/*.js']
 				}
-			},
-			itemList: {
 			}
 		},
 		/*
@@ -197,7 +241,7 @@ module.exports = function(grunt) {
 		},
 		*/
 		clean : {
-			temp : ['arale', 'alipay', 'gallery', 'enterprise']
+			temp : ['arale', 'alipay', 'gallery']
 		}
 	});
 
@@ -213,17 +257,8 @@ module.exports = function(grunt) {
 	// grunt.loadNpmTasks('grunt-contrib-watch');
 	// Default task.
 	grunt.registerTask('enterprise', [
-		'copy:$', 
-		'copy:arale', 
-		'copy:select',
-		'copy:cellula',
-		'copy:fdp',
-		'transport:select', 
-		'transport:cellula',
-		'transport:fdp',
-		'transport:itemList',
-		'transport:singleForm',
-		'transport:searchingScene',
+		'copy', 
+		'transport', 
 		'concat',
 		'cssmin', 
 		'clean'

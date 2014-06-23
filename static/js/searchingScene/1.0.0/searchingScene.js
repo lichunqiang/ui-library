@@ -4,8 +4,8 @@ define(function(require, exports, module) {
 	var FDP = require('fdp');
 	var $ = require('$');
 	
-	require('assets/arale/dialog/1.2.6/dialog.css');
-	require('assets/arale/calendar/1.0.0/calendar.css');
+	require('arale/dialog/1.2.6/dialog.css');
+	require('arale/calendar/1.0.0/calendar.css');
 	var Dialog = require('dialog');
 	var Calendar = require('calendar');
 	var Select = require('select');
