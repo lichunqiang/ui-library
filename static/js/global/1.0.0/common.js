@@ -1,14 +1,14 @@
-
-seajs && seajs.config({
-    base : '/github/ui-library/sea-modules',
-    paths: {
-        assets: '/github/ui-library/assets'
-    },
-    alias : {
-        '$' : '$'
-    },
-    charset : 'utf-8'
-});
+	
+	seajs && seajs.config({
+		base : '/alipay-ct-wd/enterprise/raw/master/assets',
+		/*paths: {
+			assets: '/alipay-ct-wd/enterprise/raw/master/assets'
+		},*/
+		alias : {
+			'$' : '$'
+		},
+		charset : 'utf-8'
+	});
 	
 	// util. TODO
 	var Utils = Utils || {};

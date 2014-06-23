@@ -4,10 +4,10 @@ define(function(require, exports, module) {
 	var FDP = require('fdp');
 	var $ = require('$');
 	
-	var dialogStyle = require('arale/dialog/1.2.6/dialog.css');
-	var Dialog = require('arale/dialog/1.2.6/dialog.js');
-	var calendarStyle = require('arale/calendar/1.0.0/calendar.css');
-	var Calendar = require('arale/calendar/1.0.0/calendar.js');
+	require('assets/arale/dialog/1.2.6/dialog.css');
+	require('assets/arale/calendar/1.0.0/calendar.css');
+	var Dialog = require('dialog');
+	var Calendar = require('calendar');
 	var Select = require('select');
 	
 	var util = Cellula._util, Class = Cellula.Class, Element = Cellula.Element, Cell = Cellula.Cell, Coll = Cellula.Collection;
