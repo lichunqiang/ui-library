@@ -1,8 +1,8 @@
 	
 	seajs && seajs.config({
-		base : '/gitlab/ui-library/assets',
+		base : '/github/ui-library/assets',
 		/*paths: {
-			assets: '/gitlab/ui-library/assets'
+			assets: '/github/ui-library/assets'
 		},*/
 		alias : {
 			'$' : '$'
