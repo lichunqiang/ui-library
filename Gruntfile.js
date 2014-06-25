@@ -58,6 +58,14 @@ module.exports = function(grunt) {
 					dest : 'assets'
 				}]
 			},
+			money : {
+				files : [{
+					expand : true,
+					cwd : 'lib/',
+					src : ['money/1.0.0/*'],
+					dest : 'assets'
+				}]
+			},
 			tinyscrollbar: {
 				files : [{
 					expand : true,
@@ -71,6 +79,14 @@ module.exports = function(grunt) {
 					expand : true,
 					cwd : 'lib/',
 					src : ['accountswitcher/1.0.3/*'],
+					dest : 'assets'
+				}]
+			},
+			mockAsyn: {
+				files : [{
+					expand : true,
+					cwd : 'lib/',
+					src : ['mockAsyn/1.0.0/*'],
 					dest : 'assets'
 				}]
 			},
@@ -111,6 +127,18 @@ module.exports = function(grunt) {
 					cwd : 'lib/select/1.0.0',
 					src : '*.js',
 					dest : 'assets/select/1.0.0'
+				}]
+			},
+			money : {
+				options : {
+					idleading : 'money/1.0.0/'
+				},
+				files : [{
+					expand : true,
+					filter : 'isFile',
+					cwd : 'lib/money/1.0.0',
+					src : '*.js',
+					dest : 'assets/money/1.0.0'
 				}]
 			},
 			tinyscrollbar: {
@@ -161,6 +189,18 @@ module.exports = function(grunt) {
 					dest : 'assets/fdp/1.0.0'
 				}]
 			},
+			mockAsyn: {
+				options : {
+					idleading : 'mockAsyn/1.0.0/'
+				},
+				files : [{
+					expand : true,
+					filter : 'isFile',
+					cwd : 'lib/mockAsyn/1.0.0',
+					src : '*.js',
+					dest : 'assets/mockAsyn/1.0.0'
+				}]
+			},
 			itemList : {
 				options : {
 					idleading : 'itemList/0.1.0/'
@@ -197,6 +237,18 @@ module.exports = function(grunt) {
 					dest : 'assets/searchingScene/1.0.0'
 				}]
 			},
+			bpToBankcard: {
+				options : {
+					idleading : 'bizfundprod/bpToBankcard/1.0.0/'
+				},
+				files : [{
+					expand : true,
+					filter : 'isFile',
+					cwd : 'static/js/bizfundprod/bpToBankcard/1.0.0',
+					src : '*.js',
+					dest : 'assets/bizfundprod/bpToBankcard/1.0.0'
+				}]
+			}
 		},
 		cssmin: {
 	         options: {
@@ -205,7 +257,7 @@ module.exports = function(grunt) {
 	         compress: {
 	             files: {
 	                 'assets/enterpriseportal/enterprise/1.0.0/enterprise.css': ['static/css/enterpriseportal/base/1.0.0/*.css', 'static/css/patch/1.0.0/*.css', 'static/css/enterpriseportal/enterprise/1.0.0/*.css'],
-	                 'assets/bizfundprod/bf/1.0.0/bf.css': ['static/css/bizfundprod/bf/1.0.0/*.css']
+	                 'assets/bizfundprod/bf/1.0.0/bf.css': ['static/css/bizfundprod/bf/1.0.0/*.css', 'static/css/bizfundprod/bp/1.0.0/*.css']
 	             }
 	         }
      	},

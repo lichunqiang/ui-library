@@ -9,6 +9,7 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
     var Cellula = require("cellula/0.4.1/cellula");
     var $ = require("$");
     var util = Cellula._util, Class = Cellula.Class, Element = Cellula.Element, Cell = Cellula.Cell, Coll = Cellula.Collection;
+    var itemType = [ "INPUT", "SELECT", "RADIO", "CHECKBOX", "TEXTAREA" ];
     var FormItem = FDP.FormItem = new Class("FormItem", {
         type: "input",
         // validated type is `input` `select` `radio` 'checkbox' `textarea` todo ...
@@ -24,16 +25,22 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
         tipElement: undefined,
         name: undefined,
         value: undefined,
+        beforeValidate: undefined,
+        afterValidate: undefined,
         init: function(conf) {
             this._super(conf);
             this.key = this.key ? this.key : this.__cid__;
             this.type = this.type.toUpperCase();
+            if (this.allowItemType()) throw new Error("formItem type is error!");
             this.setElement();
             this._bindAll("focus", "blur");
             this.bindDefaultEvent();
         },
-        revalidate: function() {
-            this.triggerValidate();
+        revalidate: function(e) {
+            this.triggerValidate(e);
+        },
+        allowItemType: function() {
+            return $.inArray(this.type, itemType) == -1;
         },
         setElement: function() {
             var i, arr = [];
@@ -140,8 +147,6 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
         isEmpty: function(v) {
             return util.isEmpty(v);
         },
-        /** This rule can be customized **/
-        /** Must show that the return true or false **/
         rule: {},
         rollback: function() {
             var r = true;
@@ -162,11 +167,14 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
             var i, r, t, len;
             var value;
             var checked = false;
+            // 验证之前触发 TODO
+            if (this.beforeValidate && util.isFunction(this.beforeValidate)) this.beforeValidate.apply(this, arguments);
             if (this.require) {
                 if (this.type == "INPUT" || this.type == "TEXTAREA" || this.type == "SELECT") {
                     // 验证是否为空
-                    t = this.type == "SELECT" ? "请选择" : "请输入";
+                    t = this.type == "SELECT" ? "请选择" : "请填写";
                     if (util.isArray(this.element)) {
+                        //if (this.element[0].type.toUpperCase() == '')
                         for (i = 0, len = this.element.length; i < len; i++) {
                             if (this.isEmpty(this.element[i]["ele"].value)) {
                                 this.save(false);
@@ -176,6 +184,7 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
                             }
                         }
                     } else {
+                        t = this.element.type.toUpperCase() == "FILE" ? "请选择" : t;
                         value = this.element.value;
                         if (this.isEmpty(value)) {
                             this.save(false);
@@ -235,6 +244,8 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
             }
             this.save(true);
             this.setDefaultTip();
+            // 验证后触发 TODO
+            if (this.afterValidate && util.isFunction(this.afterValidate)) this.afterValidate.apply(this, arguments);
         },
         error: function() {
             if (this.tipElement && !this.validate) {
@@ -246,14 +257,14 @@ define("fdp/1.0.0/fdp-formItem", [ "fdp/1.0.0/fdp-namespace", "cellula/0.4.1/cel
             this.setDefaultTip();
         },
         blur: function(e) {
-            this.triggerValidate();
+            this.triggerValidate(e);
         },
         receiver: function(e) {
             if (!e) return;
             var targ = e.target, evt = e.name.split(":")[1];
             switch (evt) {
               case "VALIDATE":
-                this.revalidate();
+                this.revalidate(e);
                 break;
             }
         }

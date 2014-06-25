@@ -13,7 +13,7 @@ define("singleForm/1.0.0/singleForm", [ "cellula/0.4.1/cellula", "cellula/0.4.1/
             this._super(conf);
         },
         rule: {
-            isString: function() {
+            isChinese: function() {
                 if (!/[\u4e00-\u9fa5]+/.test(this.element.value)) {
                     this.errorMessage = this.label + "只能包含中文字符";
                     return false;
@@ -53,12 +53,21 @@ define("singleForm/1.0.0/singleForm", [ "cellula/0.4.1/cellula", "cellula/0.4.1/
     var Type = new Class("type", {
         type: "select",
         label: "类别",
+        select: undefined,
         init: function(conf) {
             this._super(conf);
-            new Select({
+            var _self = this;
+            var isFirst = true;
+            this.select = new Select({
                 width: 100,
                 size: 3,
-                zIndex: 2
+                zIndex: 2,
+                onSelect: function() {
+                    if (!isFirst) {
+                        _self.triggerValidate();
+                    }
+                    isFirst = false;
+                }
             }).apply(this.element);
         }
     }).inherits(FDP.FormItem);

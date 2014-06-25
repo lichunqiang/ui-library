@@ -1,0 +1,72 @@
+
+..summary {
+	padding: 23px 10px 0 0;
+}
+
+.accountCard {
+	margin: 0 0 0 50px;
+}
+
+.formItems {
+	padding: 0 0 20px 50px;
+}
+
+.sl-file {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	cursor: pointer;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.sl-file .sl-file-input {
+	height: 100%;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+	-ms-filter: "alpha(opacity=0)";
+	cursor: pointer;
+	outline: none;
+	position: absolute;
+	top: -2000px;
+	right: 0;
+}
+
+.upload-trigger {
+	height: 22px;
+	line-height: 22px;
+	color: #808080;
+	border: 1px dashed #ccc;
+	text-align: center;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	min-width: 120px;
+}
+
+.rdt-tip {
+	padding: 10px 0 0 14px;
+	margin: 0 0 0 -17px;
+}
+
+.bra-fl {
+	height: 22px;
+	display: inline-block;
+	line-height: 22px;
+	margin: 2px 5px 0 0;
+}
+
+.mi-form-bp-unit {
+	position: relative;
+	display: inline-block;
+	zoom: 1;
+	height: 30px;
+	line-height: 30px;
+	left: -18px;
+}
+
+.memo {
+	width: 385px;
+}
+

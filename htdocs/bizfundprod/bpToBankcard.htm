@@ -44,30 +44,22 @@
 				</div>
 				<div class="fn-clear vessel">
 					<!-- 业务系统开始 -->
-					<form class="mi-form " action="" method="post" enctype="multipart/form-data">
+					<form class="mi-form " action="" method="post" id="bpToBankcardForm" enctype="multipart/form-data">
 						<div class="summary fn-clear">
-					       	<div class="mi-form-item">
+					       	<div class="mi-form-item accountCard" id="cardNo">
 					            <label class="mi-label">付款账户</label>
-				                <!--
-				                <span class="mi-form-text account-desc">
-				                    <em class="acquiring-account ft-bold">
-				                        [收单账户]- alipay@alipay.com
-				                        <span class="ft-explain ft-normal">（可用余额<em class="ft-orange ft-normal">23,890.00</em> 元）</span>
-				                    </em>
-				                </span>
-					        	<div class="mi-form-explain"></div>
-					        	-->
-					        	<input type="hidden" value="" id="J_bp_cardNo" />
+					        	<input type="hidden" name="cardNo" value="" />
 					        	<div class="accountSwitch ui-selectmenu fn-hide" role="button" aria-haspopup="true" aria-owns="accountSwitcher" aria-disabled="false">
 	        						<span class="fn-left ft-14 ft-bold accountName">[asdf]</span> <span class="fn-left accountHyphen"> - </span> <span class="fn-left accountEmail">mdata.dev.001@alitest.com</span>
 	    						</div>
 	    						<div class="accountSwitcher ui-selectmenu-menu" aria-hidden="false" role="listbox" aria-labelledby="accountSwitch"></div>
+	    						<div class="mi-form-explain"></div>
 					        </div>
 					   	</div>
-						
+						<!-- tile -->
 						<script id="accountsMenuTemplate" type="text/x-handlebars-template">
 						    <div class="filter-search-box fn-hide">
-						    <input type="text" autocomplete="false" spellcheck="false" placeholder="搜索账户" />
+						    	<input type="text" autocomplete="false" spellcheck="false" placeholder="搜索账户" />
 						    </div>
 						    <div class="ui-selectmenu-menu-dropdown">
 						        <ul>
@@ -98,130 +90,101 @@
 						        </ul>
 						    </div>
 						</script>
+						
 						<script type="text/javascript">
-							window.accountSwitchList = [{
-								accountId: "1000011110",
-								accountName: "账户A",
-								accountEmail: "alipayb01@alitest.com",
-								order: 0,
-								current: false
-							}, {
-								accountId: "1000011111",
-								accountName: "账户B",
-								accountEmail: "alipayb02@alitest.com",
-								order: 1,
-								current: false
-							}, {
-								accountId: "1000011113",
-								accountName: "",
-								accountEmail: "alipayb01@alitest.com",
-								order: 2,
-								current: false
-							}, {
-								accountId: "1000011115",
-								accountName: "asdf啊士大夫啊啊",
-								accountEmail: "alip32b5301@alitasdfasdfzxcvzxcest.com",
-								order: 3,
-								current: true
-							}, {
-								accountId: "1000011340",
-								accountName: "",
-								accountEmail: "alipayb345601@alitest.com",
-								order: 4,
-								current: false
-							}, {
-								accountId: "1000011210",
-								accountName: "啊士大夫",
-								accountEmail: "alipab01@alitest.com",
-								order: 5,
-								current: false
-							}, {
-								accountId: "1004311111",
-								accountName: "踩刹车",
-								accountEmail: "alipa01@alitest.com",
-								order: 6,
-								current: false
-							}];
+						seajs.use(['bizfundprod/bpToBankcard/1.0.0/bpToBankcard'], function(bpToBankcard) {
+							console.log(bpToBankcard);
 							
-						seajs.use(['$', 'accountswitcher/1.0.3/accountswitcher'], function($, AccountSwitcher) {
-						   console.log(AccountSwitcher);
-						   var acountList = window.accountSwitchList;
-						   if ( acountList.length ) {
-								$('#J_bp_cardNo').val(acountList[0].accountId);
-						   }
-						   var accountSwitcher = AccountSwitcher.init({
-						        dataList: window.accountSwitchList,
-						        bSwitchDefault: true,
-						        accountSwitchInput: $('#J_bp_cardNo')
-						    });
 						});
 						</script>
-						<div class="mi-form-item">
-					    	<label class="mi-label">批次号</label>
-					        <input type="text" class="mi-input" name="batchNo" autocomplete="off" maxlength="32" tabindex="1" />
-					        <div class="mi-form-explain"></div>
-					    </div>
 						
-						<div class="mi-form-item">
-					        <label class="mi-label">付款文件</label>
-					        <label class="mi-bp-sel-file" for="J_bp_payFile">
-					            <span class="mi-bp-upload-trigger ft-bold">选择文件</span>
-					            <input type="file" name="uploadFile" id="J_bp_payFile" class="mi-bp-sel-file-input" tabindex="2" />
-					        </label>
-					        <div class="mi-form-explain">
-					            	若初次使用，请先下载<a href="#" target="_blank">Excel模板</a>
-					        </div>
-					    </div>
-						
-						<div class="mi-form-item">
-				          	<label class="mi-label">总笔数</label>
-				          	<input type="text" class="mi-input" name="totalCount" autocomplete="off" data-max="3000" tabindex="3" maxlength="32" /><span class="mi-form-bp-unit">笔</span>
-				          	<div class="mi-form-explain">总笔数最多3000笔</div>
-				    	</div>
-				    	
-				    	<div class="mi-form-item">
-				          	<label class="mi-label">到账时间</label>
-				          	<input type="radio" name="receiveDateTime" id="rdt0" value="0" class="mi-radio" tabindex="4" />
-							<label class="mi-radio-label" for="rdt0">T+0日到账</label>
-							<input type="radio" name="receiveDateTime" id="rdt1" value="1" class="mi-radio" tabindex="5" />
-							<label class="mi-radio-label" for="rdt1">T+1日到账</label>
-							<div>
-								<span class="mi-message mi-message-cue">
-							    <i class="iconfont" title="提示">&#xF046;</i>
-								    用户名和密码不能为空
-								</span>
+						<div class="formItems">
+							<div class="mi-form-item fn-mt20" id="batchNo">
+						    	<label class="mi-label">批次号</label>
+						        <input type="text" class="mi-input" name="batchNo" autocomplete="off" maxlength="32" tabindex="1" />
+						        <div class="mi-form-explain"></div>
+						    </div>
+							
+							<div class="mi-form-item" id="uploadFile">
+						        <label class="mi-label">付款文件</label>
+						        <label class="sl-file" for="choiceFile">
+						            <span class="upload-trigger ft-bold">选择文件</span>
+						            <input type="file" name="uploadFile" id="choiceFile" class="sl-file-input" tabindex="2" />
+						            <span class="rollback-filename bra-fl ft-bold fn-hide"></span>
+						            <a href="javascript:;" class="reupload-file bra-fl fn-hide">重新选择</a>
+						        </label>
+						        <div class="mi-form-explain">
+									若初次使用，请先下载<a href="#" target="_blank">Excel模板</a>
+						        </div>
+						    </div>
+							
+							<div class="mi-form-item" id="totalCount">
+					          	<label class="mi-label">总笔数</label>
+					          	<input type="text" class="mi-input" name="totalCount" autocomplete="off" data-max="3000" tabindex="3" maxlength="32" /><span class="mi-form-bp-unit">笔</span>
+					          	<div class="mi-form-explain">总笔数最多3000笔</div>
+					    	</div>
+					    	
+					    	<div class="mi-form-item" id="totalAmount">
+					          	<label class="mi-label">总金额</label>
+					          	<input class="mi-input" name="totalAmount" /><span class="mi-form-bp-unit">元</span><span class="toMoney fn-hide"></span>
+	        				<div class="mi-form-explain"></div>
+					    	</div>
+					    	
+					    	<div class="mi-form-item" id="receiveDateTime">
+					          	<label class="mi-label">到账时间</label>
+					          	<input type="radio" name="receiveDateTime" id="rdt0" value="0" class="mi-radio" tabindex="4" />
+								<label class="mi-radio-label" for="rdt0">T+0日到账</label>
+								<input type="radio" name="receiveDateTime" id="rdt1" value="1" class="mi-radio" tabindex="5" />
+								<label class="mi-radio-label" for="rdt1">T+1日到账</label>
+								<div class="rdt-tip">
+									<span class="mi-message mi-message-cue ft-12">
+								    <i class="iconfont" title="提示">&#xF046;</i>不同到账时间的收费，将以实际到账时间对应的签约收费标准收费。
+									</span>
+								</div>
+					          	<div class="mi-form-explain"></div>
+					    	</div>
+							
+							<div class="mi-form-item" id="purpose">
+								<label class="mi-label">用途</label>
+								<div class="mi-form-text">
+									<select name="type" tabindex="6">
+										<option value="" selected>请选择</option>
+										<option value="A">代发工资协议和收款人清单</option>
+										<option value="B">奖励</option>
+										<option value="C">新闻版、演出等相关劳动合同</option>
+										<option value="D">证券、期货、信托等退款</option>
+										<option value="E">债权或产权转让协议</option>
+										<option value="F">借款合同</option>
+										<option value="G">保险合同</option>
+										<option value="H">税收征管部门的</option>
+										<option value="I">农、副、矿产品购销合同</option>
+										<option value="J">其他合法款项的</option>
+									</select>
+								</div>
+								<div class="mi-form-explain"></div>
 							</div>
-				          	<div class="mi-form-explain"></div>
-				    	</div>
-						
-						<div class="mi-form-item" id="type">
-							<label class="mi-label">用途</label>
-							<div class="mi-form-text">
-								<select name="type" tabindex="6">
-									<option value="" selected>请选择</option>
-									<option value="A">类别A</option>
-									<option value="B">类别B</option>
-									<option value="C">类别C</option>
-									<option value="D">类别D</option>
-								</select>
-							</div>
-							<div class="mi-form-explain"></div>
-						</div>
-						
-						<div class="mi-form-item">
-					        <label class="mi-label">备注</label>
-					        <textarea class="mi-textarea" data-maxlength="50" name="remark" autocomplete="off" tabindex="7"></textarea>
-					        <div class="mi-form-explain">50个汉字，100个字符。</div>
-					    </div>
-						
+							
+							<div class="mi-form-item" id="memo">
+						        <label class="mi-label">备注</label>
+						        <input class="mi-input memo" type="text" data-maxlength="50" name="memo" autocomplete="off" tabindex="7" />
+						        <div class="mi-form-explain">50个汉字，100个字符。</div>
+						    </div>
+							
+							<div class="mi-form-item fn-mt20">
+		                        <label class="mi-label">&nbsp;</label>
+		                        <span class="mi-button mi-button-mblue">
+		                            <input class="mi-button-text" type="submit" value="确认提交"></input>
+		                        </span>
+		                    </div>
+	                    </div>
+	                    
 					</form>
-					
 					<!-- 业务系统结束 -->
 				</div>
 			</div><!--.container-->
 		</div><!--.content-->
 		
-		<style>
+		<style type="text/css">
 			.ui-footer {margin-top: 30px; border-top: 1px solid #cccccc; height: 100px; color:#808080;}
 			.ui-footer .ui-separator{font-weight: normal;}
 			.ui-footer-ctn {border-top: 1px solid #ffffff;padding-top: 15px;text-align: center;}
